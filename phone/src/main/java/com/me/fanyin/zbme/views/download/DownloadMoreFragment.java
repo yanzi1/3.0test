@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.me.core.exception.ApiException;
 import com.me.core.utils.NetWorkUtils;
 import com.me.core.utils.ToastBarUtils;
-import com.me.data.common.Statistics;
 import com.me.data.local.SharedPrefHelper;
 import com.me.data.model.play.CourseChapter;
 import com.me.data.model.play.CourseDetail;
@@ -27,9 +26,8 @@ import com.me.fanyin.zbme.views.course.play.widget.SelectDialog;
 import com.me.fanyin.zbme.views.course.play.widget.WrapperExpandableListAdapter;
 import com.me.fanyin.zbme.views.download.adapter.DownloadMoreChapterAdapter;
 import com.me.fanyin.zbme.views.download.adapter.DownloadMoreNoChapterAdapter;
-import com.me.fanyin.zbme.widget.dropdown.DropDownMenuTitle;
 import com.me.fanyin.zbme.widget.DialogManager;
-import com.umeng.analytics.MobclickAgent;
+import com.me.fanyin.zbme.widget.dropdown.DropDownMenuTitle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,7 +83,6 @@ public class DownloadMoreFragment extends BaseMvpFragment<DownloadMoreView, Down
         switch (v.getId()) {
             case R.id.download_layout:
                 gotoActivity(MyDownloadActivity.class);
-                MobclickAgent.onEvent(getActivity(), Statistics.PROFILE_DOWNLOAD);
                 break;
             case R.id.close:
                 FragmentActivity activity = getActivity();
@@ -350,13 +347,10 @@ public class DownloadMoreFragment extends BaseMvpFragment<DownloadMoreView, Down
 
         switch (defDownloadQuaity) {
             case "流畅":
-                MobclickAgent.onEvent(mActivity, Statistics.COURSE_SMALLSCREEN_DOWNLOADFLUENT);
                 break;
             case "标清":
-                MobclickAgent.onEvent(mActivity, Statistics.COURSE_SMALLSCREEN_DOWNLOADSD);
                 break;
             case "高清":
-                MobclickAgent.onEvent(mActivity, Statistics.COURSE_SMALLSCREEN_DOWNLOADHD);
                 break;
         }
 

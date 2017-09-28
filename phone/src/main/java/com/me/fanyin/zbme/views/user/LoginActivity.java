@@ -23,18 +23,16 @@ import android.widget.TextView;
 import com.me.core.utils.DensityUtils;
 import com.me.core.utils.NetWorkUtils;
 import com.me.data.common.Constants;
-import com.me.data.common.Statistics;
 import com.me.data.event.LoginNeedCloseEvent;
+import com.me.data.event.LoginSuccessEvent;
 import com.me.data.local.SharedPrefHelper;
 import com.me.data.model.user.UserBean;
 import com.me.fanyin.zbme.R;
 import com.me.fanyin.zbme.base.BaseMvpActivity;
-import com.me.data.event.LoginSuccessEvent;
 import com.me.fanyin.zbme.views.MainActivity;
 import com.me.fanyin.zbme.widget.DialogManager;
 import com.me.share.callback.ShareCallBack;
 import com.me.share.utils.ShareUtils;
-import com.umeng.analytics.MobclickAgent;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -190,7 +188,6 @@ public class LoginActivity extends BaseMvpActivity<LoginView,LoginPersenter> imp
                     return;
                 }
                 //TODO 登录操作
-                MobclickAgent.onEvent(this, Statistics.PROFILE_LOGIN_PHONE);
                 mPresenter.login(username,password,NetWorkUtils.getIPAddress(this));
                 break;
             case R.id.login_register_tv:
@@ -209,7 +206,6 @@ public class LoginActivity extends BaseMvpActivity<LoginView,LoginPersenter> imp
                 },R.drawable.user_dialog_happy_icon,"请选择你要找回的方式");
                 break;
             case R.id.login_weibo_bt:
-                MobclickAgent.onEvent(this, Statistics.PROFILE_LOGIN_WEIBO);
                 ShareUtils shareUtils=new ShareUtils(this);
                 shareUtils.platformLogin(ShareUtils.LOGIN_PLATFORM_WEIBO);
                 showDialogLoading();

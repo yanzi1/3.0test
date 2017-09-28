@@ -33,14 +33,12 @@ import com.jakewharton.retrofit2.adapter.rxjava2.HttpException;
 import com.me.core.exception.ApiException;
 import com.me.core.utils.NetWorkUtils;
 import com.me.data.common.Constants;
-import com.me.data.common.Statistics;
 import com.me.data.model.user.GetBackPwUserInfoBean;
 import com.me.fanyin.zbme.R;
 import com.me.fanyin.zbme.base.BaseMvpActivity;
 import com.me.fanyin.zbme.widget.DialogManager;
 import com.me.fanyin.zbme.widget.PhoneEditText;
 import com.me.fanyin.zbme.widget.VerificationEditText;
-import com.umeng.analytics.MobclickAgent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -451,10 +449,8 @@ public class GetBackPswActivity extends BaseMvpActivity<GetBackPswView,GetBackPs
                                     String sendType="";
                                     if (method==TELEPHONE){
                                         sendType=Constants.USER_SENT_TYPE_PHONE;
-                                        MobclickAgent.onEvent(this, Statistics.PROFILE_FINDPASSWORD_PHONE);
                                     }else{
                                         sendType=Constants.USER_SENT_TYPE_EMAIL;
-                                        MobclickAgent.onEvent(this, Statistics.PROFILE_FINDPASSWORD_MAIL);
                                     }
                                     //TODO 找回密码
                                     mPresenter.getBackPw(phoneOrEmail,sendType,pswText,gb_psw_verification_code_et.getText().toString());

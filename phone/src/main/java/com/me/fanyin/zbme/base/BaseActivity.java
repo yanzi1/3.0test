@@ -16,7 +16,6 @@ import com.me.fanyin.zbme.widget.CommonToolbar;
 import com.me.fanyin.zbme.widget.statusbar.StatusBarCompat;
 import com.me.fanyin.zbme.widget.statuslayoutmanager.RootFrameLayout;
 import com.me.fanyin.zbme.widget.statuslayoutmanager.StatusLayoutManager;
-import com.umeng.analytics.MobclickAgent;
 
 import org.apache.http.util.TextUtils;
 
@@ -204,12 +203,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        MobclickAgent.onResume(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        MobclickAgent.onPause(this);
     }
 }

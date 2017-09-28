@@ -10,8 +10,6 @@ import com.alibaba.fastjson.JSON;
 import com.me.core.exception.ErrorHandlers;
 import com.me.core.utils.NetWorkUtils;
 import com.me.core.utils.SystemUtils;
-import com.me.data.common.Constants;
-import com.me.data.common.Statistics;
 import com.me.data.event.LoginSuccessEvent;
 import com.me.data.local.SharedPrefHelper;
 import com.me.data.remote.ApiService;
@@ -19,7 +17,6 @@ import com.me.data.remote.rxjava.RxUtils;
 import com.me.data.remote.utils.ParamsUtils;
 import com.me.fanyin.zbme.views.course.play.widget.WVJBWebViewClient;
 import com.me.fanyin.zbme.views.user.LoginActivity;
-import com.umeng.analytics.MobclickAgent;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -214,8 +211,6 @@ public class BaseWebviewBuyFragment extends BaseWebviewFragment {
                 .subscribe(new Consumer<String>() {
                                @Override
                                public void accept(String addShopCart) throws Exception {
-                                   // getMvpView().addShopCart(addShopCart);
-                                   MobclickAgent.onEvent(getContext(), Statistics.SHOPPINGMALL_SHOPPINGCART);
 
                                }
                            }, ErrorHandlers.displayErrorConsumer(getActivity())

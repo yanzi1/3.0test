@@ -20,7 +20,6 @@ import android.widget.ImageButton;
 import com.alibaba.fastjson.JSON;
 import com.me.core.utils.NetWorkUtils;
 import com.me.data.common.Constants;
-import com.me.data.common.Statistics;
 import com.me.data.event.ContinuePlayEvent;
 import com.me.data.event.ExamChangeEvent;
 import com.me.data.event.PostStudyLogEvent;
@@ -42,7 +41,6 @@ import com.me.fanyin.zbme.views.mine.MineFragment;
 import com.me.fanyin.zbme.views.user.LoginActivity;
 import com.me.fanyin.zbme.widget.DialogManager;
 import com.me.fanyin.zbme.widget.statusbar.StatusBarCompat;
-import com.umeng.analytics.MobclickAgent;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -261,7 +259,6 @@ public class MainActivity extends BaseMvpActivity<MainActivityView, MainActivity
         main_bottom_nav_view.select(position);
         switch (position) {
             case 0:
-                MobclickAgent.onEvent(this, Statistics.HOMEPAGE);
                 showFragment(TAG_MAIN);
                 lastTag = TAG_MAIN;
                 break;
@@ -271,18 +268,15 @@ public class MainActivity extends BaseMvpActivity<MainActivityView, MainActivity
                     Intent asdasd = new Intent(MainActivity.this, CourseTypeChangeActivity.class);
                     startActivity(asdasd);
                 } else {
-                    MobclickAgent.onEvent(this, Statistics.CLASSROOM);
                     showFragment(TAG_COURSE);
                     lastTag = TAG_COURSE;
                 }
                 break;
             case 2:
-                MobclickAgent.onEvent(this, Statistics.SHOPPINGMALL);
                 showFragment(TAG_DISCOVER);
                 lastTag = TAG_DISCOVER;
                 break;
             case 3:
-                MobclickAgent.onEvent(this, Statistics.PROFILE);
                 showFragment(TAG_MINE);
                 lastTag = TAG_MINE;
                 break;

@@ -22,7 +22,6 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.me.core.utils.NetWorkUtils;
-import com.me.data.common.Statistics;
 import com.me.data.event.ContinuePlayEvent;
 import com.me.data.local.SharedPrefHelper;
 import com.me.data.model.play.Course;
@@ -41,12 +40,11 @@ import com.me.fanyin.zbme.views.course.play.db.CourseDetailDB;
 import com.me.fanyin.zbme.views.course.play.db.CourseListDB;
 import com.me.fanyin.zbme.views.course.play.db.SubjectDB;
 import com.me.fanyin.zbme.views.download.MyDownloadActivity;
+import com.me.fanyin.zbme.widget.CommonToolbar;
 import com.me.fanyin.zbme.widget.dropdown.DropDownMenuLayout;
 import com.me.fanyin.zbme.widget.dropdown.DropDownMenuTitle;
-import com.me.fanyin.zbme.widget.CommonToolbar;
 import com.me.fanyin.zbme.widget.pop.HintPopupWindow;
 import com.me.fanyin.zbme.widget.statuslayoutmanager.StatusLayoutManager;
-import com.umeng.analytics.MobclickAgent;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -149,7 +147,6 @@ public class CourseListActivity extends BaseMvpActivity<CourseListView, CourseLi
                             break;
                         case 2:
                             Intent download = new Intent(CourseListActivity.this, MyDownloadActivity.class);
-                            MobclickAgent.onEvent(CourseListActivity.this, Statistics.PROFILE_DOWNLOAD);
                             startActivity(download);
                             break;
                     }
@@ -372,7 +369,6 @@ public class CourseListActivity extends BaseMvpActivity<CourseListView, CourseLi
                         Toast.makeText(appContext, getResources().getString(R.string.app_nonetwork_message), Toast.LENGTH_SHORT).show();
                     }
                 }
-                MobclickAgent.onEvent(this, Statistics.COURSE_CONTINUEPLAY);
                 break;
         }
     }

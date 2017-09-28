@@ -5,7 +5,6 @@ import android.os.Bundle;
 
 import com.me.core.app.AppManager;
 import com.me.data.common.Constants;
-import com.me.data.common.Statistics;
 import com.me.data.local.SharedPrefHelper;
 import com.me.data.model.BaseRes;
 import com.me.data.model.main.CaptureResultBean;
@@ -18,7 +17,6 @@ import com.me.fanyin.zbme.R;
 import com.me.fanyin.zbme.views.course.play.audition.AuditionPlayActivity;
 import com.me.fanyin.zbme.views.main.event.SetCourseListEvent;
 import com.me.fanyin.zbme.views.user.LoginActivity;
-import com.umeng.analytics.MobclickAgent;
 
 import org.apache.http.util.TextUtils;
 
@@ -62,7 +60,6 @@ class CapturePresenter extends BasePersenter<CaptureView> {
                     public void doOnNext(CaptureResultBean captureResultBean) {
                         if (captureResultBean.getExaminationVo() != null || captureResultBean.getCourseVo() != null) {
                             if (captureResultBean.getExaminationVo() != null) {
-                                MobclickAgent.onEvent(getMvpView().context(), Statistics.SCANNER_EXERCISE);
                                 return;
                             }
                             if (captureResultBean.getCourseVo() != null && captureResultBean.getCourseVo().size() != 0 && captureResultBean.getCourseVo().get(0) != null) {
@@ -76,7 +73,6 @@ class CapturePresenter extends BasePersenter<CaptureView> {
                                     Bundle bundle = new Bundle();
                                     bundle.putSerializable("cw", courseWare);
                                     gotoActivity(AuditionPlayActivity.class, false, bundle);
-                                    MobclickAgent.onEvent(getMvpView().context(), Statistics.SCANNER_PLAY);
                                 } else {
                                     Bundle bundle = new Bundle();
                                     bundle.putSerializable(Constants.COURSE_ID, new SetCourseListEvent(captureResultBean.getCourseVo()));
@@ -105,7 +101,6 @@ class CapturePresenter extends BasePersenter<CaptureView> {
                                 getMvpView().resumeCameraPreview();
                                 break;
                             case NO_PERMISSION_EXAMINATION:
-                                MobclickAgent.onEvent(getMvpView().context(), Statistics.SCANNER_ACTIVE);
                                 break;
                         }
                     }

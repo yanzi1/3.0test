@@ -33,7 +33,6 @@ import android.widget.Toast;
 import com.me.core.utils.DateUtils;
 import com.me.core.utils.NetWorkUtils;
 import com.me.data.common.Constants;
-import com.me.data.common.Statistics;
 import com.me.data.local.SharedPrefHelper;
 import com.me.data.model.play.CourseWare;
 import com.me.data.model.play.CwStudyLog;
@@ -48,7 +47,6 @@ import com.me.fanyin.zbme.views.course.play.utils.SignUtils;
 import com.me.fanyin.zbme.views.course.play.utils.StringUtil;
 import com.me.fanyin.zbme.views.download.DownloadManager;
 import com.me.fanyin.zbme.widget.DialogManager;
-import com.umeng.analytics.MobclickAgent;
 import com.yunqing.core.db.utils.LogUtils;
 
 import java.io.BufferedReader;
@@ -1053,7 +1051,6 @@ public class FragmentPlayer extends Fragment implements OnInfoListener, MediaPla
         }else{
             if (!TextUtils.isEmpty(cw.getPaperId()) && !toExcise && NetWorkUtils.isConnected(getActivity())) {    //调到随堂练习
                 toExcise = true;
-                MobclickAgent.onEvent(getActivity(), Statistics.COURSE_FULLSCREEN_EXERCISE);
             } else {
                 PowerManager pm = (PowerManager) activity.getSystemService(Context.POWER_SERVICE);
                 boolean isScreenOn = pm.isScreenOn();

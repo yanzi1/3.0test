@@ -6,12 +6,10 @@ import android.widget.CheckedTextView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.me.data.common.Statistics;
 import com.me.data.local.SharedPrefHelper;
 import com.me.fanyin.zbme.R;
 import com.me.fanyin.zbme.base.BaseActivity;
 import com.me.fanyin.zbme.views.course.play.widget.SelectDialog;
-import com.umeng.analytics.MobclickAgent;
 
 import java.util.Arrays;
 import java.util.List;
@@ -94,15 +92,12 @@ public class DownloadAndPlaySettingActivity extends BaseActivity {
                 switch (position)  {
                     case 0:
                         SharedPrefHelper.getInstance().setPlayQuaity("流畅");
-                        MobclickAgent.onEvent(DownloadAndPlaySettingActivity.this, Statistics.PROFILE_DOWNLOAD_FLUENT);
                         break;
                     case 1:
                         SharedPrefHelper.getInstance().setPlayQuaity("标清");
-                        MobclickAgent.onEvent(DownloadAndPlaySettingActivity.this, Statistics.PROFILE_DOWNLOAD_SD);
                         break;
                     case 2:
                         SharedPrefHelper.getInstance().setPlayQuaity("高清");
-                        MobclickAgent.onEvent(DownloadAndPlaySettingActivity.this, Statistics.PROFILE_DOWNLOAD_HD);
                         break;
                 }
                 video_clarity_setting_tv.setText(clarity[position]);

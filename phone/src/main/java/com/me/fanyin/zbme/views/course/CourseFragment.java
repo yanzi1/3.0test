@@ -25,7 +25,6 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.me.core.utils.DensityUtils;
 import com.me.core.utils.NetWorkUtils;
-import com.me.data.common.Statistics;
 import com.me.data.event.ExamChangeEvent;
 import com.me.data.event.LoginSuccessEvent;
 import com.me.data.event.LogoutSuccessEvent;
@@ -48,7 +47,6 @@ import com.me.fanyin.zbme.views.course.play.widget.PhoneClickSpan;
 import com.me.fanyin.zbme.views.main.activity.CourseTypeChangeActivity;
 import com.me.fanyin.zbme.views.user.LoginActivity;
 import com.me.fanyin.zbme.widget.EmptyViewLayout;
-import com.umeng.analytics.MobclickAgent;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -435,7 +433,6 @@ public class CourseFragment extends BaseMvpFragment<CourseView, CoursePersenter>
                 if (!SharedPrefHelper.getInstance().isLogin()) {
                     gotoActivity(LoginActivity.class, "com.dongao.kaoqian.phone.views.exam.ExamActivity");
                 } else {
-                    MobclickAgent.onEvent(getActivity(), Statistics.EXERCISE_HOMEPAGE);
                 }
                 break;
             case R.id.class_dayi_ll:
@@ -464,7 +461,6 @@ public class CourseFragment extends BaseMvpFragment<CourseView, CoursePersenter>
                         Toast.makeText(appContext, getResources().getString(R.string.app_nonetwork_message), Toast.LENGTH_SHORT).show();
                     }
                 }
-                MobclickAgent.onEvent(getActivity(), Statistics.COURSE_CONTINUEPLAY);
                 break;
         }
     }

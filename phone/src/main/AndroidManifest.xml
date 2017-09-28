@@ -88,8 +88,6 @@
         <activity
             android:name="com.me.fanyin.zbme.views.main.activity.MainTypeChangeActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.me.fanyin.zbme.views.exam.ExamShowTableActivity"
-            android:screenOrientation="portrait"/>
         <activity android:name="com.me.fanyin.zbme.base.CommonWebViewBuyActivity"
             android:screenOrientation="portrait"/>
         <activity
@@ -135,30 +133,6 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"/>
         <activity
-            android:name="com.me.fanyin.zbme.views.exam.draw.PaintPaperActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.exam.ExamPaperActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.exam.ExamActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.exam.ExamQuestionFeedBackActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.exam.ExamPaperReportActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.exam.ExamPreviousPaperActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.exam.ExamChapterPracticeListActivity"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name="com.me.fanyin.zbme.views.course.play.PlayActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:launchMode="singleTask"
@@ -170,29 +144,7 @@
             android:name="com.me.fanyin.zbme.views.course.play.courselist.CourseListActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.me.fanyin.zbme.views.mine.errors.ErrorsStatisticActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.address.SelectAddressActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.address.EditAddressActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.invoice.ApplyInvoiceActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.collect.CollectActivity"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name="com.me.fanyin.zbme.views.mine.settings.SettingsActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.information.PersonalInformationActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.message.MessageActivity"
             android:screenOrientation="portrait"/>
         <activity
             android:name="com.me.fanyin.zbme.views.mine.settings.DownloadAndPlaySettingActivity"
@@ -200,23 +152,6 @@
         <activity
             android:name="com.me.fanyin.zbme.views.mine.settings.AboutUsActivity"
             android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.invoice.MyInvoiceActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.wxapi.WXPayEntryActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/transparentFrameWindowStyle"/>
-        <activity
-            android:name="com.me.fanyin.zbme.wxapi.WXEntryActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:exported="true"
-            android:launchMode="singleTop"
-            android:screenOrientation="portrait"
-            android:theme="@style/transparentFrameWindowStyle"/>
         <activity
             android:name="com.me.fanyin.zbme.views.course.notes.NotesActivity"
             android:windowSoftInputMode="adjustPan|stateHidden"
@@ -233,57 +168,12 @@
             android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
             android:theme="@style/ImagePickerThemeFullScreen"/>
         <activity
-            android:name="com.me.fanyin.zbme.views.mine.invoice.InvoiceDetailActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.booksactivate.BooksActivateActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.booksactivate.BooksActivateDetailActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.account.MyAccountActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.notes.MyNotesActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.learningrecord.LearningRecordActivity"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name="com.me.fanyin.zbme.views.mine.settings.FeedbackActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"/>
 
-        <activity
-            android:name="com.me.fanyin.zbme.views.course.statiscal.StudyStatiscialActivity"
-            android:screenOrientation="portrait"
-            />
-
-        <activity
-            android:name="com.me.fanyin.zbme.views.course.statiscal.KnowledgePointsStatiscialActivity"
-            android:screenOrientation="portrait"
-            />
-
         <service android:name="com.me.fanyin.zbme.views.course.play.widget.PlayService"/>
 
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.errors.ErrorsActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.answer.AnswerActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.coupon.MyCouponActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.settings.AccountSafeActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.account.CashAccountActivity"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name="com.me.fanyin.zbme.views.mine.settings.ResetPswActivity"
             android:screenOrientation="portrait"
@@ -297,12 +187,6 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name="com.me.fanyin.zbme.views.main.activity.CaptureCourseListActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.account.MyAccountDetailActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name="com.me.fanyin.zbme.views.mine.openclass.OpenClassListActivity"
             android:screenOrientation="portrait"/>
         <activity
             android:name="com.me.fanyin.zbme.base.CommonWebViewActivity"
@@ -344,11 +228,6 @@
             android:exported="false"
             android:screenOrientation="behind"
             android:windowSoftInputMode="adjustResize|stateHidden"/>
-        <activity android:name="com.me.fanyin.zbme.views.course.statiscal.StatiscalDetailActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name="com.me.fanyin.zbme.views.exam.ExamRankingActivity"
-            android:screenOrientation="portrait"/>
 
         <!-- ************************** 小能SDK  start ************************** -->
         <activity

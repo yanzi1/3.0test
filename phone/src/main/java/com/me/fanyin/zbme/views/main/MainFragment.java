@@ -16,7 +16,6 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSON;
 import com.me.core.utils.StringUtils;
 import com.me.data.common.Constants;
-import com.me.data.common.Statistics;
 import com.me.data.event.LoginSuccessEvent;
 import com.me.data.event.LogoutSuccessEvent;
 import com.me.data.model.main.MainADBean;
@@ -35,7 +34,6 @@ import com.me.fanyin.zbme.views.main.view.bean.SimpleTitleTip;
 import com.me.fanyin.zbme.widget.DialogManager;
 import com.me.fanyin.zbme.widget.smarttablayout.SmartTabLayout;
 import com.me.fanyin.zbme.widget.statuslayoutmanager.StatusLayoutManager;
-import com.umeng.analytics.MobclickAgent;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -102,7 +100,6 @@ public class MainFragment extends BaseMvpFragment<MainView, MainPersenter> imple
 		main_menu_kefu_iv.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				MobclickAgent.onEvent(mActivity, Statistics.PROFILE_ONLINECUSTOMERSERVICE);
 			}
 		});
 		ImageView main_menu_saoyisao_iv = (ImageView) mToolbar.getMenu().findItem(R.id.menu_main_saoyisao).getActionView().findViewById(R.id.main_menu_saoyisao_iv);
@@ -110,7 +107,6 @@ public class MainFragment extends BaseMvpFragment<MainView, MainPersenter> imple
 			@Override
 			public void onClick(View v) {
 				gotoActivity(CaptureActivity.class);
-				MobclickAgent.onEvent(mActivity, Statistics.SCANNER_LAUNCH);
 			}
 		});
 		initClick();
@@ -206,7 +202,6 @@ public class MainFragment extends BaseMvpFragment<MainView, MainPersenter> imple
 					CommonWebViewBuyActivity.startActivity(getActivity(), "活动详情", mainADBean.getAdLink());
 				} else {
 					CommonWebViewBuyActivity.startActivity(getActivity(), "活动详情", mainADBean.getAdLink());
-					MobclickAgent.onEvent(getActivity(), Statistics.MAIN_ADVERTISEVIEW);
 				}
 			}
 
@@ -310,7 +305,6 @@ public class MainFragment extends BaseMvpFragment<MainView, MainPersenter> imple
 			showError(getActivity().getResources().getString(R.string.main_nodata_advice));
 			return;
 		}
-		MobclickAgent.onEvent(getActivity(), Statistics.HOMEPAGE_EDITEXAM);
 		Intent intent = new Intent(getActivity(), MainTypeChangeActivity.class);
 		Bundle bundle = new Bundle();
 		List<SimpleTitleTip> simpleTitleTipList = new ArrayList<>();

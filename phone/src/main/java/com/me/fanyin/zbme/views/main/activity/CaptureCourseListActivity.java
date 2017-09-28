@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.me.data.common.Constants;
-import com.me.data.common.Statistics;
 import com.me.data.model.main.CaptureResultBean;
 import com.me.data.model.play.CourseWare;
 import com.me.fanyin.zbme.R;
@@ -21,7 +20,6 @@ import com.me.fanyin.zbme.views.main.activity.adapter.CaptureCourseAdapter;
 import com.me.fanyin.zbme.views.main.event.SetCourseListEvent;
 import com.me.fanyin.zbme.widget.statuslayoutmanager.RootFrameLayout;
 import com.me.fanyin.zbme.widget.statuslayoutmanager.StatusLayoutManager;
-import com.umeng.analytics.MobclickAgent;
 
 import butterknife.BindView;
 
@@ -86,7 +84,6 @@ public class CaptureCourseListActivity extends BaseActivity {
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("cw", courseWare);
                     gotoActivity(AuditionPlayActivity.class, false, bundle);
-                    MobclickAgent.onEvent(CaptureCourseListActivity.this, Statistics.SCANNER_PLAY);
                 }
             });
             mStatusLayoutManager.showContent();
