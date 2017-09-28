@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--答疑精华-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selectable_item_background"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/spacing_xmedium"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_xmedium">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/maintype_type3_item7_title"
+                style="@style/MainTypeItemTitleSmallTV"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:minLines="1"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/test"/>
+
+            <TextView
+                android:id="@+id/maintype_type3_item7_time"
+                style="@style/MainTypeItemTimeTV"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:text="@string/test"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xmedium"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/maintype_type3_item7_subject"
+                    style="@style/MainTypeItemTimeTV"
+                    android:layout_marginRight="@dimen/spacing_xmedium"
+                    android:text="@string/test"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/linercompat_line"/>
+
+                <TextView
+                    android:id="@+id/maintype_type3_item7_username"
+                    style="@style/MainTypeItemTimeTV"
+                    android:layout_marginLeft="@dimen/spacing_xmedium"
+                    android:text="@string/test"/>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

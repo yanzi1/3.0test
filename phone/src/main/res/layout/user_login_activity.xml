@@ -1,0 +1,211 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/x_page"
+    android:background="@color/white"
+    tools:context="com.me.fanyin.zbme.views.user.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/login_title_icon"
+            />
+
+        <View
+            android:id="@+id/status_bar_fix"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            />
+
+        <com.me.fanyin.zbme.widget.CommonToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/status_bar_fix"
+            app:titleSize="@dimen/font_size_large"
+            app:titleColor="@color/text_color_primary_dark"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/login_logo_icon"
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/x_page"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_large"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
+            <EditText
+                android:id="@+id/login_username_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:singleLine="true"
+                android:lines="1"
+                android:textColor="@color/text_color_primary_dark"
+                android:textSize="@dimen/font_size_medium"
+                android:hint="@string/login_username_hint_text"
+                android:textColorHint="@color/text_color_primary"
+                />
+
+            <ImageView
+                android:id="@+id/login_username_clear_iv"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/login_clear_icon"
+                android:scaleType="center"
+                android:visibility="invisible"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical"
+            >
+            <com.me.fanyin.zbme.widget.BanPasteEdittext
+                android:id="@+id/login_password_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:singleLine="true"
+                android:lines="1"
+                android:maxLength="20"
+                android:inputType="textPassword"
+                android:textColor="@color/text_color_primary_dark"
+                android:textSize="@dimen/font_size_medium"
+                android:hint="@string/login_psw_hint_text"
+                android:textColorHint="@color/text_color_primary"
+                />
+
+            <ImageView
+                android:id="@+id/login_password_visiable_iv"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/login_closedeye_icon"
+                android:scaleType="center"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line"
+            />
+
+        <TextView
+            android:id="@+id/login_error_tv"
+            style="@style/x_user_text"
+            android:layout_marginTop="@dimen/spacing_nomarl"
+            android:textSize="@dimen/font_size_small"
+            android:textColor="@color/color_accent"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:id="@+id/login_confirm_bt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/spacing_nomarl"
+            android:text="@string/title_activity_login"
+            android:textSize="@dimen/font_size_medium"
+            android:textColor="@color/white"
+            android:enabled="false"
+            style="?android:borderlessButtonStyle"
+            android:background="@drawable/login_bt_confirm_enable_selector"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            >
+
+            <TextView
+                android:id="@+id/login_register_tv"
+                style="@style/x_text"
+                android:textSize="@dimen/font_size_nomarl"
+                android:textColor="@color/text_color_primary_light"
+                android:text="@string/login_register_text"
+                />
+
+            <TextView
+                android:id="@+id/login_forget_psw_tv"
+                style="@style/x_text"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/font_size_nomarl"
+                android:textColor="@color/text_color_primary_light"
+                android:text="@string/login_forget_psw_text"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/login_weibo_bt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/login_weibo_bt_selector"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/login_weibo_logo_icon"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/font_size_medium"
+                    android:textColor="@color/text_color_primary_dark"
+                    android:text="@string/login_weibo_login_text"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

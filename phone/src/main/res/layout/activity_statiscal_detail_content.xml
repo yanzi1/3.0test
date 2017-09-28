@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/x_bg"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@color/white">
+
+                <RadioGroup
+                    android:id="@+id/week_or_month_rg"
+                    android:layout_width="180dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_border_shape"
+                    android:orientation="horizontal"
+                    android:padding="1dp">
+
+                    <RadioButton
+                        android:id="@+id/week_rb"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/left_circle_primary_bg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="周时长"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <RadioButton
+                        android:id="@+id/month_rb"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/right_circle_white_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="月时长"
+                        android:textColor="@color/color_primary"
+                        android:textSize="@dimen/font_size_medium" />
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_primary"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_xmedium">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/description_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="总时长: "
+                        android:textColor="#ffc5a6"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <TextView
+                        android:id="@+id/total_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="300"
+                        android:textColor="@android:color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/unit_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Min"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/font_size_xnomarl" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffc5a6" />
+
+                <com.me.fanyin.zbme.widget.MyQulineView
+                    android:id="@+id/qulineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    app:MytransitionEndColor="#00ffffff"
+                    app:MytransitionStartColor="#5cffffff" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium"
+                android:background="@color/x_bg"
+                />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/x_page"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/menu_layout"
+        style="@style/x_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/download_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/btn_splay_downloadlist" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/download_hot"
+                android:layout_alignRight="@id/download"
+                android:layout_alignTop="@id/download"
+                android:layout_width="wrap_content"
+                android:minWidth="17dp"
+                android:minHeight="17dp"
+                android:textSize="10sp"
+                android:textColor="#ffffffff"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="13"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="4dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:paddingRight="2dp"
+                android:paddingLeft="2dp"
+                android:background="@drawable/bage_circle" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.me.fanyin.zbme.views.mall.view.DropDownMenuTitle
+                android:id="@+id/download_size_menu"
+                android:paddingLeft="@dimen/spacing_xmedium"
+                android:paddingRight="@dimen/spacing_xmedium"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/spacing_nomarl"
+                android:background="?attr/selectableItemBackground"
+                app:selectedColor="@color/text_color_primary"
+                app:selectedIcon="@mipmap/ico_morechose"
+                app:text="标清"
+                app:unselectedColor="@color/text_color_primary"
+                app:unselectedIcon="@mipmap/ico_morechose" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/btn_nav_close" />
+
+
+    </LinearLayout>
+    <View
+        style="@style/full_line"/>
+
+    <com.me.fanyin.zbme.views.course.play.widget.FloatingGroupExpandableListView
+        android:id="@+id/play_courselist_fragment_course_exlv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:childDivider="@android:color/transparent"
+        android:groupIndicator="@null"
+        android:listSelector="#dce1e9"
+        android:visibility="visible"
+        />
+
+    <ListView
+        android:id="@+id/play_courselist_fragment_course_lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:visibility="gone" />
+
+
+</LinearLayout>

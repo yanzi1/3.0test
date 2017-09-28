@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_primary_bg"
+            app:elevation="0dp"
+            >
+                <!--title-->
+                <com.me.fanyin.zbme.widget.CommonToolbar
+                    android:id="@+id/toolbar"
+                    style="@style/x_toolbar"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    app:titleColor="@color/text_color_primary_dark"
+                    app:imageMenuMarginRight="10dp"
+                    app:titleSize="@dimen/font_size_large" >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        >
+                        <!--选择课程-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <include layout="@layout/common_switch_menu"
+                                android:id="@+id/exam_main_select_body"
+                                android:gravity="center"
+                                />
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/study_record_week_bt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dip_size_5"
+                            android:layout_marginRight="@dimen/dip_size_10"
+                            android:text="周报告"/>
+                    </LinearLayout>
+                </com.me.fanyin.zbme.widget.CommonToolbar>
+        </android.support.design.widget.AppBarLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/study_record_main_sc">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <!--日历区域-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/study_record_month_body_ll"
+                        android:background="@color/white"
+                        android:translationZ="@dimen/dip_size_5"
+                        android:paddingBottom="@dimen/dip_size_5"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/study_record_calenfar_last_tv"
+                                android:padding="@dimen/dip_size_10"
+                                android:text="上一月"/>
+
+                            <TextView
+                                android:id="@+id/study_record_calenfar_month_num_tv"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/spacing_xxlarge"
+                                android:layout_marginStart="@dimen/spacing_xxlarge"
+                                android:gravity="center"
+                                android:textColor="@color/text_color_primary"
+                                android:textSize="@dimen/font_size_medium"
+                                tools:text="2017年5月"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/study_record_calenfar_next_tv"
+                                android:padding="@dimen/dip_size_10"
+                                android:text="下一月"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/spacing_nomarl"
+                            android:layout_marginTop="@dimen/spacing_xmedium"
+                            android:background="@color/text_color_primary"
+                            >
+
+                            <TextView
+                                style="@style/calendar_week_text"
+                                android:text="周日"
+                                android:textColor="@color/white"
+                                />
+
+                            <TextView
+                                style="@style/calendar_week_text"
+                                android:text="周一"
+                                android:textColor="@color/white"
+                                />
+
+                            <TextView
+                                style="@style/calendar_week_text"
+                                android:text="周二"
+                                android:textColor="@color/white"
+                                />
+
+                            <TextView
+                                style="@style/calendar_week_text"
+                                android:text="周三"
+                                android:textColor="@color/white"
+                                />
+
+                            <TextView
+                                style="@style/calendar_week_text"
+                                android:text="周四"
+                                android:textColor="@color/white"
+                                />
+
+                            <TextView
+                                style="@style/calendar_week_text"
+                                android:text="周五"
+                                android:textColor="@color/white"
+                                />
+
+                            <TextView
+                                style="@style/calendar_week_text"
+                                android:text="周六"
+                                android:textColor="@color/white"
+                                />
+
+                        </LinearLayout>
+
+                        <com.me.fanyin.zbme.widget.calendar.views.MonthView
+                            android:id="@+id/study_record_month_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="230dp"
+                            android:layout_marginTop="@dimen/spacing_xmedium"
+                            />
+                    </LinearLayout>
+                    <include layout="@layout/common_root_framelayout"/>
+                </LinearLayout>
+                <com.me.fanyin.zbme.views.mall.view.DropDownMenuLayout
+                    android:id="@+id/ddml"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

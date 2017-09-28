@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="recycle_item_type3" type="layout">@layout/maintype_recycle_type3</item>
+    <item name="recycle_item_type4" type="layout">@layout/maintype_recycle_type3</item>
+    <item name="recycle_item_type5" type="layout">@layout/maintype_recycle_type3</item>
+    <item name="recycle_item_type6" type="layout">@layout/maintype_recycle_type3</item>
+    <item name="recycle_item_type7" type="layout">@layout/maintype_recycle_type3</item>
+    <item name="recycle_item_type8" type="layout">@layout/maintype_recycle_type3</item>
+</resources>

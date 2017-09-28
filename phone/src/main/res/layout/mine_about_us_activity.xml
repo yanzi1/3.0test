@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/about_us_ll"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/x_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar_layout"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <TextView
+                    android:id="@+id/about_us_app_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:textColor="@color/text_color_primary_dark"
+                    android:textSize="@dimen/font_size_medium"/>
+
+                <TextView
+                    android:id="@+id/about_us_version_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="@dimen/spacing_xmedium"
+                    android:clickable="true"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/font_size_small"/>
+
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--<TextView-->
+                    <!--android:id="@+id/about_us_version_explain_tv"-->
+                    <!--style="@style/x_mine_text3"-->
+                    <!--android:text="版本说明"/>-->
+
+                <!--<include layout="@layout/app_line_order"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/about_us_comment_tv"-->
+                    <!--style="@style/x_mine_text3"-->
+                    <!--android:text="给我评分"/>-->
+
+                <!--<include layout="@layout/app_line_order"/>-->
+
+                <TextView
+                    android:id="@+id/about_us_feedback_tv"
+                    style="@style/x_mine_text3"
+                    android:text="意见反馈"/>
+
+                <include layout="@layout/app_line_order"/>
+
+                <TextView
+                    android:id="@+id/about_us_weibo_tv"
+                    style="@style/x_mine_text3"
+                    android:text="官方微博"/>
+
+                <include layout="@layout/app_line_order"/>
+
+                <TextView
+                    android:id="@+id/about_us_weixin_tv"
+                    style="@style/x_mine_text3"
+                    android:text="官方微信"/>
+
+                <include layout="@layout/app_line_order"/>
+
+                <LinearLayout
+                    android:id="@+id/about_us_service_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selectable_item_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:layout_weight="1"
+                        android:text="客服热线"
+                        android:textColor="@color/text_color_primary"
+                        android:textSize="@dimen/spacing_xlarge"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:drawableRight="@mipmap/ico_more"
+                        android:drawablePadding="2dp"
+                        android:text="400-627-5566"
+                        android:textColor="@color/text_color_primary"
+                        android:textSize="@dimen/font_size_nomarl"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" 
+    android:padding="@dimen/spacing_xlarge"
+    >
+
+    <ImageView
+        android:id="@+id/iv_show"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/main_type_notice" />
+
+    <ViewFlipper
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@id/iv_show"
+        android:layout_centerVertical="true"
+        android:id="@+id/id_scrollNoticeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:flipInterval="3000"
+        >
+
+    </ViewFlipper>
+
+</RelativeLayout>

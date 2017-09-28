@@ -1,0 +1,109 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+
+    android = [
+            applicationIdPhone : "com.dongao.kaoqian.phone",
+            applicationIdTablet: "com.dongao.kaoqian.tablet",
+            compileSdkVersion  : 25,
+            buildToolsVersion  : '25.0.2',
+            minSdkVersion      : 14,
+            targetSdkVersion   : 25,
+            javaVersion        : JavaVersion.VERSION_1_7,
+
+            versionCode        : 2,
+            versionName        : "1.0.1",
+    ]
+
+    depsVersion = [
+            supportVersion        : '25.2.0',
+            supportmultidexVersion: '1.0.1',
+
+            butterknifeVersion    : '8.5.1',
+            retrofitVersion       : '2.2.0',
+            picassoVersion        : '2.5.2',
+
+            httpcoreVersion       : '4.4.2',
+            okioVersion           : '1.11.0',
+            wireruntimeVersion    : '2.1.2',
+
+            daggerVersion         : '2.10-rc2',
+            eventbusVersion       : '3.0.0',
+            okhttpVersion         : '3.4.1',
+            timberVersion         : '4.5.1',
+            rxJavaVersion         : '1.2.4', //最新版2.0.7
+            rxAndroidVersion      : '1.2.1', //最新版2.0.1
+
+            rxJavaVersion2        : '2.0.7', //最新版2.0.7
+            rxAndroidVersion2     : '2.0.1', //最新版2.0.1
+            rxlifecycleVersion    : '2.0.1',
+            retrofitRxjava2Version: '1.0.0',
+            rxbinding             : '2.0.0',
+
+            leakcanaryVersion     : '1.5',
+            fastjsonVersion       : '1.2.24',
+            loggerVersion         : '1.15',
+            frescoVersion         : '1.1.0',
+            brvahVersion          : '2.9.20',
+
+    ]
+
+    deps = [
+            supportV4               : 'com.android.support:support-v4:' + depsVersion.supportVersion,
+            percent                 : 'com.android.support:percent:' + depsVersion.supportVersion,
+            supportAnnotations      : 'com.android.support:support-annotations:' + depsVersion.supportVersion,
+            appcompatV7             : 'com.android.support:appcompat-v7:' + depsVersion.supportVersion,
+            design                  : 'com.android.support:design:' + depsVersion.supportVersion,
+            gridlayoutV7            : 'com.android.support:gridlayout-v7:' + depsVersion.supportVersion,
+            recyclerviewV7          : 'com.android.support:recyclerview-v7:' + depsVersion.supportVersion,
+            cardviewV7              : 'com.android.support:cardview-v7:' + depsVersion.supportVersion,
+
+            picasso                 : 'com.squareup.picasso:picasso:' + depsVersion.picassoVersion,
+            httpcore                : 'org.apache.httpcomponents:httpcore:' + depsVersion.httpcoreVersion,
+            okio                    : 'com.squareup.okio:okio:' + depsVersion.okioVersion,
+            wireruntime             : 'com.squareup.wire:wire-runtime:' + depsVersion.wireruntimeVersion,
+
+            rxjava2                 : 'io.reactivex.rxjava2:rxjava:' + depsVersion.rxJavaVersion2,
+            rxandroid2              : 'io.reactivex.rxjava2:rxandroid:' + depsVersion.rxAndroidVersion2,
+
+            rxjava                  : 'io.reactivex:rxjava:' + depsVersion.rxJavaVersion,
+            rxandroid               : 'io.reactivex:rxandroid:' + depsVersion.rxAndroidVersion,
+
+            rxbinding               : 'com.jakewharton.rxbinding2:rxbinding:' + depsVersion.rxbinding,
+
+            dagger                  : 'com.google.dagger:dagger:' + depsVersion.daggerVersion,
+            daggerCompiler          : 'com.google.dagger:dagger-compiler:' + depsVersion.daggerVersion,
+            eventBus                : 'org.greenrobot:eventbus:' + depsVersion.eventbusVersion,
+            butterknife             : 'com.jakewharton:butterknife:' + depsVersion.butterknifeVersion,
+            butterknifeCompiler     : 'com.jakewharton:butterknife-compiler:' + depsVersion.butterknifeVersion,
+            retrofit                : 'com.squareup.retrofit2:retrofit:' + depsVersion.retrofitVersion,
+            retrofitConverterScalars: 'com.squareup.retrofit2:converter-scalars:' + depsVersion.retrofitVersion,
+            retrofitconverterGson   : 'com.squareup.retrofit2:converter-gson:' + depsVersion.retrofitVersion,
+            retrofitAdapterRxjava   : 'com.squareup.retrofit2:adapter-rxjava:' + depsVersion.retrofitVersion,
+            retrofitAdapterRxjava2  : 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:' + depsVersion.retrofitRxjava2Version,
+            okhttp                  : 'com.squareup.okhttp3:okhttp:' + depsVersion.okhttpVersion,
+            okhttpUrlconnection     : 'com.squareup.okhttp3:okhttp-urlconnection:' + depsVersion.okhttpVersion,
+            okhttpLoggingInterceptor: 'com.squareup.okhttp3:logging-interceptor:' + depsVersion.okhttpVersion,
+
+            fastjson                : 'com.alibaba:fastjson:' + depsVersion.fastjsonVersion,
+
+            buglycrashreport        : 'com.tencent.bugly:crashreport:latest.release', //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.1.5
+            buglynativecrashreport  : 'com.tencent.bugly:nativecrashreport:latest.release', //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+
+            leakCanary              : 'com.squareup.leakcanary:leakcanary-android:' + depsVersion.leakcanaryVersion, //内存分析
+            umengAnalytics          : 'com.umeng.analytics:analytics:latest.integration', //友盟统计
+
+            multidex                : 'com.android.support:multidex:' + depsVersion.supportmultidexVersion,
+
+            timber                  : 'com.jakewharton.timber:timber:' + depsVersion.timberVersion,
+            logger                  : 'com.orhanobut:logger:' + depsVersion.loggerVersion,
+            fresco                  : 'com.facebook.fresco:fresco:' + depsVersion.frescoVersion,
+            rxlifecycle             : 'com.trello.rxlifecycle2:rxlifecycle-android:' + depsVersion.rxlifecycleVersion,
+            rxlifecycleComponents   : 'com.trello.rxlifecycle2:rxlifecycle-components:' + depsVersion.rxlifecycleVersion,
+            brvah                   : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:'+ depsVersion.brvahVersion,
+    ]
+}

@@ -1,0 +1,28 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <item   
+            >
+        <shape>
+            <gradient
+                android:gradientRadius="400"
+                android:startColor="@color/x_bg"
+                android:endColor="@color/x_bg_transpant"
+                android:type="radial"/>
+            <!--<solid android:color="@color/search_layover_bg"/>-->
+        </shape>
+    </item>
+    <!-- 背景图片，android:right表示阴影图片右边到背景图片右边的距离
+    android:bottom表示阴影图片下边到背景图片下边的距离-->
+    <item   android:bottom="2dp"
+            android:right="2dp"
+            android:left="2dp"
+            android:top="2dp">
+        <shape>
+            <!-- <stroke
+                 android:width="1dp"
+                 android:color="@color/x_bg"/>-->
+            <solid android:color="@color/white"/>
+        </shape>
+    </item>
+</layer-list>

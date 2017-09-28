@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_bottom_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.me.fanyin.zbme.views.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/main_bottom_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/btn_system_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:background="@null"
+            android:src="@mipmap/btn_change" />
+
+    </RelativeLayout>
+
+
+    <View style="@style/full_line" />
+
+    <com.me.fanyin.zbme.views.main.view.widget.BottomNavigatorView
+        android:id="@+id/main_bottom_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fbfbfb"
+        android:elevation="2dp" />
+</LinearLayout>

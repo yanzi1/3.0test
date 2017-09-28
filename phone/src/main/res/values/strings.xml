@@ -1,0 +1,247 @@
+<resources>
+    <string name="app_name">会计云课堂</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">登录</string>
+    <string name="login_forget_psw_text">忘记密码？</string>
+    <string name="login_register_text">注册新用户</string>
+    <string name="login_weibo_login_text">微博登录</string>
+    <string name="login_username_hint_text">用户名/手机号</string>
+    <string name="login_psw_hint_text">密码</string>
+    <string name="register_title_new_user_register">新用户注册</string>
+    <string name="please_input_cell_phone_number">请输入手机号</string>
+    <string name="encounter_problems">如您遇到问题请</string>
+    <string name="dongao_user_register_term">《东奥用户注册条款》</string>
+    <string name="verification_code_send_to">短信验证码已发送至</string>
+    <string name="verification_code_error">验证码输入错误</string>
+    <string name="again_input_psw">重新输入密码</string>
+    <string name="input_psw">密码:(4~20位字符,英文,数字组成)</string>
+    <string name="setting_psw_format_error">密码格式不正确</string>
+    <string name="phone_format_error">手机号格式错误</string>
+    <string name="setting_psw_inconsistent_error">两次输入的密码不一致</string>
+    <string name="agian_psw_is_null_error">确认密码不能为空</string>
+    <string name="psw_is_null_error">密码不能为空</string>
+    <string name="register">注册</string>
+    <string name="already_register">该手机号已经注册过用户</string>
+    <string name="phone_format_incorrect">手机号格式不正确</string>
+    <string name="get_back_psw">找回密码</string>
+    <string name="reset_psw">重置密码</string>
+    <!-- Strings related to login_weibo_bt_nor_shape -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This username is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <string name="app_loading_message">loading...</string>
+    <string name="app_empty_message">这里空荡荡的~</string>
+    <string name="app_error_message">sorry，数据出现异常~</string>
+    <string name="app_nonetwork_message">糟糕，貌似没网了~</string>
+    <string name="app_no_permission_message">您还没有权限哦~</string>
+    <string name="app_empty_button">刷新</string>
+    <string name="app_loading_button">取消</string>
+
+    <string name="test">占位符</string>
+    <string name="main_type_zhujiang">主讲：</string>
+
+    <!-- wp-->
+    <string name="dialog_title_vedio">视频加载异常！</string>
+    <string name="dialog_message_vedio">请确认网络是否联通。</string>
+    <string name="dialog_warnning_vedio">您已设置仅wi-fi环境下播放，是否进行修改？</string>
+    <string name="dialog_warnning_download">您已设置仅wi-fi环境下下载，是否进行修改？</string>
+    <string name="dialog_allow_vedio">当前已切换至2G/3G/4G网络，是否继续播放？</string>
+    <string name="dialog_allow_download">当前已切换至2G/3G/4G网络，是否继续下载？</string>
+    <string name="no_network">没有网络，请连接网络</string>
+    <string name="dialog_title_download">视频下载异常！</string>
+
+    <string name="more">更多</string>
+    <string name="finish">完成</string>
+    <string name="change_type_title">长按拖拽可以排序</string>
+    <string name="contact_service">联系客服</string>
+    <string name="read_and_accept">已阅读并接受</string>
+    <string name="next_step">下一步</string>
+
+    <!-- exam 题库部分  fzw -->
+    <string name="exam_main_persenal_title">自主演练</string>
+    <string name="exam_main_persenal_practice">智能特训</string>
+    <string name="exam_main_persenal_chapter">章节组卷</string>
+    <string name="exam_main_persenal_custom">自定义组卷</string>
+    <string name="exam_main_persenal_practice_first">智</string>
+    <string name="exam_main_persenal_chapter_first">章</string>
+    <string name="exam_main_persenal_custom_first">自</string>
+    <string name="exam_main_persenal_practice_title">练习题库</string>
+
+    <string name="exam_paper_draft">草稿</string>
+    <string name="exam_paper_favor">收藏</string>
+    <string name="exam_paper_answer">答案</string>
+    <string name="exam_paper_card">题卡</string>
+
+    <string name="exam_paper_draw_last">上一步</string>
+    <string name="exam_paper_draw_next">下一步</string>
+    <string name="exam_paper_draw_clear">清除</string>
+
+    <string name="exam_paper_setting_font">Aa</string>
+    <string name="exam_paper_setting_day">日间模式</string>
+    <string name="exam_paper_setting_night">夜间模式</string>
+    <string name="exam_paper_setting_exam_type_reply">答题模式</string>
+    <string name="exam_paper_setting_exam_type_memory">背题模式</string>
+
+    <string name="exam_paper_card_hint_unanswer">未作回答：</string>
+    <string name="exam_paper_card_hint_answered">已作回答：</string>
+    <string name="exam_paper_card_bt">交卷并查看结果</string>
+    <string name="exam_paper_card_title">答题卡</string>
+
+    <string name="exam_paper_report_title">答题报告</string>
+    <string name="exam_paper_report_all_anys">全部解析</string>
+    <string name="exam_paper_report_wrong_anys">错题解析</string>
+    <string name="exam_paper_report_hint_right">回答正确</string>
+    <string name="exam_paper_report_hint_wrong">回答错误</string>
+    <string name="exam_paper_report_hint_noanswer">未做回答</string>
+    <string name="exam_paper_report_hint_total_goal">最后得分</string>
+    <string name="exam_paper_report_hint_beat_num">试卷用时</string>//击败考生
+    <string name="exam_paper_report_hint_correct_odds">正确率</string>
+
+    <string name="exam_paper_question_charge_ans_right">正确</string>
+    <string name="exam_paper_question_charge_ans_wrong">错误</string>
+
+    <string name="exam_paper_question_myans">我的答案：</string>
+    <string name="exam_paper_question_correctans">正确答案：</string>
+    <string name="exam_paper_question_noans">您未作答</string>
+    <string name="exam_paper_question_correct">答案正确</string>
+    <string name="exam_paper_question_statistics">统计</string>
+    <string name="exam_paper_question_statistics_totalans">共答</string>
+    <string name="exam_paper_question_statistics_wrongans">答错</string>
+    <string name="exam_paper_question_statistics_unit">次</string>
+    <string name="exam_paper_question_statistics_hint_persenal">个人统计：</string>
+    <string name="exam_paper_question_statistics_hint_total">全部统计：</string>
+    <string name="exam_paper_question_analysis">解析</string>
+    <string name="exam_paper_question_analysis_way">解题思路</string>
+    <string name="exam_paper_question_video_analysis">视频讲解</string>
+    <string name="exam_paper_question_knowledgePoint">相关知识点</string>
+    <string name="exam_paper_question_question">推荐答疑 ></string>
+    <string name="exam_paper_question_feedback">试题反馈 ></string>
+    <string name="exam_paper_question_lebal">笔记 ></string>
+    <string name="exam_paper_question_addlebal">+添加笔记</string>
+    <string name="exam_paper_question_card_title">答题卡</string>
+
+    <string name="exam_question_type_signal">单选题</string>
+    <string name="exam_question_type_multi">多选题</string>
+    <string name="exam_question_type_uncertainty">不定项选择题</string>
+    <string name="exam_question_type_charge">判断题</string>
+    <string name="exam_question_type_simple">简答题</string>
+    <string name="exam_question_type_analyse">计算分析题</string>
+    <string name="exam_question_type_general">综合题</string>
+    <string name="exam_question_type_simple_hint">本题不支持判分，您可查看答案解析</string>
+
+    <string name="exam_question_title_signal">[单选题]</string>
+    <string name="exam_question_title_multi">[多选题]</string>
+    <string name="exam_question_title_uncertainty">[不定项选择题]</string>
+    <string name="exam_question_title_charge">[判断题]</string>
+    <string name="exam_question_title_simple">[简答题]</string>
+    <string name="exam_question_title_analyse">[计算分析题]</string>
+    <string name="exam_question_title_general">[综合题]</string>
+
+    <string name="exam_question_title_signal_explain">[单选题]每题只有一个正确答案</string>
+    <string name="exam_question_title_multi_explain">[多选题]每题至少有两个正确答案</string>
+    <string name="exam_question_title_uncertainty_explain">[不定项选择题]每题有一个或多个选项</string>
+    <string name="exam_question_title_charge_explain">[判断题]判断以下说法是否正确</string>
+    <string name="exam_question_title_simple_explain">[简答题]</string>
+    <string name="exam_question_title_general_explain">[综合题]</string>
+
+    <string name="collect">收藏</string>
+    <string name="give_thumb_up">点赞</string>
+    <string name="share">分享</string>
+    <string name="judge">评价</string>
+    <string name="original_question">原题</string>
+    <string name="original_lecture">查看讲义</string>
+    <!--            by wyc                  -->
+    <string name="queryadd_relevant">推荐答疑</string>
+    <string name="queryadd_no_knowledge">图书当前页码下，无知识点或者试题</string>
+    <string name="queryadd_no_knowledge_choose">点击选择知识点或者试题</string>
+    <string name="queryadd_good_status">满意度</string>
+    <string name="queryadd_pingjia">答疑评价</string>
+    <string name="search_hint">请输入您想搜索的答疑</string>
+    <string name="search_submit">提交</string>
+    <string name="query_book_add">图书提问</string>
+    <string name="sure">确认</string>
+    <string name="sure_delete">是否确认删除？</string>
+    <string name="query_relevant_knowledge">相关知识点</string>
+    <string name="query_search_hint">请输入您想要搜索的答疑</string>
+    <string name="cancel">取消</string>
+    <string name="main_daojishi">距离中级会计职称考试还剩</string>
+    <string name="main_nodata_advice">请您先获取考种列表！</string>
+    <string name="day">天</string>
+    <string name="query_judge_nocontent">请您先选择评价内容！</string>
+    <string name="query_judge_success">您已提交成功，感谢您的评价！</string>
+    <string name="query_add_ask">提问</string>
+    <string name="query_add_ask_suggest">温馨提示：请您仔细阅读提问规范，对不符合条件的提问，我们将按照规范进行处理，感谢您的理解和配合。点击查看完整《提问规范》</string>
+    <string name="query_add_myask">我要提问</string>
+    <string name="query_add_myask_advice">您还未提交成功，是否确认退出？</string>
+    <string name="query_add_jihuo">图书激活</string>
+    <string name="query_add_update">修改</string>
+    <string name="query_add_other">追问</string>
+    <string name="query_check_original">讲义</string>
+    <string name="query_judge_no">此答疑不能评价！</string>
+    <string name="query_favort_no">此答疑暂不能评价！</string>
+    <string name="query_favort_yes">您已经点过赞啦~</string>
+    <string name="query">答疑</string>
+    <string name="query_no_permission">暂无可进行答疑的图书</string>
+    <string name="main_change_type_click">点击进入频道</string>
+    <string name="main_change_type_longclick">长按拖拽可以排序</string>
+    <string name="main_change_type_manager">编辑</string>
+    <string name="main_change_type_complete">完成</string>
+
+    <array name="MainType">
+        <item>@mipmap/ico_kz_chuji</item>
+        <item>@mipmap/ico_kz_zhongji</item>
+        <item>@mipmap/ico_kz_gaoji</item>
+        <item>@mipmap/ico_kz_zhukuai</item>
+        <item>@mipmap/ico_kz_shui</item>
+        <item>@mipmap/ico_kz_kuajicongye</item>
+        <item>@mipmap/ico_kz_jiijn</item>
+        <item>@mipmap/ico_kz_zhukuai</item>
+        <item>@mipmap/ico_kz_daxue</item>
+        <item>@mipmap/ico_kz_cma</item>
+    </array>
+
+    <string name="exam_question_feedback_title">试题反馈</string>
+    <string name="exam_question_feedback_commit">提交</string>
+    <string name="exam_question_feedback_hint">请输入您的反馈意见（还可输入200字）</string>
+    <string name="exam_question_feedback_question_title">您认为哪一部分有问题</string>
+    <string name="exam_question_feedback_question_option1">题干</string>
+    <string name="exam_question_feedback_question_option2">选项</string>
+    <string name="exam_question_feedback_question_option3">答案</string>
+
+    <string name="pay_install_wx">请安装最新版本微信客户端</string>
+    <string name="pay_loading">正在支付中...</string>
+    <string name="pay_internet_error">服务器繁忙，请稍后再试</string>
+    <string name="pay_price_later">订单优惠后的金额：</string>
+    <string name="pay_order_info">订单详情</string>
+    <string name="pay_result_error">支付失败</string>
+    <string name="pay_result_success">支付成功</string>
+    <string name="pay_result_success_title">您已经购买成功！</string>
+    <string name="pay_result_back">返回首页</string>
+    <string name="pay_result_back_dingdan">返回订单</string>
+    <string name="pay_result_continue">继续购买</string>
+    <string name="pay_result_restart_buy">重新支付</string>
+
+    <string name="not_filled">未填写</string>
+
+    <string name="app_load_more_end">我是有底线的</string>
+    <string name="app_load_more_failed">加载失败，请点我重试</string>
+    <string name="app_loading_more">玩命加载中...</string>
+
+</resources>

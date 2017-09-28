@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/topic_types_tv"
+        style="@style/x_mine_text3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:background="@drawable/selectable_item_background"
+        android:textColor="@color/text_color_primary_dark"
+        android:textSize="@dimen/font_size_xnomarl"/>
+
+    <include layout="@layout/app_line_order"/>
+
+</LinearLayout>

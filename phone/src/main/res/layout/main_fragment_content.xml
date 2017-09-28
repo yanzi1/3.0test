@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              style="@style/x_page"
+              tools:context="com.me.fanyin.zbme.views.main.MainFragment">
+
+    <LinearLayout
+        android:id="@+id/main_fragment_content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/main_fragemnt_type_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <com.me.fanyin.zbme.widget.smarttablayout.SmartTabLayout
+                android:id="@+id/main_fragment_indicator"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/spacing_xxnomarl"
+                app:stl_defaultTabTextColor="@color/text_color_primary_dark"
+                app:stl_selectedTabTextColor="@color/color_primary"
+                app:stl_defaultTabTextHorizontalPadding="12dp"
+                app:stl_defaultTabTextSize="@dimen/font_size_medium"
+                app:stl_distributeEvenly="false"
+                app:stl_dividerThickness="0dp"
+                app:stl_indicatorAlwaysInCenter="false"
+                app:stl_indicatorColor="@color/color_primary"
+                app:stl_indicatorInterpolation="smart"
+                app:stl_indicatorThickness="3dp"
+                app:stl_indicatorWidth="15dp"
+                app:stl_underlineThickness="0dp"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/main_fragment_add_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selectable_item_background"
+                    android:drawableRight="@mipmap/btn_nav_menu"
+                    android:text=""/>
+
+        </LinearLayout>
+
+        <View style="@style/full_line"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_fragment_vp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

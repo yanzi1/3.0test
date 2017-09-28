@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_mine_kefu"
+        app:actionLayout="@layout/mine_toolbar_kefu_icon"
+        android:actionLayout="@layout/mine_toolbar_kefu_icon"
+        android:title="客服"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_mine_settings"
+        app:actionLayout="@layout/mine_toolbar_settings_icon"
+        android:actionLayout="@layout/mine_toolbar_settings_icon"
+        android:title="设置"
+        app:showAsAction="always" />
+
+</menu>

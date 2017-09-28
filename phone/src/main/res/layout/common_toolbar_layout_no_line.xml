@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.me.fanyin.zbme.widget.CommonToolbar
+        android:id="@+id/toolbar"
+        style="@style/x_toolbar"
+        android:layout_below="@+id/status_bar_fix"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:titleColor="@color/text_color_primary_dark"
+        app:titleSize="@dimen/font_size_large" />
+
+</merge>

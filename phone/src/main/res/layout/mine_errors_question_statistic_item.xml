@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_large"
+        android:id="@+id/mine_errors_question_statistic_item_name"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textColor="@color/text_color_primary_dark"
+        android:textSize="@dimen/font_size_medium"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:layout_marginTop="@dimen/dip_size_10"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_large">
+        <!--style="@style/fiveRatingBar"-->
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mine_errors_question_statistic_item_star"
+            android:isIndicator="true"
+            style="@style/MyRatingBar"
+            android:numStars="5"
+            android:rating="0.5"
+            />
+        <!--<com.iarcuschin.simpleratingbar.SimpleRatingBar-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/mine_errors_question_statistic_item_star"-->
+            <!--android:isIndicator="true"-->
+            <!--app:srb_starsSeparation="@dimen/dip_size_5"-->
+            <!--app:srb_numberOfStars="5"-->
+            <!--app:srb_rating="0"-->
+            <!--app:srb_starSize="@dimen/dip_size_22"-->
+            <!--app:srb_isIndicator="true"-->
+            <!--app:srb_borderColor="@color/gray_back"-->
+            <!--app:srb_fillColor="@color/color_primary"-->
+            <!--/>-->
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/mine_errors_question_statistic_item_count"
+            android:layout_marginLeft="@dimen/dip_size_10"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mine_errors_question_statistic_item_play"
+            android:src="@drawable/mine_errors_question_statistic_play"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mine_errors_question_statistic_item_recomm"
+            android:layout_marginLeft="@dimen/dip_size_10"
+            android:src="@drawable/mine_errors_question_statistic_recomm"/>
+    </LinearLayout>
+
+    <include layout="@layout/app_line"
+        />
+
+</LinearLayout>

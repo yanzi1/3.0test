@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/x_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar_layout"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/personal_information_nsv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/x_bg"
+            android:orientation="vertical">
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/spacing_large"
+                    android:paddingRight="@dimen/spacing_large">
+
+                    <ImageView
+                        android:id="@+id/personal_information_avatar_iv"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@mipmap/ico_avatar_denglu"/>
+
+                    <TextView
+                        android:id="@+id/personal_information_consumer_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/font_size_nomarl"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:layout_weight="1"
+                        android:text="手机"
+                        android:textColor="@color/text_color_primary_dark"
+                        android:textSize="@dimen/font_size_medium"/>
+
+                    <TextView
+                        android:id="@+id/personal_information_phone_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="未填写"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/font_size_nomarl"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/app_line_order"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:text="邮箱"
+                        android:textColor="@color/text_color_primary_dark"
+                        android:textSize="@dimen/font_size_medium"/>
+
+                    <TextView
+                        android:id="@+id/personal_information_email_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="未填写"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/font_size_nomarl"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/app_line_order"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:text="学历"
+                        android:textColor="@color/text_color_primary_dark"
+                        android:textSize="@dimen/font_size_medium"/>
+
+                    <TextView
+                        android:id="@+id/personal_information_education_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="未填写"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/font_size_nomarl"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/app_line_order"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:text="专业"
+                        android:textColor="@color/text_color_primary_dark"
+                        android:textSize="@dimen/font_size_medium"/>
+
+                    <TextView
+                        android:id="@+id/personal_information_major_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="未填写"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/font_size_nomarl"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/app_line_order"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:text="毕业时间"
+                        android:textColor="@color/text_color_primary_dark"
+                        android:textSize="@dimen/font_size_medium"/>
+
+                    <TextView
+                        android:id="@+id/personal_information_graduation_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="未填写"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/font_size_nomarl"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/app_line_order"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:text="单位性质"
+                        android:textColor="@color/text_color_primary_dark"
+                        android:textSize="@dimen/font_size_medium"/>
+
+                    <TextView
+                        android:id="@+id/personal_information_enterprise_property_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="未填写"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/font_size_nomarl"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/app_line_order"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:text="工作岗位"
+                        android:textColor="@color/text_color_primary_dark"
+                        android:textSize="@dimen/font_size_medium"/>
+
+                    <TextView
+                        android:id="@+id/personal_information_operating_post_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="未填写"
+                        android:textColor="@color/text_second_color_primary"
+                        android:textSize="@dimen/font_size_nomarl"/>
+
+                </LinearLayout>
+
+                <include layout="@layout/app_line_order"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="45dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="资格证书"
+                        android:textColor="@color/text_color_primary_dark"
+                        android:textSize="@dimen/font_size_medium"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+                        <com.me.fanyin.zbme.widget.FlowLayout
+                            android:id="@+id/personal_information_credentials_fl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/spacing_xmedium"
+                            android:paddingRight="@dimen/spacing_large"
+                            android:paddingTop="@dimen/spacing_xmedium"
+                            app:layoutStartOrientation="right">
+
+                        </com.me.fanyin.zbme.widget.FlowLayout>
+
+                        <TextView
+                            android:id="@+id/personal_information_credentials_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="@dimen/spacing_large"
+                            android:text="未填写"
+                            android:textColor="@color/text_second_color_primary"
+                            android:textSize="@dimen/font_size_nomarl"/>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/app_line_order"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginRight="45dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingRight="@dimen/spacing_large"
+                        android:text="计划考试类型"
+                        android:textColor="@color/text_color_primary_dark"
+                        android:textSize="@dimen/font_size_medium"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical">
+
+                        <com.me.fanyin.zbme.widget.FlowLayout
+                            android:id="@+id/personal_information_plan_credentials_fl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/spacing_xmedium"
+                            android:paddingRight="@dimen/spacing_large"
+                            android:paddingTop="@dimen/spacing_xmedium"
+                            app:layoutStartOrientation="right">
+
+                        </com.me.fanyin.zbme.widget.FlowLayout>
+
+                        <TextView
+                            android:id="@+id/personal_information_plan_credentials_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center_vertical"
+                            android:paddingRight="@dimen/spacing_large"
+                            android:text="未填写"
+                            android:textColor="@color/text_second_color_primary"
+                            android:textSize="@dimen/font_size_nomarl"/>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

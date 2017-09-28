@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/media_play_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--    <include layout="@layout/videobuffer"/>-->
+    <RelativeLayout
+        android:id="@+id/course_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/course_comment_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/play_img_evaluation"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:src="@mipmap/course_play_comment" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="课程评价"
+                        android:textColor="@color/text_color_primary"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/play_img_setting"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/course_play_setting" />
+
+                <ImageView
+                    android:id="@+id/play_img_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/play_img_setting"
+                    android:src="@mipmap/mediacontroller_offline_deep" />
+
+            </RelativeLayout>
+
+            <com.me.fanyin.zbme.widget.smarttablayout.SmartTabLayout
+                android:id="@+id/mall_detail_smart_tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                app:stl_defaultTabTextColor="@color/text_color_primary"
+                app:stl_defaultTabTextHorizontalPadding="12dp"
+                app:stl_defaultTabTextSize="16sp"
+                app:stl_distributeEvenly="true"
+                app:stl_dividerThickness="0dp"
+                app:stl_indicatorAlwaysInCenter="false"
+                app:stl_indicatorColor="@color/color_primary"
+                app:stl_indicatorInterpolation="smart"
+                app:stl_indicatorThickness="3dp"
+                app:stl_indicatorWidth="15dp"
+                app:stl_selectedTabTextColor="@color/color_primary"
+                app:stl_underlineThickness="0dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dip_size_0.5"
+                android:layout_marginTop="8dp"
+                android:background="@color/divider_line" />
+
+            <com.me.fanyin.zbme.views.course.play.widget.MydViewPager
+                android:id="@+id/play_viewpger"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:id="@+id/media_setting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/play_smart_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="22dp"
+            android:layout_marginBottom="33dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/play_smart_more"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

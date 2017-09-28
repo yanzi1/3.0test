@@ -1,0 +1,1 @@
+include ':phone', ':core', ':data', ':tablet', ':zxinglib', ':share', ':rxdownload', ':vitamiolib', ':imagepicker', ':updatelib'

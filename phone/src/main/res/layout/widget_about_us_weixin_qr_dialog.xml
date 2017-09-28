@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/search_layover_bg">
+
+    <View
+        android:id="@+id/outside_bg_v"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?android:selectableItemBackground"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:id="@+id/about_us_weixin_qr_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_large"
+            android:background="@drawable/widget_text_dialog_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/about_weixin_iv"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/mine_abort_us_weixin_qr"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip_size_25"
+                android:text="微信扫一扫，关注我们吧 !"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/font_size_large"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

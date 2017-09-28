@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/subpage_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.me.fanyin.zbme.views.mall.MallFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        app:elevation="0dp">
+
+        <include layout="@layout/common_toolbar_layout_no_line"/>
+
+        <com.me.fanyin.zbme.widget.smarttablayout.SmartTabLayout
+            android:id="@+id/subpage_tbl"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/spacing_xxnomarl"
+            android:visibility="gone"
+            app:stl_defaultTabTextColor="@color/text_color_primary"
+            app:stl_defaultTabTextHorizontalPadding="12dp"
+            app:stl_defaultTabTextSize="16sp"
+            app:stl_distributeEvenly="false"
+            app:stl_dividerThickness="0dp"
+            app:stl_indicatorAlwaysInCenter="false"
+            app:stl_indicatorColor="@color/color_primary"
+            app:stl_indicatorInterpolation="smart"
+            app:stl_indicatorThickness="3dp"
+            app:stl_indicatorWidth="15dp"
+            app:stl_selectedTabTextColor="@color/color_primary"
+            app:stl_underlineThickness="0dp"/>
+
+        <include layout="@layout/app_line"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/common_root_framelayout"/>
+
+</android.support.design.widget.CoordinatorLayout>

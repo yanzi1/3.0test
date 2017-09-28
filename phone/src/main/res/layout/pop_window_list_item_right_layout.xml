@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <!--android:descendantFocusability="blocksDescendants"-->
+
+    <View
+        android:visibility="invisible"
+        android:id="@+id/v_top_query"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_size_10"
+        android:background="@color/divider_line"
+        />
+
+    <TextView
+        android:id="@+id/pop_window_list_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_size_40"
+        android:gravity="center"
+        android:textColor="@color/query_bottom_font"
+        android:textSize="@dimen/font_size_large"
+        android:text="@string/test"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_size_1"
+        android:background="@color/divider_line"
+        />
+
+</LinearLayout>

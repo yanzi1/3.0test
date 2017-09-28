@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~  * Copyright (C) 2015 by  xunice@qq.com
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  * http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  */
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/x_page">
+
+    <LinearLayout style="@style/x_page">
+
+        <com.me.fanyin.zbme.widget.CommonToolbar
+            android:id="@+id/toolbar"
+            style="@style/x_toolbar"
+            android:elevation="0dp"
+            android:translationZ="0dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleColor="@color/text_color_primary_dark"
+            app:titleSize="@dimen/font_size_large">
+
+            <TextView
+                android:id="@+id/courselist_menu_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/dip_size_10"
+                android:drawableLeft="@mipmap/query_view_detailed"
+                android:gravity="right"
+                android:text="" />
+
+        </com.me.fanyin.zbme.widget.CommonToolbar>
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/course_cotent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.me.fanyin.zbme.views.mall.view.DropDownMenuTitle
+                        android:id="@+id/subject_layout"
+                        style="@style/ShopHomeMenu"
+                        android:background="?attr/selectableItemBackground"
+                        app:selectedColor="@color/text_color_primary"
+                        app:selectedIcon="@mipmap/ico_morechose"
+                        app:text="科目"
+                        app:unselectedColor="@color/text_color_primary"
+                        app:unselectedIcon="@mipmap/ico_morechose" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/spacing_xmedium"
+                        android:layout_marginTop="@dimen/spacing_xmedium"
+                        android:background="@color/divider_line" />
+
+                    <com.me.fanyin.zbme.views.mall.view.DropDownMenuTitle
+                        android:id="@+id/year_layout"
+                        style="@style/ShopHomeMenu"
+                        android:background="?attr/selectableItemBackground"
+                        app:selectedColor="@color/text_color_primary"
+                        app:selectedIcon="@mipmap/ico_morechose"
+                        app:text="年份"
+                        app:unselectedColor="@color/text_color_primary"
+                        app:unselectedIcon="@mipmap/ico_morechose" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dip_size_0.5"
+                    android:background="@color/divider_line" />
+
+                <com.me.fanyin.zbme.widget.BaseSwipeRefreshLayout
+                    android:id="@+id/swipe_refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/course_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/network_error_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/x_bg"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="16dp"
+                            android:visibility="gone"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                            <ImageView
+                                android:id="@+id/app_view_iv"
+                                android:layout_width="168dp"
+                                android:layout_height="157dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="80dp"
+                                android:src="@mipmap/img_special_nonetwork" />
+
+                            <TextView
+                                android:id="@+id/app_message_tv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/app_view_iv"
+                                android:layout_marginTop="@dimen/spacing_large"
+                                android:gravity="center_horizontal"
+                                android:text="@string/app_nonetwork_message"
+                                android:textColor="@color/text_color_primary_light_more"
+                                android:textSize="@dimen/font_size_medium" />
+
+                            <Button
+                                android:id="@+id/app_action_nonetwork_btn"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@color/transparent"
+                                android:text=""
+                                android:textColor="@color/transparent" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/play_continue"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/white"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/divider_line" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:src="@mipmap/play_continue" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="继续播放:"
+                                    android:textSize="@dimen/spacing_xlarge" />
+
+                                <TextView
+                                    android:id="@+id/play_continue_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginRight="15dp"
+                                    android:singleLine="true"
+                                    android:text="会计基础"
+                                    android:textSize="@dimen/spacing_xlarge" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ExpandableListView
+                            android:id="@+id/courselist_exp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:listSelector="@color/color_primary_btn_select"
+                            android:cacheColorHint="@color/transparent"
+                            android:childDivider="@color/transparent"
+                            android:divider="@color/transparent"
+                            android:groupIndicator="@null" />
+
+                        <com.me.fanyin.zbme.views.mall.view.DropDownMenuLayout
+                            android:id="@+id/mall_menu_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+                    </RelativeLayout>
+
+                </com.me.fanyin.zbme.widget.BaseSwipeRefreshLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/no_subjects"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+    <include
+        layout="@layout/app_view_loading"
+        android:visibility="gone"/>
+</RelativeLayout>

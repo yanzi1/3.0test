@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_listen_record"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/play_courserb_bg"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="听课统计"
+            android:textColor="@drawable/play_textcolor"
+            android:textSize="@dimen/spacing_large" />
+
+        <RadioButton
+            android:id="@+id/rb_exam_record"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-2dp"
+            android:layout_weight="1"
+            android:background="@drawable/play_courserb_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="做题统计"
+            android:textColor="@drawable/play_textcolor"
+            android:textSize="@dimen/spacing_large" />
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/divider_line"/>
+
+    <com.me.fanyin.zbme.views.course.play.widget.MyViewpager
+        android:id="@+id/record_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

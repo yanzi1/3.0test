@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MMTheme.Basics" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="homeAsUpIndicator">@mipmap/btn_nav_back</item>
+
+        <item name="android:textColorPrimary">@color/text_color_primary</item>
+        <item name="android:textColorSecondary">@color/text_second_color_primary</item>
+        <item name="windowActionBar">false</item>
+        <!--windowActionModeOverlay属性是设置让toolbar重叠在Actionbar上，将其盖住；高版本请用第三行，低版本请用第二行-->
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowNoTitle">true</item>
+          <item name="android:statusBarColor">@color/white</item>
+          <item name="android:windowLightStatusBar">true</item> <!--android 6.0以上的功能  -->
+
+        <item name="android:windowAnimationStyle">@style/orientationAnimation</item>
+        <item name="colorAccent">@color/color_primary</item>
+    </style>
+
+
+    <!--日夜间模式切换的动画-->
+    <style name="WindowAnimationFadeInOut">
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+    </style>
+
+</resources>

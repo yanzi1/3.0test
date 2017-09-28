@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/spacing_large"
+    android:layout_marginRight="@dimen/spacing_large"
+    android:layout_marginTop="@dimen/spacing_large"
+    android:background="@drawable/mine_card_item_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/books_activate_detail_head_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mine_books_activate_detail_item_top_red_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_xmedium">
+
+            <TextView
+                android:id="@+id/books_activate_category_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="初级会计职称"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_medium"/>
+
+            <TextView
+                android:id="@+id/books_activate_goods_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:text="2017年初级《经济法基础》-轻松过关二"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_nomarl"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/books_activate_detail_number_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_xmedium"
+                    android:layout_marginTop="@dimen/spacing_xmedium"
+                    android:paddingLeft="@dimen/spacing_xmedium"
+                    android:paddingRight="@dimen/spacing_xmedium"
+                    android:text="激活码:4324234235325252"
+                    android:textColor="@color/text_color_primary_hint"
+                    android:textSize="@dimen/font_size_nomarl"/>
+
+                <TextView
+                    android:id="@+id/books_activate_detail_validity_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_xmedium"
+                    android:paddingLeft="@dimen/spacing_xmedium"
+                    android:paddingRight="@dimen/spacing_xmedium"
+                    android:text="有效期至:"
+                    android:textColor="@color/text_color_primary_hint"
+                    android:textSize="@dimen/font_size_nomarl"/>
+
+                <LinearLayout
+                    android:id="@+id/books_activate_detail_line_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/spacing_xmedium"
+                        android:background="@color/divider_line"/>
+
+                    <View
+                        android:id="@+id/books_activate_detail_override_line_v"
+                        android:layout_width="64dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/spacing_xmedium"
+                        android:background="@color/divider_line"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/books_activate_detail_service_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/spacing_xmedium"
+                        android:text="服务详情"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/books_activate_detail_service_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/spacing_xmedium"
+                        android:background="?android:selectableItemBackground"
+                        android:src="@mipmap/ico_fold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/books_activate_detail_overdue_iv"
+                android:layout_width="80dp"
+                android:layout_height="68dp"
+                android:layout_gravity="right|bottom"
+                android:layout_marginRight="0.5dp"
+                android:layout_marginBottom="0.5dp"
+                android:src="@mipmap/img_mark_overdue"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/books_activate_service_validity_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/books_activate_service_validity_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/spacing_xmedium"
+                android:paddingRight="@dimen/spacing_xmedium"
+                android:paddingTop="@dimen/spacing_xmedium"
+                android:text="服务有效期至: "
+                android:textColor="@color/text_color_primary_hint"
+                android:textSize="@dimen/font_size_nomarl"
+                android:visibility="gone"/>
+
+            <com.me.fanyin.zbme.widget.FlowLayout
+                android:id="@+id/books_activate_service_validity_fl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_xmedium"
+                android:translationZ="-1dp">
+
+            </com.me.fanyin.zbme.widget.FlowLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

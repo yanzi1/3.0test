@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/exam_complex_drag_view_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:id="@+id/app_action_empty_ll"
+        android:paddingTop="@dimen/spacing_xxlarge">
+
+        <ImageView
+            android:id="@+id/app_view_iv"
+            android:layout_width="168dp"
+            android:layout_height="157dp"
+            android:src="@mipmap/img_pclearn"/>
+
+        <TextView
+            android:id="@+id/app_message_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:gravity="center_horizontal"
+            android:text="请您先在PC端完成入学测试再到移动端进行学习~"
+            android:textColor="@color/text_color_primary_light_more"
+            android:textSize="@dimen/font_size_medium"/>
+
+        <ImageView
+            android:id="@+id/play_smart_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginBottom="33dp"
+            android:layout_gravity="right|bottom"
+            android:src="@mipmap/play_smart_more"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+

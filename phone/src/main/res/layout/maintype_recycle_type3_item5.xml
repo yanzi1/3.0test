@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--热门课程、推荐课程、推荐图书-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/maintype_type3_item5_cv"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/selectable_item_background"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_xmedium">
+
+        <ImageView
+            android:id="@+id/maintype_type3_item5_iv"
+            style="@style/MainTypeImage3"
+            android:layout_marginBottom="@dimen/spacing_xmedium"
+            android:src="@mipmap/img_default_book"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/maintype_type3_item5_coursename"
+                style="@style/MainTypeItemTitleSmallTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/spacing_nomarl"
+                android:paddingRight="@dimen/spacing_large"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:minLines="1"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/maintype_type3_item5_lecturer_tv"
+                style="@style/MainTypeItemTimeTV"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingRight="@dimen/spacing_large"
+                android:drawablePadding="@dimen/dip_size_2"
+                android:gravity="center_vertical"
+                android:drawableLeft="@mipmap/ico_course_tea"/>
+
+            <TextView
+                android:id="@+id/maintype_type3_item5_original_price_tv"
+                android:layout_width="wrap_content"
+                android:paddingBottom="18dp"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/spacing_large"
+                android:gravity="bottom"
+                android:textSize="@dimen/font_size_nomarl"
+                android:textColor="@color/color_primary"/>
+
+            <include layout="@layout/app_line"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

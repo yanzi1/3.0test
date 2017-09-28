@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/x_page"
+    tools:context=".views.main.activity.MainTypeChangeActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/maintype_change_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:fadingEdge="none"
+        android:layout_margin="@dimen/dip_size_0.5"
+        />
+
+    <ScrollView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:orientation="vertical">
+            <include layout="@layout/main_type_change_top"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/maintype_change_rv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:fadingEdge="none"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/maintype_change_hide_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fadingEdge="none"
+                android:visibility="gone"
+                />
+            <!--holder.item_recyc_type.setNestedScrollingEnabled(false);-->
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,217 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    tools:context="com.me.fanyin.zbme.views.course.fragment.StatisticalFragment"
+    >
+
+    <LinearLayout
+        android:id="@+id/statistical_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/white"
+            >
+
+
+            <RadioGroup
+                android:id="@+id/lectures_or_question_rg"
+                android:layout_width="180dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle_border_shape"
+                android:orientation="horizontal"
+                android:padding="1dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/lectures_time_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/left_circle_primary_bg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="听课时长"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <RadioButton
+                    android:id="@+id/question_count_rb"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/right_circle_white_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="做题数量"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_medium" />
+
+            </RadioGroup>
+
+            <View
+                style="@style/x_line"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_size_40"
+            android:paddingLeft="@dimen/spacing_large"
+            android:paddingRight="@dimen/spacing_large">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                >
+
+                <TextView
+                    android:id="@+id/description_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总时长:"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/font_size_nomarl" />
+
+                <TextView
+                    android:id="@+id/total_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_xsmall"
+                    android:text="200"
+                    android:textColor="@color/color_primary"
+                    android:textSize="24sp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/unit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_xsmall"
+                    android:text="Min"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/font_size_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/switch_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/switch_icon"
+                    />
+
+                <TextView
+                    android:id="@+id/switch_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/spacing_nomarl"
+                    android:text="切换周时长"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/font_size_xnomarl" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:id="@+id/type_data_layout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.me.fanyin.zbme.widget.BingImage
+                    android:id="@+id/statistical_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="@dimen/spacing_large"
+                    android:layout_marginRight="@dimen/spacing_large"
+                    android:layout_marginTop="@dimen/spacing_xxxlarge" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xxxlarge"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/type_empty_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/empty_iv"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/img_special_nothing"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/empty_iv"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/text_color_primary_light_more"
+                    android:textSize="@dimen/font_size_medium"
+                    android:text="@string/app_empty_message"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/empty_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/img_empty"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/img_special_nothing"/>
+
+        <TextView
+            android:id="@+id/app_message_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_empty"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:gravity="center_horizontal"
+            android:textColor="@color/text_color_primary_light_more"
+            android:textSize="@dimen/font_size_medium" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

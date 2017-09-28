@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/x_page"
+    tools:context=".views.main.activity.MainTypeChangeActivity">
+
+    <com.me.fanyin.zbme.widget.CommonToolbar
+        android:id="@+id/toolbar"
+        style="@style/x_toolbar"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:titleColor="@color/text_color_primary_dark"
+        app:titleSize="@dimen/font_size_large">
+
+        <TextView
+            android:id="@+id/tv_main_type_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical"
+            android:paddingLeft="@dimen/dip_size_10"
+            android:paddingRight="@dimen/dip_size_10"
+            android:gravity="left|center_vertical"
+            android:text="编辑"
+            android:textSize="@dimen/font_size_medium"
+            android:background="@drawable/selectable_item_background"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/iv_main_type_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:background="@drawable/selectable_item_background"
+            android:src="@mipmap/btn_nav_close"
+            android:visibility="visible"
+            />
+
+    </com.me.fanyin.zbme.widget.CommonToolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/maintype_change_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dip_size_0.5"
+        android:clipChildren="false"
+        android:fadingEdge="none"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:orientation="vertical">
+
+            <include layout="@layout/main_type_change_top"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/maintype_change_rv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:fadingEdge="none"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/maintype_change_hide_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fadingEdge="none"
+                android:visibility="gone"
+                />
+            <!--holder.item_recyc_type.setNestedScrollingEnabled(false);-->
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

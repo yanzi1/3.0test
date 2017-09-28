@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/play_courselist_nosection_course_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="44dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/course_play_icolight" />
+
+        <TextView
+            android:id="@+id/tv_local"
+            android:layout_width="25dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="14dp"
+            android:background="@color/color_primary"
+            android:gravity="center"
+            android:text="本地"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_xsmall" />
+
+        <TextView
+            android:id="@+id/play_courselist_child_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:text="第02讲 法律基础（一）"
+            android:textColor="@color/text_color_primary_dark"
+            android:textSize="14dp" />
+
+
+        <TextView
+            android:id="@+id/play_courselist_child_test_img"
+            android:layout_width="45dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/course_test_tv"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="练习"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_small" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/divider_line"/>
+
+</LinearLayout>

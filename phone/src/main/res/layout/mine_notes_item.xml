@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notes_item_fl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/selectable_item_background"
+        android:padding="@dimen/spacing_large">
+
+        <TextView
+            android:id="@+id/notes_item_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="其他货币资金"
+            android:textColor="@color/text_color_primary_dark"
+            android:textSize="@dimen/font_size_medium"/>
+
+        <TextView
+            android:id="@+id/notes_item_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="其他货币资卡罗拉囧囧记录奇偶尽快了解哦哦接口楼剑及履及"
+            android:textColor="@color/text_color_primary"
+            android:textSize="@dimen/font_size_nomarl"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/app_line_order_bottom"/>
+
+</FrameLayout>

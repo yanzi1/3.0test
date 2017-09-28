@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/books_activate_fragment_root_nsv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_xmedium"
+        android:paddingRight="@dimen/spacing_large"
+        android:paddingBottom="@dimen/spacing_xmedium">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mine_edit_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_nomarl">
+
+            <EditText
+                android:id="@+id/books_activate_num_edt"
+                style="@style/x_edit"
+                android:layout_weight="1"
+                android:focusableInTouchMode="true"
+                android:hint="请输入随书赠卡激活码"
+                android:paddingLeft="@dimen/spacing_xmedium"
+                android:paddingRight="@dimen/spacing_xmedium"
+                android:textColorHint="@color/text_color_primary_hint"
+                android:maxLines="1"/>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/books_activate_clean_btn"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:padding="@dimen/spacing_nomarl"-->
+                <!--android:src="@mipmap/ic_delete"/>-->
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/books_activate_reture_hint_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_nomarl"
+            android:textColor="@color/color_accent"
+            android:textSize="@dimen/font_size_small"/>
+
+        <Button
+            android:id="@+id/books_activate_activate_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_xmedium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:background="@drawable/login_bt_confirm_enable_selector"
+            android:enabled="false"
+            android:foreground="?android:selectableItemBackground"
+            android:text="激 活"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium"/>
+
+        <TextView
+            android:id="@+id/books_activate_hint_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:lineSpacingExtra="@dimen/spacing_nomarl"
+            android:textColor="@color/text_color_primary_light_more"
+            android:textSize="@dimen/font_size_nomarl"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

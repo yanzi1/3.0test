@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/open_course_need_know_bgv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/pop_background"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:gravity="center"
+            android:textSize="@dimen/font_size_large"
+            android:textColor="@color/text_color_primary_dark"
+            android:text="开课须知"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_line"
+            android:layout_marginLeft="@dimen/spacing_large"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_large"
+            android:lineSpacingExtra="5dp"
+            android:textSize="@dimen/font_size_nomarl"
+            android:text="1、请勿一次性开通所有课程，开通未参加相应年度科目的考试，将不能享受“当年考试不过，免费开课”服务。
+\n2、凡已通过考试的科目将不在享受“当年考试不过，免费开课”服务。
+\n3、请谨慎选择本年度需要学习的课程，以便您快速开通进行学习。如有疑问，请致电东奥客服400-627-5566。"
+            />
+
+    </LinearLayout>
+</LinearLayout>

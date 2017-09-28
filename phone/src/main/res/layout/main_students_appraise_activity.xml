@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <include layout="@layout/common_toolbar_layout_no_line"/>
+
+        <include layout="@layout/app_line"/>
+
+        <LinearLayout
+            android:id="@+id/appraise_ratings_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="26dp"
+            android:visibility="gone"
+            android:paddingTop="26dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/appraise_aspect_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="讲义排版美观度:"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/font_size_nomarl"/>
+
+                <RatingBar
+                    android:id="@+id/appraise_star_rb1"
+                    style="@style/MyRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="6dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:stepSize="0.5"/>
+
+                <TextView
+                    android:id="@+id/appraise_score_tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_primary_light_more"
+                    android:textSize="@dimen/font_size_nomarl"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/spacing_xxlarge"
+                android:paddingTop="@dimen/spacing_xxlarge">
+
+                <TextView
+                    android:id="@+id/appraise_aspect_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="老师讲解清晰度:"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/font_size_nomarl"/>
+
+                <RatingBar
+                    android:id="@+id/appraise_star_rb2"
+                    style="@style/MyRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="6dp"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:stepSize="0.5"/>
+
+                <TextView
+                    android:id="@+id/appraise_score_tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_primary_light_more"
+                    android:textSize="@dimen/font_size_nomarl"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/appraise_aspect_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="课程设置合理度:"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/font_size_nomarl"/>
+
+                <RatingBar
+                    android:id="@+id/appraise_star_rb3"
+                    style="@style/MyRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="6dp"
+                   android:isIndicator="true"
+                    android:numStars="5"
+                    android:stepSize="0.5"/>
+
+                <TextView
+                    android:id="@+id/appraise_score_tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_primary_light_more"
+                    android:textSize="@dimen/font_size_nomarl"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/common_root_framelayout"/>
+
+</android.support.design.widget.CoordinatorLayout>

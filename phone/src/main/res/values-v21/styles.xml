@@ -1,0 +1,20 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+       <!-- <item name="android:statusBarColor">@android:color/transparent</item>
+-->
+        <item name="homeAsUpIndicator">@mipmap/btn_nav_back</item>
+
+    </style>
+
+    <style name="x_toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dip_size_50</item>
+        <!--<item name="android:elevation">@dimen/dp_4</item>-->
+        <item name="android:background">@color/white</item>
+    </style>
+</resources>

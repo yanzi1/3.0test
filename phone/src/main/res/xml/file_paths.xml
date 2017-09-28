@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path
+        name="external_storage_root"
+        path="."/>
+    <external-path
+        name="download"
+        path=""/>
+    <!-- updatelib 使用 start -->
+    <files-path
+        name="int_root"
+        path="/" /><!--1、对应内部内存卡根目录：Context.getFileDir()-->
+    <!-- updatelib 使用 end -->
+
+</paths>

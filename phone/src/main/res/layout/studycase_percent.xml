@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/studycase_percent"
+    android:gravity="center"
+    android:paddingTop="20dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/study_nums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="92"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="总任务数"
+            android:textSize="@dimen/font_size_small"
+            android:textColor="@color/text_color_primary" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dip_size_5"
+        android:layout_marginRight="@dimen/dip_size_5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.me.fanyin.zbme.widget.ColorArcProgressBar
+            android:id="@+id/study_case_pb"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            app:back_color="@color/color_accent_3"
+            app:back_width="4dp"
+            app:front_color1="@color/color_accent_2"
+            app:front_width="4dp"
+            app:is_need_content="true"
+            app:is_need_unit="true"
+            app:max_value="100"
+            app:string_unit="完成率"
+            app:total_engle="360" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/study_nums_do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="完成任务数"
+            android:textColor="@color/text_color_primary"
+            android:textSize="@dimen/font_size_small" />
+    </LinearLayout>
+
+
+</LinearLayout>

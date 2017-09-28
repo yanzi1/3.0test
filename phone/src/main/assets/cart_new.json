@@ -1,0 +1,545 @@
+{
+  "msg": "成功",
+  "result": {
+    "checked": false,
+    "checkedNum": 1,
+    "jieShengPrice": "20.00",
+    "total": 2,
+    "venders": [{
+    "checked": false,
+    "id": 1,
+    "jianPrice": 0,
+    "name": "东奥店铺",
+    "promos": [
+      {
+        "fulfill": true,
+        "id": 93,
+        "jianPrice": "10.00",
+        "name": "韩学文满减大促销1",
+        "products": [
+          {
+            "categoryId": 124,
+            "checked": false,
+            "classific": 2,
+            "count": 1,
+            "cxyhs": [
+              {
+                "id": 93,
+                "name": "韩学文满减大促销1"
+              }
+            ],
+            "danJia": "60.00",
+            "goodsCode": "1dd62bd5032644329cfcd23f11d27a3b",
+            "hasCxyh": true,
+            "id": 75,
+            "imgUrl": "/goods/images/20161103/1478159669408090231.jpg",
+            "name": "张洁轻松搞定ERP——薪资管理",
+            "payments": "1,2,3,4,5,6",
+            "shortDesc": "",
+            "venderId": 1,
+            "xiaoJi": "60.00"
+          },
+          {
+            "categoryId": 124,
+            "checked": false,
+            "classific": 2,
+            "count": 1,
+            "cxyhs": [
+              {
+                "id": 93,
+                "name": "韩学文满减大促销1"
+              },
+              {
+                "id": 92,
+                "name": "不使用优惠"
+              }
+            ],
+            "danJia": "60.00",
+            "goodsCode": "1dd62bd5032644329cfcd23f11d27a3b",
+            "hasCxyh": true,
+            "id": 75,
+            "imgUrl": "/goods/images/20161103/1478159669408090231.jpg",
+            "name": "2017初级会计实务",
+            "payments": "1,2,3,4,5,6",
+            "shortDesc": "",
+            "venderId": 1,
+            "xiaoJi": "60.00"
+          }
+        ],
+        "promoPrice": "60.00",
+        "type": 1,
+        "typeName": "满减"
+      },
+      {
+        "allGifts": [
+          {
+            "id": 315,
+            "imgUrl": "/goods/images/20161209/1481250072172002507.jpg",
+            "name": "中级经济法-1209-预售-颜",
+            "price": "12.85",
+            "shortDesc": "中级经济法-1209-预售-颜"
+          },
+          {
+            "id": 312,
+            "imgUrl": "/goods/images/20161209/1481249710711054425.jpg",
+            "name": "图书1209-预售-颜",
+            "price": "10.33",
+            "shortDesc": "图书1209-预售-颜"
+          },
+          {
+            "id": 311,
+            "imgUrl": "/goods/images/20161209/1481249710711054425.jpg",
+            "name": "图书1209-预售-颜2",
+            "price": "10.33",
+            "shortDesc": "图书1209-预售-颜"
+          },
+          {
+            "id": 310,
+            "imgUrl": "/goods/images/20161209/1481249710711054425.jpg",
+            "name": "图书1209-预售-颜3",
+            "price": "10.33",
+            "shortDesc": "图书1209-预售-颜"
+          }
+
+        ],
+        "fulfill": true,
+        "giftNum": 2,
+        "gifts": [
+          {
+            "id": 315,
+            "imgUrl": "/goods/images/20161209/1481250072172002507.jpg",
+            "name": "中级经济法-1209-预售-颜",
+            "price": "12.85",
+            "shortDesc": "中级经济法-1209-预售-颜"
+          },
+          {
+            "id": 312,
+            "imgUrl": "/goods/images/20161209/1481249710711054425.jpg",
+            "name": "图书1209-预售-颜",
+            "price": "10.33",
+            "shortDesc": "图书1209-预售-颜"
+          }
+        ],
+        "id": 228,
+        "jianPrice": "0.00",
+        "name": "满500赠书一本",
+        "products": [
+          {
+            "autoStart": 1,
+            "categoryId": 97,
+            "checked": false,
+            "classific": 2,
+            "count": 1,
+            "cxyhs": [
+              {
+                "id": 109,
+                "name": "满赠测试1"
+              },
+              {
+                "id": 186,
+                "name": "109满200减30"
+              },
+              {
+                "id": 191,
+                "name": "116测试现金券"
+              },
+              {
+                "id": 220,
+                "name": "高端私教免费"
+              },
+              {
+                "id": 221,
+                "name": "高端私教免费 有效"
+              },
+              {
+                "id": 227,
+                "name": "大放送"
+              },
+              {
+                "id": 228,
+                "name": "满500赠书一本"
+              }
+            ],
+            "danJia": "1500.00",
+            "goodsCode": "0770f873825a4abfa65bc0c22c192ed7",
+            "goodsDate": 1483200000000,
+            "hasCxyh": true,
+            "id": 277,
+            "imgUrl": "/goods/images/20161130/1480499210634071084.jpg",
+            "isPackage": 0,
+            "name": "课程-换课",
+            "payments": "1,2,3,4,5,6",
+            "pweight": 0,
+            "shortDesc": "你好",
+            "venderId": 1,
+            "xiaoJi": "1500.00",
+            "yuanJia": "1500.00"
+          }
+        ],
+        "promoPrice": "1500.00",
+        "type": 2,
+        "typeName": "满送"
+      },
+      {
+        "promoPrice": "360.00",
+        "noCheckedNum": null,
+        "count": null,
+        "fulfill": true,
+        "type": 4,
+        "typeName": "买送卡/券",
+        "id": 191,
+        "coupons": [
+          {
+            "period": null,
+            "id": 266,
+            "title": "￥100.0x1",
+            "name": "scx-测试赠送优惠券的出库状态"
+          }
+        ],
+        "name": "116测试现金券",
+        "checkedNum": null,
+        "gifts": null,
+        "allGifts": null,
+        "jianPrice": "0.00",
+        "giftNum": null,
+        "products": [
+          {
+            "pweight": 0,
+            "count": 1,
+            "autoStart": 1,
+            "isPackage": 0,
+            "categoryId": 427,
+            "venderId": 1,
+            "shortDesc": "",
+            "goodsCode": "96fd1ce9b5724572b556055d77b3e999",
+            "imgUrl": "/goods/images/20170223/1487845017563075900.jpg",
+            "id": 402,
+            "goodsDate": "2017-01-01 00:00:00",
+            "name": "2017年中级《中级会计实务》——精品保障班",
+            "isbn": null,
+            "xiaoJi": "360.00",
+            "payments": "1,2",
+            "yuanJia": "600.00",
+            "classific": 2,
+            "danJia": "360.00",
+            "checked": true,
+            "channel": null,
+            "cxyhs": [
+              {
+                "id": 109,
+                "name": "满赠测试1"
+              },
+              {
+                "id": 186,
+                "name": "109满200减30"
+              },
+              {
+                "id": 191,
+                "name": "116测试现金券"
+              },
+              {
+                "id": 220,
+                "name": "高端私教免费"
+              },
+              {
+                "id": 221,
+                "name": "高端私教免费 有效"
+              },
+              {
+                "id": 227,
+                "name": "大放送"
+              }
+            ],
+            "hasCxyh": true
+          }
+        ],
+        "opt": null,
+        "allCoupons": null
+      },
+      {
+        "promoPrice": "390.00",
+        "noCheckedNum": null,
+        "count": null,
+        "fulfill": true,
+        "type": 5,
+        "typeName": "买送商品",
+        "id": 231,
+        "coupons": null,
+        "name": "五月份买就送礼品一份",
+        "checkedNum": null,
+        "gifts": [
+          {
+            "imgUrl": "/goods/images/20170327/1490593917522040147.jpg",
+            "id": 462,
+            "shortDesc": "2017年注会《会计》-轻松过关一",
+            "price": "56.00",
+            "count": null,
+            "name": "2017年注会《会计》-轻松过关一"
+          },
+          {
+            "imgUrl": "/goods/images/20170406/1491462050724083722.jpg",
+            "id": 495,
+            "shortDesc": "注会-会计图书yl测试",
+            "price": "23.00",
+            "count": null,
+            "name": "注会-会计图书yl测试"
+          }
+        ],
+        "allGifts": null,
+        "jianPrice": "0.00",
+        "giftNum": 0,
+        "products": [
+          {
+            "pweight": 0,
+            "count": 1,
+            "autoStart": 1,
+            "isPackage": 0,
+            "categoryId": 97,
+            "venderId": 1,
+            "shortDesc": "",
+            "goodsCode": "0c3d466e70ac4be6b628dd8af51c5168",
+            "imgUrl": "/goods/images/20170223/1487846569112039126.jpg",
+            "id": 423,
+            "goodsDate": "2017-01-01 00:00:00",
+            "name": "2017年注册会计师《会计》——精品保障班",
+            "isbn": null,
+            "xiaoJi": "390.00",
+            "payments": "1,2",
+            "yuanJia": "650.00",
+            "classific": 2,
+            "danJia": "390.00",
+            "checked": false,
+            "channel": null,
+            "cxyhs": [
+              {
+                "id": 231,
+                "name": "五月份买就送礼品一份"
+              },
+              {
+                "id": 109,
+                "name": "满赠测试1"
+              },
+              {
+                "id": 186,
+                "name": "109满200减30"
+              },
+              {
+                "id": 191,
+                "name": "116测试现金券"
+              },
+              {
+                "id": 220,
+                "name": "高端私教免费"
+              },
+              {
+                "id": 221,
+                "name": "高端私教免费 有效"
+              },
+              {
+                "id": 227,
+                "name": "大放送"
+              }
+            ],
+            "hasCxyh": true
+          }
+        ],
+        "opt": null,
+        "allCoupons": null
+      },
+      {
+        "fulfill": true,
+        "id": 93,
+        "jianPrice": "10.00",
+        "name": "韩学文满减大促销",
+        "products": [
+          {
+            "categoryId": 124,
+            "checked": false,
+            "classific": 2,
+            "count": 1,
+            "cxyhs": [
+              {
+                "id": 93,
+                "name": "韩学文满减大促销"
+              }
+            ],
+            "danJia": "60.00",
+            "goodsCode": "1dd62bd5032644329cfcd23f11d27a3b",
+            "hasCxyh": true,
+            "id": 75,
+            "imgUrl": "/goods/images/20161103/1478159669408090231.jpg",
+            "name": "2016审计",
+            "payments": "1,2,3,4,5,6",
+            "shortDesc": "",
+            "venderId": 1,
+            "xiaoJi": "60.00"
+          }
+        ],
+        "promoPrice": "60.00",
+        "type": 1,
+        "typeName": "满减"
+      },
+      {
+        "fulfill": true,
+        "id": 93,
+        "jianPrice": "10.00",
+        "name": "满赠大促销",
+        "products": [
+          {
+            "categoryId": 124,
+            "checked": false,
+            "classific": 2,
+            "count": 1,
+            "cxyhs": [],
+            "danJia": "60.00",
+            "goodsCode": "1dd62bd5032644329cfcd23f11d27a3b",
+            "hasCxyh": false,
+            "id": 75,
+            "imgUrl": "/goods/images/20161103/1478159669408090231.jpg",
+            "name": "无优惠商品-审计",
+            "payments": "1,2,3,4,5,6",
+            "shortDesc": "",
+            "venderId": 1,
+            "xiaoJi": "60.00"
+          },
+          {
+            "categoryId": 124,
+            "checked": false,
+            "classific": 2,
+            "count": 1,
+            "cxyhs": [],
+            "danJia": "60.00",
+            "goodsCode": "1dd62bd5032644329cfcd23f11d27a3b",
+            "hasCxyh": false,
+            "id": 75,
+            "imgUrl": "/goods/images/20161103/1478159669408090231.jpg",
+            "name": "无优惠商品-税法",
+            "payments": "1,2,3,4,5,6",
+            "shortDesc": "",
+            "venderId": 1,
+            "xiaoJi": "60.00"
+          },
+          {
+            "categoryId": 124,
+            "checked": false,
+            "classific": 2,
+            "count": 2,
+            "cxyhs": [],
+            "danJia": "60.00",
+            "goodsCode": "1dd62bd5032644329cfcd23f11d27a3b",
+            "hasCxyh": false,
+            "id": 75,
+            "imgUrl": "/goods/images/20161103/1478159669408090231.jpg",
+            "name": "无优惠商品-会计实务",
+            "payments": "1,2,3,4,5,6",
+            "shortDesc": "",
+            "venderId": 1,
+            "xiaoJi": "60.00"
+          }
+        ],
+        "promoPrice": "60.00",
+        "type": -1,
+        "typeName": "无优惠"
+      }
+    ]
+},
+  {
+    "checked": false,
+    "id": 2,
+    "jianPrice": 0,
+    "name": "东奥移动店铺",
+    "promos": [
+      {
+        "fulfill": true,
+        "id": 93,
+        "jianPrice": "10.00",
+        "name": "满赠大促销2",
+        "products": [
+          {
+            "categoryId": 123,
+            "checked": true,
+            "classific": 2,
+            "count": 1,
+            "cxyhs": [
+              {
+                "id": 93,
+                "name": "满赠大促销"
+              }
+            ],
+            "danJia": "60.00",
+            "goodsCode": "1dd62bd5032644329cfcd23f11d27a3b",
+            "hasCxyh": true,
+            "id": 75,
+            "imgUrl": "/goods/images/20161103/1478159669408090231.jpg",
+            "name": "张洁轻松搞定ERP——薪资管理",
+            "payments": "1,2,3,4,5,6",
+            "shortDesc": "",
+            "venderId": 2,
+            "xiaoJi": "60.00"
+          },
+          {
+            "categoryId": 124,
+            "checked": false,
+            "classific": 2,
+            "count": 1,
+            "cxyhs": [
+              {
+                "id": 93,
+                "name": "满赠大促销2"
+              }
+            ],
+            "danJia": "60.00",
+            "goodsCode": "1dd62bd5032644329cfcd23f11d27a3b",
+            "hasCxyh": true,
+            "id": 75,
+            "imgUrl": "/goods/images/20161103/1478159669408090231.jpg",
+            "name": "张洁轻松搞定ERP——薪资管理2",
+            "payments": "1,2,3,4,5,6",
+            "shortDesc": "",
+            "venderId": 2,
+            "xiaoJi": "60.00"
+          }
+        ],
+        "promoPrice": "60.00",
+        "type": 1,
+        "typeName": "满减"
+      },
+      {
+        "fulfill": true,
+        "id": -1,
+        "jianPrice": "10.00",
+        "name": "满赠大促销",
+        "products": [
+          {
+            "categoryId": 124,
+            "checked": false,
+            "classific": 2,
+            "count": 1,
+            "cxyhs": [
+              {
+                "id": 93,
+                "name": "满赠大促销"
+              }
+            ],
+            "danJia": "60.00",
+            "goodsCode": "1dd62bd5032644329cfcd23f11d27a3b",
+            "hasCxyh": true,
+            "id": 75,
+            "imgUrl": "/goods/images/20161103/1478159669408090231.jpg",
+            "name": "张洁轻松搞定ERP——薪资管理",
+            "payments": "1,2,3,4,5,6",
+            "shortDesc": "",
+            "venderId": 2,
+            "xiaoJi": "60.00"
+          }
+        ],
+        "promoPrice": "60.00",
+        "type": 1,
+        "typeName": "满赠"
+      }
+    ]
+  }],
+    "zongPrice": "80.00"
+  },
+  "status": "1"
+}

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/x_page">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="4dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:background="@color/color_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_color_primary"
+            android:layout_marginLeft="10dp"
+            android:text="下载与播放设置"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/setting_close"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/btn_nav_close"
+            android:gravity="right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/divider_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/play_setting_speed"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/selectable_item_background"
+            android:padding="@dimen/spacing_xmedium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:text="默认播放速度"
+                android:textColor="@color/text_color_primary_dark"
+                android:textSize="@dimen/spacing_xlarge" />
+
+            <ImageView
+                android:id="@+id/setting_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ico_filter" />
+
+            <TextView
+                android:id="@+id/setting_speed_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_color_primary"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:layout_toLeftOf="@+id/setting_speed"
+                android:text="1.2x"
+                android:textSize="@dimen/spacing_large" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/x_line"
+            android:layout_marginLeft="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/play_setting_dd"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/selectable_item_background"
+            android:padding="@dimen/spacing_xmedium">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:textColor="@color/text_color_primary_dark"
+                android:text="默认播放/下载清晰度"
+                android:textSize="@dimen/spacing_xlarge" />
+
+            <ImageView
+                android:id="@+id/setting_quality_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ico_filter" />
+
+            <TextView
+                android:id="@+id/setting_quality_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/text_color_primary"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@+id/setting_quality_img"
+                android:text="视频"
+                android:textSize="@dimen/spacing_large" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/x_line"
+            android:layout_marginLeft="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/spacing_xmedium"
+            android:paddingRight="@dimen/spacing_xmedium"
+            android:background="@drawable/selectable_item_background">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:text="仅WiFi环境下下载"
+                android:textColor="@color/text_color_primary_dark"
+                android:textSize="@dimen/spacing_xlarge" />
+
+            <CheckedTextView
+                android:id="@+id/play_download_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/select_checkbox" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

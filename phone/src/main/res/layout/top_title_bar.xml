@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~  * Copyright (C) 2015 by  xunice@qq.com
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  * http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  */
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/top_title_bar_layout"
+    android:background="@color/transparent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/top_title_right"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:background="?android:selectableItemBackground"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/btn_nav_back_white"/>
+    <TextView
+        android:id="@+id/top_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="70dp"
+        android:gravity="center"
+        android:text="标题"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_large"/>
+    <View
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_size_0.5"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

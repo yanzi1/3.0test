@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--东奥名师-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/selectable_item_background"
+        android:paddingLeft="@dimen/spacing_large">
+
+        <ImageView
+            android:id="@+id/maintype_type3_item3_iv"
+            style="@style/MainTypeImage4"
+            android:layout_marginBottom="@dimen/spacing_xmedium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/spacing_xmedium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/maintype_type3_item3_teachername"
+                style="@style/MainTypeItemTitleLargeTV"
+                android:maxLines="1"
+                android:paddingRight="@dimen/spacing_large"
+                android:text="@string/test"/>
+
+            <TextView
+                android:id="@+id/maintype_type3_item3_pro"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/spacing_xmedium"
+                android:layout_marginTop="@dimen/spacing_xmedium"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="3"
+                android:paddingRight="@dimen/spacing_large"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/font_size_small"/>
+
+            <View
+                android:id="@+id/app_line"
+                style="@style/full_line"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

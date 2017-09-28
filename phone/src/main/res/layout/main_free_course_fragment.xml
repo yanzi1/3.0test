@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/free_course_nsv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<include layout="@layout/common_recyclerview_head_more"/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/free_course_summary_tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:lineSpacingMultiplier="1.2"-->
+            <!--android:padding="@dimen/spacing_large"-->
+            <!--android:textColor="@color/text_color_primary_dark"/>-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/free_course_appraise_rcv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/x_bg"
+                android:paddingBottom="@dimen/spacing_large"
+                android:visibility="gone"
+                android:nestedScrollingEnabled="false">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <FrameLayout
+                android:id="@+id/recommended_fl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <include layout="@layout/common_recyclerview_head_more"/>
+
+</FrameLayout>

@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              style="@style/x_page"
+              tools:context="com.me.fanyin.zbme.views.main.MainFragment">
+
+    <View
+        android:id="@+id/status_bar_fix"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        />
+
+    <com.me.fanyin.zbme.widget.CommonToolbar
+        android:id="@+id/toolbar"
+        style="@style/x_toolbar"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:titleColor="@color/text_color_primary_dark"
+        android:elevation="0dp"
+        app:titleSize="@dimen/font_size_large" />
+
+    <include layout="@layout/common_root_framelayout"/>
+
+
+</LinearLayout>

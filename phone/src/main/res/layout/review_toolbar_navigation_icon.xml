@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+           android:id="@+id/review_menu_navigation_iv"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:clickable="true"
+           style="@android:style/Widget.ActionButton"
+           android:paddingStart="0dp"
+           android:paddingEnd="0dp"
+           android:src="@mipmap/btn_nav_content"/>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/recyclerview_head_more_ll"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/selectable_item_background"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <View
+        android:layout_width="4dp"
+        android:layout_height="15dp"
+        android:background="@color/color_primary"/>
+
+    <TextView
+        android:id="@+id/recyclerview_head_title_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="学员评价"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/font_size_medium"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/recyclerview_head_more_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/selectable_item_background"
+        android:clickable="true"
+        android:drawableRight="@mipmap/ico_more"
+        android:gravity="center"
+        android:visibility="gone"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_large"
+        android:text="全部评价(0)"
+        android:textColor="@color/text_second_color_primary"
+        android:textSize="@dimen/font_size_nomarl"/>
+
+</LinearLayout>
+
+

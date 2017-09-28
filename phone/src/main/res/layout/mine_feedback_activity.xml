@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar_layout"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/feedback_title_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xmedium"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:background="@drawable/mine_edit_bg"
+                android:hint="标题 (30个字符以内)"
+                android:maxLength="30"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/spacing_xmedium"
+                android:paddingRight="@dimen/spacing_xmedium"
+                android:paddingTop="10dp"
+                android:textColor="@color/text_color_primary_dark"
+                android:textColorHint="@color/text_color_primary_light_more"
+                android:textSize="@dimen/font_size_nomarl"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/feedback_content_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/spacing_large"
+                    android:layout_marginRight="@dimen/spacing_large"
+                    android:background="@drawable/mine_edit_bg"
+                    android:gravity="left|top"
+                    android:hint="请留下您的宝贵意见!"
+                    android:maxLength="500"
+                    android:minLines="10"
+                    android:paddingBottom="30dp"
+                    android:paddingLeft="@dimen/spacing_xmedium"
+                    android:paddingRight="@dimen/spacing_xmedium"
+                    android:paddingTop="@dimen/spacing_large"
+                    android:lineSpacingExtra="8dp"
+                    android:textColor="@color/text_color_primary_dark"
+                    android:textColorHint="@color/text_color_primary_light_more"
+                    android:textSize="@dimen/font_size_nomarl"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="@dimen/spacing_xmedium"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/feedback_words_number_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_small"
+                        android:textColor="@color/color_accent_2"
+                        android:text="0"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_small"
+                        android:textColor="@color/text_color_primary_hint"
+                        android:text=" / 500"/>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/feedback_submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/widget_color_primary_btn_bg_selector"
+        android:foreground="?android:selectableItemBackground"
+        android:enabled="false"
+        android:text="提 交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_medium"/>
+
+</LinearLayout>

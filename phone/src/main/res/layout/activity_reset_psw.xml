@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.me.fanyin.zbme.views.mine.settings.ResetPswActivity">
+
+    <include layout="@layout/common_toolbar_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingTop="40dp"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_large"
+        >
+
+        <LinearLayout
+            android:id="@+id/input_forward_psw_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <EditText
+                    android:id="@+id/input_forward_psw_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:lines="1"
+                    android:maxLength="20"
+                    android:inputType="textPassword"
+                    android:textColor="@color/text_color_primary_dark"
+                    android:textSize="@dimen/font_size_medium"
+                    android:hint="请输入原密码"
+                    android:textColorHint="@color/text_color_primary"
+                    />
+
+                <ImageView
+                    android:id="@+id/input_forward_psw_visiable_iv"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line"
+                />
+
+            <TextView
+                android:id="@+id/input_forward_error_tv"
+                style="@style/x_user_text"
+                android:layout_marginTop="@dimen/spacing_nomarl"
+                android:textSize="@dimen/font_size_small"
+                android:textColor="@color/color_accent"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/input_psw_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <com.me.fanyin.zbme.widget.BanPasteEdittext
+                    android:id="@+id/input_psw_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:lines="1"
+                    android:textColor="@color/text_color_primary_dark"
+                    android:textSize="@dimen/font_size_medium"
+                    android:hint="@string/input_psw"
+                    android:textColorHint="@color/text_color_primary"
+                    />
+
+                <ImageView
+                    android:id="@+id/psw_visiable_iv1"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="25dp"
+                android:gravity="center_vertical"
+                >
+                <com.me.fanyin.zbme.widget.BanPasteEdittext
+                    android:id="@+id/input_again_psw_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:lines="1"
+                    android:inputType="textPassword"
+                    android:textColor="@color/text_color_primary_dark"
+                    android:textSize="@dimen/font_size_medium"
+                    android:hint="@string/again_input_psw"
+                    android:textColorHint="@color/text_color_primary"
+                    />
+
+                <ImageView
+                    android:id="@+id/psw_visiable_iv"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line"
+                />
+
+            <TextView
+                android:id="@+id/psw_error_tv"
+                style="@style/x_user_text"
+                android:layout_marginTop="@dimen/spacing_nomarl"
+                android:textSize="@dimen/font_size_small"
+                android:textColor="@color/color_accent"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next_bt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/spacing_xlarge"
+            android:enabled="false"
+            style="?android:borderlessButtonStyle"
+            android:background="@drawable/login_bt_confirm_enable_selector"
+            android:textSize="@dimen/font_size_medium"
+            android:textColor="@color/white"
+            android:text="@string/next_step"
+            />
+    </LinearLayout>
+</LinearLayout>

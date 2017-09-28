@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_large"
+        android:paddingTop="@dimen/spacing_xxlarge"
+        android:paddingBottom="@dimen/spacing_xxlarge">
+
+        <TextView
+            android:id="@+id/errata_detail_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_primary_dark"
+            android:textSize="@dimen/font_size_medium"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/spacing_large">
+
+            <TextView
+                android:id="@+id/errata_detail_books_tv"
+                style="@style/MainTypeItemTimeTV"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textSize="@dimen/font_size_nomarl"/>
+
+            <TextView
+                android:id="@+id/errata_detail_time_tv"
+                style="@style/MainTypeItemTimeTV"
+                android:textSize="@dimen/font_size_nomarl"
+                android:layout_marginLeft="24dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="原文"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium"
+            android:background="@drawable/main_books_errata_source_tab_bg"/>
+
+        <WebView
+            android:id="@+id/errata_detail_source_wbv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:textSize="@dimen/font_size_nomarl"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="更正为"
+            android:gravity="center"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium"
+            android:background="@drawable/main_books_errata_target_tab_bg"/>
+
+        <WebView
+            android:id="@+id/errata_detail_target_wbv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:textSize="@dimen/font_size_nomarl"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

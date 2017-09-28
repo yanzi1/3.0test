@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="bing_have_data_colors">
+        <item>0xfff55454</item>
+        <item>0xfffba62e</item>
+        <item>0xffffce39</item>
+        <item>0xff53bfb6</item>
+        <item>0xff69a8ee</item>
+        <item>0xff2467b1</item>
+
+    </array>
+    <array name="bing_no_data_colors">
+        <item>0xffc1c1c1</item>
+        <item>0xffdad7d5</item>
+        <item>0xffe2dfcf</item>
+        <item>0xffced6d5</item>
+        <item>0xffd7e1e4</item>
+        <item>0xffd1d7df</item>
+    </array>
+</resources>

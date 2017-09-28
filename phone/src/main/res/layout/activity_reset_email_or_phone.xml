@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/common_toolbar_layout"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingTop="40dp"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_large"
+        >
+
+        <LinearLayout
+            android:id="@+id/your_phone_or_email_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/your_phone_or_email_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您的手机号:"
+                android:textSize="17sp"
+                android:textColor="@color/text_color_primary_dark"
+                />
+
+            <TextView
+                android:id="@+id/your_phone_or_email_content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/spacing_medium"
+                android:text="1571214214"
+                android:textSize="17sp"
+                android:textColor="@color/color_primary"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/input_phone_or_email_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <com.dongao.kaoqian.phone.widget.PhoneEditText
+                    android:id="@+id/input_phone_or_email_et"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:lines="1"
+                    android:inputType="number"
+                    android:textColor="@color/text_color_primary_dark"
+                    android:textSize="@dimen/font_size_medium"
+                    android:hint="@string/please_input_cell_phone_number"
+                    android:textColorHint="@color/text_color_primary"
+                    />
+
+                <ImageView
+                    android:id="@+id/phone_or_email_clear_iv"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:visibility="invisible"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_line"
+                />
+
+            <TextView
+                android:id="@+id/phone_or_email_error_tv"
+                style="@style/x_user_text"
+                android:layout_marginTop="@dimen/spacing_nomarl"
+                android:textSize="@dimen/font_size_small"
+                android:textColor="@color/color_accent"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/input_verification_code_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/verification_code_pn_tv"
+                style="@style/x_text"
+                android:textColor="@color/text_color_primary_dark"
+                android:textSize="@dimen/font_size_small"
+                android:text="@string/verification_code_send_to"
+                />
+
+            <com.dongao.kaoqian.phone.widget.VerificationEditText
+                android:id="@+id/verification_code_et"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/spacing_xmedium"
+                android:background="@drawable/register_verification_code_et_icon"
+                android:inputType="number"
+                android:cursorVisible="false"
+                app:codeLength="6"
+                app:codeTextColor="@color/text_color_primary_dark"
+                app:codeTextSize="@dimen/font_size_nomarl"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                >
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/verification_code_time_tv"
+                        style="@style/x_text"
+                        android:textSize="@dimen/font_size_small"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/verification_code_error_tv"
+                    style="@style/x_text"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/color_accent"
+                    android:textSize="@dimen/font_size_small"
+                    android:text="@string/verification_code_error"
+                    android:visibility="invisible"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next_bt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/spacing_xlarge"
+            style="?android:borderlessButtonStyle"
+            android:background="@drawable/login_bt_confirm_enable_selector"
+            android:textSize="@dimen/font_size_medium"
+            android:textColor="@color/white"
+            android:text="@string/next_step"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

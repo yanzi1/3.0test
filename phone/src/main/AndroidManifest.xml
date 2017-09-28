@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.me.fanyin.zbme">
+
+    <!-- 网络权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 获取设备唯一标识 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- 获取访问用户账户名的权限用以精准匹配标签(可选) -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 微信权限 -->
+    <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> -->
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE"/> -->
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/> -->
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <!-- 二维码扫描权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- 小能SDK权限 -->
+    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <!--<uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+
+    <!-- 版本更新权限 -->
+    <!--<uses-permission android:name="android.permission.INTERNET"/>-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>-->
+    <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>-->
+
+    <application
+        android:name="com.me.fanyin.zbme.base.PhoneAppContext"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MMTheme.Basic">
+        <activity
+            android:name="com.me.fanyin.zbme.views.WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.me.fanyin.zbme.views.PermissionsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.GuideActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.user.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.MainDrawerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.main.activity.MainTypeChangeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.me.fanyin.zbme.views.exam.ExamShowTableActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.me.fanyin.zbme.base.CommonWebViewBuyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.main.activity.CourseTypeChangeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.main.activity.SubpageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.main.activity.SubwebActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.main.activity.FamousTeacherActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.main.activity.BooksErrataDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.main.activity.BooksErrataActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.main.activity.StudentsAppraiseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.download.MyDownloadActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.download.DownloadManagerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.download.MyDownloadCourseActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.download.DownloadMoreActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.user.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.user.GetBackPswActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.draw.PaintPaperActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.ExamPaperActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.ExamActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.ExamQuestionFeedBackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.ExamPaperReportActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.ExamPreviousPaperActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.ExamChapterPracticeListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.course.play.PlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.course.play.SystemPlayer.PlayerActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.course.play.courselist.CourseListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.errors.ErrorsStatisticActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.address.SelectAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.address.EditAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.invoice.ApplyInvoiceActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.collect.CollectActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.settings.SettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.information.PersonalInformationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.message.MessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.settings.DownloadAndPlaySettingActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.settings.AboutUsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.invoice.MyInvoiceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/transparentFrameWindowStyle"/>
+        <activity
+            android:name="com.me.fanyin.zbme.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/transparentFrameWindowStyle"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.course.notes.NotesActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.course.play.audition.AuditionPlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.course.notes.NoteDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.invoice.InvoiceDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.booksactivate.BooksActivateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.booksactivate.BooksActivateDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.account.MyAccountActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.notes.MyNotesActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.learningrecord.LearningRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.settings.FeedbackActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name="com.me.fanyin.zbme.views.course.statiscal.StudyStatiscialActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.me.fanyin.zbme.views.course.statiscal.KnowledgePointsStatiscialActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <service android:name="com.me.fanyin.zbme.views.course.play.widget.PlayService"/>
+
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.errors.ErrorsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.answer.AnswerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.coupon.MyCouponActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.settings.AccountSafeActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.account.CashAccountActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.settings.ResetPswActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.settings.ResetEmailOrPhoneActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.main.activity.CaptureActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.main.activity.CaptureCourseListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.account.MyAccountDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.mine.openclass.OpenClassListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.base.CommonWebViewActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.course.SystemChangeActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"/>
+
+        <meta-data
+            android:name="com.me.fanyin.zbme.views.main.fragemnt.utils.MyGlideModule"
+            android:value="GlideModule"/>
+
+        <meta-data android:value="597091bd1c5dd024ad0000c7" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="dongao" android:name="UMENG_CHANNEL"/>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="92fe36d4cf54bac970119c19ccdfe8b9" />
+
+        <!-- 7.0第三方app打开文件用 pdf -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.me.fanyin.zbme.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity
+            android:name="com.me.fanyin.zbme.widget.TokenErrorActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:theme="@style/MyDialogActivityStyle"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity android:name="com.me.fanyin.zbme.views.course.statiscal.StatiscalDetailActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name="com.me.fanyin.zbme.views.exam.ExamRankingActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- ************************** 小能SDK  start ************************** -->
+        <activity
+            android:name="com.me.fanyin.zbme.views.course.studyplan.StudyCaseActivity"
+            android:screenOrientation="portrait"/>
+
+
+
+    </application>
+
+</manifest>

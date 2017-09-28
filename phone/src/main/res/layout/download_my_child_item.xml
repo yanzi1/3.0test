@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/spacing_large">
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox"
+        style="@style/x_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:clickable="false" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="105dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/img_default_course" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/spacing_xmedium"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_classname"
+            style="@style/x_text_dark"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:gravity="left"
+            android:maxLines="2"
+            android:textSize="@dimen/font_size_nomarl"
+            tools:text="发地方的发放但是发生反而但是发生地方地方地方的是否的是否但是"
+            android:singleLine="false"
+            android:text="" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_count"
+            style="@style/x_text"
+            android:textSize="@dimen/font_size_nomarl"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="14dp"
+            android:gravity="left"
+            android:lines="1"
+            tools:text="发地方的发放但是发生反而但是发生地方地方地方的是否的是否但是"
+            android:text=""
+            android:textColor="@color/text_color_primary_light_more" />
+
+        <View
+            style="@style/full_line"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/ico_more"
+        android:layout_marginEnd="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
+

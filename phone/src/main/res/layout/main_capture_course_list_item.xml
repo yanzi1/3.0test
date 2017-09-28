@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/x_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:background="@drawable/mine_card_item_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/capture_course_item_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_large"
+            android:text="第三章 第二讲 支付结算法律制度达瓦大挖都挖达瓦"
+            android:textColor="@color/text_color_primary_dark"
+            android:textSize="@dimen/font_size_medium"/>
+
+        <TextView
+            android:id="@+id/capture_course_item_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/spacing_xlarge"
+            android:paddingLeft="@dimen/spacing_large"
+            android:paddingRight="@dimen/spacing_large"
+            android:text="13:30 - 45:50"
+            android:textColor="@color/text_color_primary_light_more"
+            android:textSize="@dimen/font_size_nomarl"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spacing_xxsmall"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:background="@color/divider_line"/>
+
+        <LinearLayout
+            android:id="@+id/capture_course_item_continu_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selectable_item_bottom_round_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/spacing_xmedium"
+            android:paddingLeft="@dimen/spacing_large"
+            android:paddingRight="@dimen/spacing_large"
+            android:paddingTop="@dimen/spacing_xmedium">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ico_xuexijilu_jixubofnag"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:drawableRight="@mipmap/ico_more"
+                android:gravity="center_vertical"
+                android:text="继续播放"
+                android:textColor="@color/text_color_primary_dark"
+                android:textSize="@dimen/font_size_medium"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+        android:id="@+id/capture_course__item_sp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_xxmedium"/>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/x_page"
+    tools:context="com.me.fanyin.zbme.views.course.statiscal.StatiscalDetailActivity">
+
+
+    <com.me.fanyin.zbme.widget.CommonToolbar
+        android:id="@+id/toolbar"
+        style="@style/x_toolbar"
+        app:titleColor="@color/text_color_primary_dark"
+        app:titleSize="@dimen/font_size_large">
+
+        <com.me.fanyin.zbme.widget.dropdown.DropDownMenuTitle
+            android:id="@+id/titleMenuView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingEnd="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingStart="5dp"
+            app:text_max_length="11"
+            app:selectedColor="@color/text_color_primary_dark"
+            app:selectedIcon="@mipmap/ico_morechose"
+            app:text_size="@dimen/font_size_large"
+            app:unselectedColor="@color/text_color_primary_dark"
+            app:unselectedIcon="@mipmap/ico_morechose" />
+
+    </com.me.fanyin.zbme.widget.CommonToolbar>
+
+    <include layout="@layout/app_line"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/common_root_framelayout"/>
+
+        <com.me.fanyin.zbme.widget.dropdown.DropDownMenuLayout
+            android:id="@+id/menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+
+</LinearLayout>

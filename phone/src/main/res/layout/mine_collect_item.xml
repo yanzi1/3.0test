@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/collect_item_fl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/collect_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_large"
+        android:paddingBottom="@dimen/spacing_xlarge"
+        android:paddingTop="@dimen/spacing_xlarge"
+        android:ellipsize="end"
+        android:background="@drawable/selectable_item_background"
+        android:gravity="center_vertical"
+        android:lineSpacingMultiplier="1.1"
+        android:maxLines="2"
+        android:textColor="@color/text_color_primary_dark"
+        android:textSize="@dimen/font_size_medium"/>
+
+    <!--<org.sufficientlysecure.htmltextview.HtmlTextView-->
+        <!--android:id="@+id/collect_item_tv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:paddingLeft="@dimen/spacing_large"-->
+        <!--android:paddingRight="@dimen/spacing_large"-->
+        <!--android:paddingBottom="@dimen/spacing_xlarge"-->
+        <!--android:paddingTop="@dimen/spacing_xlarge"-->
+        <!--android:ellipsize="end"-->
+        <!--android:isScrollContainer="false"-->
+        <!--android:longClickable="false"-->
+        <!--android:textIsSelectable="false"-->
+        <!--android:background="@drawable/selectable_item_background"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:lineSpacingMultiplier="1.1"-->
+        <!--android:maxLines="2"-->
+        <!--android:textColor="@color/text_color_primary_dark"-->
+        <!--android:textSize="@dimen/font_size_medium"/>-->
+
+    <include layout="@layout/app_line_order_bottom"/>
+
+</FrameLayout>

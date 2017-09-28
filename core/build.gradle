@@ -1,0 +1,69 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+}
+
+//把所有用到的都放到这里面引用
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile deps.appcompatV7
+    compile deps.design
+    compile deps.supportV4
+    compile deps.recyclerviewV7
+    compile deps.rxjava2
+    compile deps.retrofit
+    compile deps.rxbinding
+    //compile deps.retrofitAdapterRxjava //会报1.x和2.x不兼容的问题
+    compile deps.retrofitconverterGson
+    compile deps.retrofitConverterScalars
+    compile deps.rxandroid2
+    compile deps.retrofitAdapterRxjava2
+//    compile deps.rxlifecycle
+//    compile deps.rxlifecycleComponents
+//    compile deps.fresco
+    compile deps.okhttp
+    compile deps.okhttpLoggingInterceptor
+    compile deps.httpcore
+    compile deps.eventBus
+    compile deps.fastjson
+    compile deps.brvah
+    compile deps.buglycrashreport
+
+    compile deps.buglynativecrashreport
+    compile deps.logger
+//    compile deps.timber
+    //Development
+    compile deps.leakCanary
+    compile deps.multidex
+    compile files('libs/db-1.0.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/alipaySdk-20160516.jar')
+    compile files('libs/tbs_sdk.jar')
+    compile project(':share')
+}

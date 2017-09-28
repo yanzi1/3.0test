@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/review_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_size_50"
+            android:background="@color/white"
+            app:title="">
+
+            <TextView
+                android:id="@+id/review_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/text_color_primary_dark"
+                android:textSize="20sp"
+                android:text="复习包"/>
+
+        </android.support.v7.widget.Toolbar>
+
+        <include layout="@layout/app_line"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/review_dl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_root_framelayout"/>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/review_navigation_nv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|bottom"
+            android:layout_marginLeft="40dp"
+            android:scrollbars="none"
+            android:background="#f4ffffff"
+            android:fitsSystemWindows="true">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/review_navigation_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4ffffff"
+                app:layoutManager="LinearLayoutManager">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

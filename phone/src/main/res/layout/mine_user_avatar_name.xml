@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mine_head_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="24dp"
+    android:paddingLeft="@dimen/spacing_xxlarge"
+    android:orientation="horizontal"
+    app:layout_collapseMode="parallax"
+    app:layout_collapseParallaxMultiplier="0.2"
+    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+    <ImageView
+        android:id="@+id/mine_avatar_iv"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:background="@mipmap/ico_avatar_bg"
+        android:padding="3dp"
+        android:src="@mipmap/ico_avatar_weidenglu"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/spacing_xlarge"
+        android:paddingRight="@dimen/spacing_large">
+
+        <TextView
+            android:id="@+id/mine_username_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small"
+            android:clickable="true"
+            android:text="登录/注册"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium"/>
+
+        <TextView
+            android:id="@+id/mine_lv_tv"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="23dp"
+            android:layout_marginTop="@dimen/spacing_nomarl"
+            android:textColor="#a87600"
+            android:textSize="@dimen/font_size_small"
+            android:maxLines="1"
+            android:background="@mipmap/img_bg_lv"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mine_more_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="@dimen/spacing_large"
+        android:src="@mipmap/ico_more_white"/>
+
+
+</LinearLayout>

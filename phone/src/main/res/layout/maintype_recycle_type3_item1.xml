@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--热点资讯-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/selectable_item_background"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/spacing_large"
+        >
+
+        <ImageView
+            android:id="@+id/maintype_type3_item1_iv"
+            style="@style/MainTypeImage2"
+            android:layout_marginBottom="@dimen/spacing_xmedium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/spacing_xmedium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/maintype_type3_item1_title"
+                style="@style/MainTypeItemTitleSmallTV"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:paddingRight="@dimen/spacing_large"
+                android:layout_weight="1"
+                android:lineSpacingMultiplier="1"
+                android:maxLines="2"
+                android:textSize="@dimen/font_size_xnomarl"
+                android:text="@string/test"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xmedium"
+                android:layout_marginTop="@dimen/spacing_nomarl"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/spacing_large">
+
+                <TextView
+                    android:id="@+id/maintype_type3_item1_type"
+                    style="@style/MainTypeItemTypeTV"
+                    android:text="@string/test"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/maintype_type3_item1_time"
+                    style="@style/MainTypeItemTimeTV"
+                    android:text="@string/test"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/app_line"
+                style="@style/full_line"
+               />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

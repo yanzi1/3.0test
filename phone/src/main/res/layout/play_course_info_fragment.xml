@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+    	android:paddingLeft="30dp"
+    	android:paddingRight="30dp"
+    	android:visibility="gone"
+        android:orientation="vertical">
+        <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="会计基础工作规范"
+            android:textColor="#333333"
+            android:textSize="@dimen/font_size_nomarl"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="课节：共四讲"
+            android:textColor="#888999"
+            android:layout_marginTop="25dp"
+            android:textSize="@dimen/font_size_nomarl"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="时长：187分钟"
+            android:textColor="#888999"
+            android:layout_marginTop="2dp"
+            android:textSize="@dimen/font_size_nomarl"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="讲师：郭守杰"
+            android:textColor="#888999"
+            android:layout_marginTop="2dp"
+            android:textSize="@dimen/font_size_nomarl"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="    会计是以货币为主要计量单位，对企事业、机关单位或其他经济组织的经济活动进行连续、系统、全面地反映和监督的一项经济管理活动，也是经济管理工作。
+从不同角度考察会计，对会计本质得出不同的认识。这些认识可概括为：
+(1)会计是反映和监督物质资料生产过程的一种方法，是管理经济的工具。
+(2)会计是一个收集、处理和输送经济信息的信息系统。
+(3)会计是通过收集处理和利用经济信息，对经济活动进行组织、控制、调节和指导，促使人们比较分析、讲求经济效益的一种以价值活动为对象的管理活动。早期的会计包括审计。习惯上，对担任会计工作的专业人员简称为会计，有时把会计作为会计学的同义语。"
+            android:textColor="#888999"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/font_size_nomarl"/>
+    </LinearLayout>
+
+
+    <com.me.fanyin.zbme.views.course.play.widget.MyWebView
+        android:id="@+id/couseinfo_webView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+    <ProgressBar
+        android:id="@+id/couseinfo_pb_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:progressDrawable="@drawable/progress_horizontal"
+        android:indeterminateDrawable="@drawable/about_web_progressbar"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateOnly="true"/>
+
+    <RelativeLayout
+        android:id="@+id/network_error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/app_view_iv"
+            android:layout_width="168dp"
+            android:layout_height="157dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/img_special_nothing" />
+
+        <TextView
+            android:id="@+id/app_message_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_view_iv"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:gravity="center_horizontal"
+            android:text="@string/app_empty_message"
+            android:textColor="@color/text_color_primary_light_more"
+            android:textSize="@dimen/font_size_medium" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_subject"
+    style="@style/x_text_dark"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:drawableLeft="@mipmap/ico_chapter_unfold"
+    android:drawablePadding="@dimen/spacing_nomarl"
+    android:textSize="@dimen/font_size_medium"
+    android:drawableStart="@mipmap/ico_chapter_unfold"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/spacing_large"
+    android:paddingEnd="@dimen/spacing_large"
+    android:paddingLeft="@dimen/spacing_large"
+    android:paddingRight="@dimen/spacing_large"
+    android:paddingStart="@dimen/spacing_large"
+    android:paddingTop="@dimen/spacing_large"
+    android:text="注册会计师">
+
+</android.support.v7.widget.AppCompatTextView>

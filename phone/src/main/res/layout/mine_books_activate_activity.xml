@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/books_activate_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/x_bg">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <include layout="@layout/common_toolbar_layout_no_line"/>
+
+        <include layout="@layout/app_line"/>
+
+        <FrameLayout
+            android:id="@+id/books_activate_tbl_fl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.me.fanyin.zbme.widget.smarttablayout.SmartTabLayout
+                android:id="@+id/books_activate_tbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/spacing_xmedium"
+                android:layout_marginTop="@dimen/spacing_xmedium"
+                app:stl_defaultTabTextColor="@color/color_primary"
+                app:stl_dividerColor="@color/transparent"
+                app:stl_dividerThickness="0dp"
+                app:stl_indicatorColor="@color/color_primary_click"
+                app:stl_indicatorCornerRadius="6dp"
+                app:stl_indicatorGravity="center"
+                app:stl_indicatorInterpolation="linear"
+                app:stl_indicatorThickness="35dp"
+                app:stl_indicatorWithoutPadding="true"
+                app:stl_selectedTabTextColor="@color/white"
+                app:stl_underlineColor="@color/transparent"
+                app:stl_underlineThickness="0dp"/>
+
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/books_activate_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>

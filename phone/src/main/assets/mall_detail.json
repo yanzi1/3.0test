@@ -1,0 +1,166 @@
+{
+  "success": "true",
+  "code": "10001",
+  "msg": "接口请求成功",
+  "obj": {
+    "activityList": [
+      {
+        "activityName": "满送商品测试1",
+        "activityNo": "1479710232081",
+        "activityType": 2,
+        "activityTypeDicName": "满送",
+        "id": 108,
+        "link": "",
+        "shopId": 1
+      },
+      {
+        "activityName": "2017初级图书单笔订单满99送《纳税人学堂》2017初级图书单笔订单满99送《纳税人学堂》",
+        "activityNo": "1479715116577",
+        "activityType": 5,
+        "activityTypeDicName": "买送商品",
+        "id": 109,
+        "link": "",
+        "shopId": 1
+      },
+      {
+        "activityName": "韩学文的促销勿动",
+        "activityNo": "1486638499702",
+        "activityType": 1,
+        "activityTypeDicName": "满减",
+        "id": 151,
+        "link": "",
+        "shopId": 1
+      }
+    ],
+    "goodsInfo": {
+      "createdate": 1490006743000,
+      "goodsDetail": {
+        "goodsAttributeValueList": [
+          {
+            "attrCode": "2",
+            "attrId": 9,
+            "attrName": "参数1",
+            "attrValue": "参数11",
+            "goodsId": 584,
+            "id": 3979
+          },
+          {
+            "attrCode": "1",
+            "attrId": 8,
+            "attrName": "1",
+            "attrValue": "",
+            "goodsId": 584,
+            "id": 3980
+          }
+        ],
+        "goodsBase": {
+          "aliasName": "",
+          "auditStatus": 1,
+          "autoStart": 1,
+          "brandId": 2,
+          "categoryId": 124,
+          "classific": 2,
+          "createdate": 1490006674000,
+          "goodsCode": "6b409748b0ec4980ae21ff1b9a764e5e",
+          "goodsDate": 1483200000000,
+          "goodsName": "经济法基础2017-轻松过关一",
+          "goodsStatus": 1,
+          "id": 584,
+          "insureYear": 0,
+          "isDelete": 0,
+          "isDelivery": 0,
+          "isPackage": 0,
+          "mainPicUrlOfPc": "/goods/images/20170320/1490006657102018374.png",
+          "originalPrice": 240,
+          "shortDesc": "",
+          "userId": 81
+        },
+        "goodsDescriptionList": [
+          {
+            "goodsDescription": "",
+            "goodsId": 584,
+            "id": 2391,
+            "platform": 1
+          }
+        ],
+        "goodsIndemnityList": [],
+        "goodsPaymentList": [
+          {
+            "goodsId": 584,
+            "id": 1580,
+            "paymentName": "现金",
+            "paymentType": 1
+          },
+          {
+            "goodsId": 584,
+            "id": 1581,
+            "paymentName": "现金账户",
+            "paymentType": 2
+          },
+          {
+            "goodsId": 584,
+            "id": 1582,
+            "paymentName": "学习卡",
+            "paymentType": 3
+          },
+          {
+            "goodsId": 584,
+            "id": 1583,
+            "paymentName": "积分",
+            "paymentType": 4
+          },
+          {
+            "goodsId": 584,
+            "id": 1584,
+            "paymentName": "优惠券",
+            "paymentType": 5
+          },
+          {
+            "goodsId": 584,
+            "id": 1585,
+            "paymentName": "现金券",
+            "paymentType": 6
+          }
+        ],
+        "goodsPicList": [
+          {
+            "goodsId": 584,
+            "id": 2452,
+            "isMainPic": 1,
+            "picUrl": "/goods/images/20170320/1490006657102018374.png",
+            "platform": 1,
+            "sort": 0
+          }
+        ],
+        "goodsProbationList": [
+          {
+            "contents": "",
+            "goodsId": 584,
+            "platform": 1
+          }
+        ],
+        "goodsSeo": {
+          "goodsId": 584,
+          "id": 1196,
+          "metaDescription": "",
+          "metaKeyword": "",
+          "pageTitle": ""
+        },
+        "goodsUpgradeList": [],
+        "packageGoodsList": []
+      },
+      "goodsId": 584,
+      "id": 4988,
+      "isDelete": 0,
+      "isFrontSale": 1,
+      "popularLevel": 1,
+      "salePrice": 180,
+      "shopId": 1,
+      "sort": 1,
+      "upDownStatus": 0,
+      "upTime": 1490006743000,
+      "updatedate": 1490006743000,
+      "userId": 81
+    }
+  }
+}

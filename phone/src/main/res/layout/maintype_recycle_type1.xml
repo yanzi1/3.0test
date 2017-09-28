@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.me.fanyin.zbme.widget.banner.Banner
+        android:id="@+id/main_type1_banner"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:default_image="@mipmap/img_default_banner"
+        app:indicator_drawable_selected="@drawable/banner_gray_radius"/>
+
+</LinearLayout>

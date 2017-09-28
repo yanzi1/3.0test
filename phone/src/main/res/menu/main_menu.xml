@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_main_kefu"
+        app:actionLayout="@layout/main_toolbar_kefu_icon"
+        android:actionLayout="@layout/main_toolbar_kefu_icon"
+        android:title="客服"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_main_saoyisao"
+        app:actionLayout="@layout/main_toolbar_saoyisao_icon"
+        android:actionLayout="@layout/main_toolbar_saoyisao_icon"
+        android:title="扫一扫"
+        app:showAsAction="always" />
+
+</menu>

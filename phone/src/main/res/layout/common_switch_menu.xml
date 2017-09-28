@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:id="@+id/type_ddmt_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.me.fanyin.zbme.views.mall.view.DropDownMenuTitle
+            android:id="@+id/type_ddmt"
+            style="@style/ShopHomeMenu"
+            android:background="@drawable/selectable_item_background"
+            app:selectedColor="@color/text_color_primary"
+            app:selectedIcon="@mipmap/ico_morechose"
+            app:text="类型"
+            app:unselectedColor="@color/text_color_primary"
+            app:unselectedIcon="@mipmap/ico_morechose"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exam_ddmt_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/spacing_xmedium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:background="@color/divider_line"
+            />
+
+        <com.me.fanyin.zbme.views.mall.view.DropDownMenuTitle
+            android:id="@+id/exam_ddmt"
+            style="@style/ShopHomeMenu"
+            android:background="@drawable/selectable_item_background"
+            app:selectedColor="@color/text_color_primary"
+            app:selectedIcon="@mipmap/ico_morechose"
+            app:text="考种"
+            app:unselectedColor="@color/text_color_primary"
+            app:unselectedIcon="@mipmap/ico_morechose"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/subject_ddmt_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/subject_ddmt_ll_line"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/spacing_xmedium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:background="@color/divider_line"
+            />
+
+        <com.me.fanyin.zbme.views.mall.view.DropDownMenuTitle
+            android:id="@+id/subject_ddmt"
+            style="@style/ShopHomeMenu"
+            android:background="@drawable/selectable_item_background"
+            app:selectedColor="@color/text_color_primary"
+            app:selectedIcon="@mipmap/ico_morechose"
+            app:text="科目"
+            app:unselectedColor="@color/text_color_primary"
+            app:unselectedIcon="@mipmap/ico_morechose"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/year_ddmt_ll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/spacing_xmedium"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:background="@color/divider_line"
+            />
+
+        <com.me.fanyin.zbme.views.mall.view.DropDownMenuTitle
+            android:id="@+id/year_ddmt"
+            style="@style/ShopHomeMenu"
+            android:background="@drawable/selectable_item_background"
+            app:selectedColor="@color/text_color_primary"
+            app:selectedIcon="@mipmap/ico_morechose"
+            app:text="年份"
+            app:unselectedColor="@color/text_color_primary"
+            app:unselectedIcon="@mipmap/ico_morechose"/>
+
+    </LinearLayout>
+
+</LinearLayout>

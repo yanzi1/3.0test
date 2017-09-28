@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.me.fanyin.zbme.views.download.MyDownloadActivity">
+
+    <include layout="@layout/common_toolbar_layout"/>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/recycler"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"/>-->
+
+    <ExpandableListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:childDivider="@color/transparent"
+        android:groupIndicator="@null"/>
+
+    <include
+        android:id="@+id/empty"
+        android:visibility="gone"
+        layout="@layout/app_view_empty"/>
+
+    <include layout="@layout/download_select_delete_layout"/>
+    <include layout="@layout/download_sdcard_size_layout"/>
+
+</LinearLayout>

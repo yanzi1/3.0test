@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:gravity="center_vertical"
+    android:background="@color/transparent"
+    android:padding="@dimen/spacing_small">
+
+    <ImageView
+        android:id="@+id/img_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/course_play_icolight" />
+
+    <TextView
+        android:id="@+id/tv_local"
+        android:layout_width="25dp"
+        android:layout_height="14dp"
+        android:layout_marginLeft="14dp"
+        android:background="@color/color_primary"
+        android:gravity="center"
+        android:textSize="@dimen/font_size_xsmall"
+        android:text="本地"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="@dimen/font_size_nomarl"
+        android:layout_marginLeft="4dp"
+        android:textColor="@color/white"
+        android:text="第02讲 法律基础（一）"
+        android:id="@+id/play_courselist_child_tv"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/play_courselist_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/play_courselist_item_downloadprogress_tv"
+                android:text="90%"
+                android:layout_marginBottom="-5dp"
+                android:visibility="gone"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/play_courselist_item_downloadStatus_img"
+                android:layout_marginTop="@dimen/spacing_xsmall"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

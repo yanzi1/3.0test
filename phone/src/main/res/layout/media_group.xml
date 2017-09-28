@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/transparent"
+    android:padding="@dimen/spacing_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/play_courselist_group_course_body">
+
+        <ImageView
+            android:id="@+id/play_courselist_group_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_xmedium"
+            android:src="@mipmap/course_play_expandless" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:padding="10dp"
+            android:layout_marginLeft="@dimen/spacing_small"
+            android:textSize="@dimen/spacing_large"
+            android:text="第一章 总论"
+            android:textColor="#aaaaaa"
+            android:id="@+id/play_courselist_group_tv"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~  * Copyright (C) 2015 by  xunice@qq.com
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  * http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  */
+  -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <com.me.fanyin.zbme.widget.BaseSwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/course_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.me.fanyin.zbme.views.course.play.widget.MyExpandlistView
+                    android:id="@+id/courselist_exp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="45dp"
+                    android:cacheColorHint="@color/transparent"
+                    android:childDivider="@color/transparent"
+                    android:divider="@color/transparent"
+                    android:groupIndicator="@null"
+                    android:listSelector="@color/color_primary_btn_select" />
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.me.fanyin.zbme.widget.BaseSwipeRefreshLayout>
+
+</FrameLayout>

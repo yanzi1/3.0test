@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.me.fanyin.zbme.widget.BaseSwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/errors_srl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/x_bg"
+    android:visibility="invisible"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/errors_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
+                android:text="0"
+                android:textColor="@color/color_primary"
+                android:textSize="50sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="错题数"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/font_size_small"/>
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="14dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/color_primary"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/errors_redo_fl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selectable_item_background"
+                    android:paddingBottom="@dimen/spacing_xmedium"
+                    android:paddingTop="@dimen/spacing_xmedium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@mipmap/icon_mine_exercise"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="练习全部错题"
+                        android:textColor="@color/text_color_primary"
+                        android:textSize="@dimen/font_size_nomarl"/>
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divider_line"/>
+
+                <FrameLayout
+                    android:id="@+id/errors_statistics_fl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selectable_item_background"
+                    android:paddingBottom="@dimen/spacing_xmedium"
+                    android:paddingTop="@dimen/spacing_xmedium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@mipmap/icon_mine_report"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="错题统计"
+                        android:textColor="@color/text_color_primary"
+                        android:textSize="@dimen/font_size_nomarl"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_xmedium"
+                android:background="@color/x_bg"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/errors_rcv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</com.me.fanyin.zbme.widget.BaseSwipeRefreshLayout>

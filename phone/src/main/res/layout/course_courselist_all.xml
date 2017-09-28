@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~  * Copyright (C) 2015 by  xunice@qq.com
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  * http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  */
+  -->
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/x_page">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <com.me.fanyin.zbme.widget.CommonToolbar
+            android:id="@+id/toolbar"
+            style="@style/x_toolbar"
+            android:elevation="0dp"
+            android:translationZ="0dp"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleColor="@color/text_color_primary_dark"
+            app:titleSize="@dimen/font_size_large">
+
+            <TextView
+                android:id="@+id/courselist_menu_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/dip_size_10"
+                android:drawableLeft="@mipmap/query_view_detailed"
+                android:gravity="right"
+                android:text=""/>
+
+        </com.me.fanyin.zbme.widget.CommonToolbar>
+
+        <LinearLayout
+            android:id="@+id/menu_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <com.me.fanyin.zbme.views.mall.view.DropDownMenuTitle
+                android:id="@+id/subject_layout"
+                style="@style/ShopHomeMenu"
+                android:background="?attr/selectableItemBackground"
+                app:selectedColor="@color/text_color_primary"
+                app:selectedIcon="@mipmap/ico_morechose"
+                app:text="科目"
+                app:unselectedColor="@color/text_color_primary"
+                app:unselectedIcon="@mipmap/ico_morechose"/>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/spacing_xmedium"
+                android:layout_marginTop="@dimen/spacing_xmedium"
+                android:background="@color/divider_line"/>
+
+            <com.me.fanyin.zbme.views.mall.view.DropDownMenuTitle
+                android:id="@+id/year_layout"
+                style="@style/ShopHomeMenu"
+                android:background="?attr/selectableItemBackground"
+                app:selectedColor="@color/text_color_primary"
+                app:selectedIcon="@mipmap/ico_morechose"
+                app:text="年份"
+                app:unselectedColor="@color/text_color_primary"
+                app:unselectedIcon="@mipmap/ico_morechose"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/app_line"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include layout="@layout/common_root_framelayout"/>
+
+        <FrameLayout
+            android:id="@+id/no_subjects"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/play_continue"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#e5ffe6d3"
+        android:gravity="center_vertical"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/play_continue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="继续播放:"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/spacing_xlarge"/>
+
+        <TextView
+            android:id="@+id/play_continue_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:singleLine="true"
+            android:text="会计基础"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/spacing_xlarge"/>
+
+    </LinearLayout>
+
+    <com.me.fanyin.zbme.views.mall.view.DropDownMenuLayout
+        android:id="@+id/mall_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/x_page"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="0dp"
+        app:elevation="0dp"
+        tools:targetApi="lollipop">
+
+        <com.me.fanyin.zbme.widget.CommonToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_below="@+id/status_bar_fix"
+            android:background="@android:color/white"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:elevation="0dp"
+            app:titleColor="@color/text_color_primary_dark"
+            app:titleSize="@dimen/font_size_large" />
+        <com.me.fanyin.zbme.widget.smarttablayout.SmartTabLayout
+            android:id="@+id/mall_coupon_smart_tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            app:stl_defaultTabTextColor="@color/text_color_primary"
+            app:stl_defaultTabTextHorizontalPadding="12dp"
+            app:stl_defaultTabTextSize="16sp"
+            app:stl_distributeEvenly="false"
+            app:stl_dividerThickness="0dp"
+            app:stl_indicatorAlwaysInCenter="false"
+            app:stl_indicatorColor="@color/color_primary"
+            app:stl_indicatorInterpolation="smart"
+            app:stl_indicatorThickness="3dp"
+            app:stl_indicatorWidth="15dp"
+            android:paddingBottom="@dimen/spacing_xxnomarl"
+            app:stl_selectedTabTextColor="@color/color_primary"
+            app:stl_underlineThickness="0dp"/>
+        <View
+            style="@style/full_line"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mall_coupon_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

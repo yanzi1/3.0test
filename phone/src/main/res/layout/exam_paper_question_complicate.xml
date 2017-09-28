@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_comprehensive_show"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <ScrollView
+            android:id="@+id/sv_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+            <!--android:fillViewport="true"-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dip_size_10"
+                android:paddingBottom="@dimen/dip_size_10">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/exam_paper_question_complicate_ques_type"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="5dp"
+                        android:text="题冒题"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_medium"
+                        />
+                    <TextView
+                        style="@style/exam_page_hint_tv_font_ww"
+                        android:id="@+id/exam_paper_question_complicate_num"
+                        android:textColor="@color/color_primary"
+                        android:text="1"
+                        />
+                    <TextView
+                        style="@style/exam_page_hint_tv_font_ww"
+                        android:id="@+id/exam_paper_question_complicate_fenge"
+                        android:text="/"
+                        android:textColor="@color/exam_paper_text_primary_color"
+                        />
+                    <TextView
+                        style="@style/exam_page_hint_tv_font_ww"
+                        android:id="@+id/exam_paper_question_complicate_total"
+                        android:text="11"
+                        android:layout_marginRight="12dp"
+                        />
+                </LinearLayout>
+                <include layout="@layout/app_line"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/exam_paper_question_complicate_ques_title"
+                    android:paddingRight="@dimen/dip_size_10"
+                    android:paddingLeft="@dimen/dip_size_10"
+                    android:paddingTop="@dimen/dip_size_5"
+                    android:paddingBottom="@dimen/dip_size_5"
+                    android:layout_marginTop="@dimen/dip_size_1"
+                    android:textSize="@dimen/font_size_medium"
+                    android:textColor="@color/black"
+                    android:lineSpacingExtra="@dimen/dip_size_10"
+                    android:text="题目标题"/>
+                <WebView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/exam_paper_question_complicate_ques_title_wv"
+                    android:visibility="gone"
+                    android:scrollbars="none"
+                    android:paddingRight="@dimen/dip_size_10"
+                    android:paddingLeft="@dimen/dip_size_10"
+                    android:paddingTop="@dimen/dip_size_10"
+                    android:paddingBottom="@dimen/dip_size_5"
+                    android:layout_marginTop="@dimen/dip_size_1"
+                    android:clickable="false"
+                    android:longClickable="false"
+                    ></WebView>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.dongao.kaoqian.phone.widget.CustomRelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/exam_paper_question_complicate_cr"
+            android:background="@color/transparent"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <ImageButton
+                android:id="@+id/btn"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/exam_paper_question_complicate_drag_bt" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dip_size_5"
+                android:layout_below="@+id/btn"
+                android:id="@+id/vp_line"
+                android:background="@color/exam_complex_drag_view_bg" />
+            <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:id="@+id/exam_paper_question_complicate_vp"
+                android:layout_below="@+id/vp_line" />
+        </com.dongao.kaoqian.phone.widget.CustomRelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

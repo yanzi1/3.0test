@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pop_background">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="56dp"
+            android:layout_marginTop="56dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/user_dialog_layout_shape"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="25dp">
+
+                    <TextView
+                        android:id="@+id/user_dialog_content_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:textColor="@color/text_color_primary_dark"
+                        android:textSize="@dimen/font_size_medium"
+                        android:layout_marginBottom="25dp"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/user_dialog_gb_psw_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/user_dialog_content_tv"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical"
+                        android:paddingBottom="40dp"
+                        android:visibility="gone"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/user_dialog_gb_psw_by_phone_layout"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/user_dialog_gb_psw_selector"
+                            >
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/user_dialog_gb_psw_by_phone_icon"
+                                />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="25dp"
+                                android:textColor="@color/color_primary"
+                                android:textSize="@dimen/font_size_medium"
+                                android:text="手机号找回"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/user_dialog_gb_psw_by_email_layout"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/user_dialog_gb_psw_selector"
+                            >
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/user_dialog_gb_psw_by_email_icon"
+                                />
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="25dp"
+                                android:textColor="@color/color_primary"
+                                android:textSize="@dimen/font_size_medium"
+                                android:text="邮箱找回"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/user_dialog_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/user_dialog_bt_selector"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/user_dialog_confirm_with_cancel_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <Button
+                        android:id="@+id/user_dialog_cancel_bt"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/user_dialog_cancel_bt_selector"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_medium"
+                        />
+
+                    <Button
+                        android:id="@+id/user_dialog_confirm_bt"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/user_dialog_confirm_bt_selector"
+                        android:textColor="@color/text_color_primary_dark"
+                        android:textSize="@dimen/font_size_medium"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/user_dialog_close_window_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user_dialog_close_window_icon"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/user_dialog_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/user_dialog_happy_icon"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

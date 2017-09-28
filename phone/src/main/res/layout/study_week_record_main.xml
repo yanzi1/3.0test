@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/exam_main_body_coo"
+        android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_primary_bg"
+            app:elevation="5dp">
+            <!--title-->
+            <com.me.fanyin.zbme.widget.CommonToolbar
+                android:id="@+id/toolbar"
+                style="@style/x_toolbar"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:titleColor="@color/text_color_primary_dark"
+                app:imageMenuMarginRight="10dp"
+                app:titleSize="@dimen/font_size_large" >
+            </com.me.fanyin.zbme.widget.CommonToolbar>
+            <include layout="@layout/app_line"/>
+        </android.support.design.widget.AppBarLayout>
+        <include layout="@layout/common_root_framelayout"/>
+    </LinearLayout>
+
+</LinearLayout>

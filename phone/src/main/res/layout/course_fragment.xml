@@ -1,0 +1,248 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/status_bar_fix"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/class_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.me.fanyin.zbme.views.course.CourseFragment">
+
+        <com.me.fanyin.zbme.widget.BaseSwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.me.fanyin.zbme.views.course.play.widget.GradationScrollView
+                android:id="@+id/scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/topbg_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/class_top_bg" />
+
+                        <LinearLayout
+                            android:id="@+id/class_day_left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/days"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/white"
+                                    android:textSize="30dp" />
+
+                                <TextView
+                                    android:id="@+id/leftDays"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="2dp"
+                                    android:text=""
+                                    android:textColor="@color/white"
+                                    android:textSize="16dp" />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/tv_leftDays"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/spacing_xxmedium" />
+
+                            <TextView
+                                android:id="@+id/tv_comeon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="13dp"
+                                android:maxLines="2"
+                                android:autoLink="all"
+                                android:ellipsize="end"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/spacing_xxmedium" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="84dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/class_kecheng_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/selectable_item_background"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@mipmap/btn_class_kecheng" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="7dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="课程"
+                                android:textColor="@color/text_color_primary_dark"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/class_tiku_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/selectable_item_background"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@mipmap/btn_class_tiku" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="7dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="题库"
+                                android:textColor="@color/text_color_primary_dark"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/class_dayi_ll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/selectable_item_background"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="10dp"
+                            android:paddingTop="10dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@mipmap/btn_class_dayi" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="7dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="答疑"
+                                android:textColor="@color/text_color_primary_dark"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="7dp"
+                        android:background="@color/x_bg" />
+
+                    <FrameLayout
+                        android:id="@+id/fragment_class_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="80dp" />
+                </LinearLayout>
+            </com.me.fanyin.zbme.views.course.play.widget.GradationScrollView>
+        </com.me.fanyin.zbme.widget.BaseSwipeRefreshLayout>
+
+
+        <LinearLayout
+            android:id="@+id/class_play_continue"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="#e5ffe6d3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/play_continue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="继续播放:"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/spacing_xlarge" />
+
+            <TextView
+                android:id="@+id/play_continue_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:singleLine="true"
+                android:text="会计基础"
+                android:textColor="@color/color_primary"
+                android:textSize="@dimen/spacing_xlarge" />
+        </LinearLayout>
+
+        <include layout="@layout/top_title_bar" />
+    </RelativeLayout>
+</LinearLayout>

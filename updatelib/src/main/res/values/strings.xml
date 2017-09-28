@@ -1,0 +1,6 @@
+<resources>
+    <string name="current_latest_version">已是最新版本</string>
+    <string name="network_disabled">网络连接不可用,请检查网络设置</string>
+    <string name="update_version">版本更新</string>
+    <string name="open_download_service">下载服务不可用,请您启用</string>
+</resources>

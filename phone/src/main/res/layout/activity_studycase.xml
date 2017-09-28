@@ -1,0 +1,261 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/x_page">
+
+    <LinearLayout
+        android:id="@+id/plancase_content"
+        style="@style/x_page">
+
+        <RelativeLayout
+            android:id="@+id/menu_subject"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                />
+
+
+            <com.me.fanyin.zbme.views.mall.view.DropDownMenuTitle
+                android:id="@+id/subject_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/sujectmenu_bg"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:selectedColor="@color/text_color_primary"
+                app:selectedIcon="@mipmap/ico_morechose"
+                app:text="科目"
+                app:text_size="@dimen/font_size_medium"
+                app:unselectedColor="@color/text_color_primary_dark"
+                app:unselectedIcon="@mipmap/ico_morechose" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_empty"
+            style="@style/x_page">
+
+            <RelativeLayout
+                android:id="@+id/rl_date"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_week_before"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="上一周" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="2017.8.01--2017.8.17" />
+
+                <TextView
+                    android:id="@+id/tv_week_after"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:text="下一周" />
+            </RelativeLayout>
+
+            <com.me.fanyin.zbme.widget.BaseSwipeRefreshLayout
+                android:id="@+id/swipe_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:descendantFocusability="blocksDescendants"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:background="@color/white"
+                            android:gravity="center">
+
+                            <View
+                                android:layout_width="45dp"
+                                android:layout_height="1dp"
+                                android:background="@color/color_primary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:text="学习任务"
+                                android:textColor="@color/color_primary"
+                                android:textSize="18dp" />
+
+                            <View
+                                android:layout_width="45dp"
+                                android:layout_height="1dp"
+                                android:background="@color/color_primary" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <include layout="@layout/studycase_percent" />
+
+                            <View
+                                android:id="@+id/line"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_below="@+id/studycase_percent"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/divider_line" />
+
+                            <com.me.fanyin.zbme.views.course.play.widget.ListViewForScrollView
+                                android:id="@+id/study_case_listview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/line"
+                                android:divider="@null" />
+
+                            <RelativeLayout
+                                android:id="@+id/error_layout_top"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="20dp"
+                                android:background="@color/white"
+                                android:gravity="center_horizontal"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/error_img_top"
+                                    android:layout_width="168dp"
+                                    android:layout_height="157dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="20dp"
+                                    android:src="@mipmap/img_special_nothing" />
+
+                                <TextView
+                                    android:id="@+id/error_tv_top"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/error_img_top"
+                                    android:layout_marginTop="@dimen/spacing_large"
+                                    android:gravity="center_horizontal"
+                                    android:text="暂无学习任务"
+                                    android:textColor="@color/text_color_primary_light_more"
+                                    android:textSize="@dimen/font_size_medium" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:background="@color/x_bg" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="24dp"
+                            android:background="@color/white"
+                            android:gravity="center">
+
+                            <View
+                                android:layout_width="45dp"
+                                android:layout_height="1dp"
+                                android:background="@color/color_primary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:text="复习包"
+                                android:textColor="@color/color_primary"
+                                android:textSize="18dp" />
+
+                            <View
+                                android:layout_width="45dp"
+                                android:layout_height="1dp"
+                                android:background="@color/color_primary" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.me.fanyin.zbme.views.course.play.widget.MyExpandlistView
+                                android:id="@+id/study_case_explist"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:childDivider="@null"
+                                android:divider="@null"
+                                android:groupIndicator="@null" />
+
+                            <RelativeLayout
+                                android:id="@+id/error_layout_bottom"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="20dp"
+                                android:background="@color/white"
+                                android:gravity="center_horizontal"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/error_img_bottom"
+                                    android:layout_width="168dp"
+                                    android:layout_height="157dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="20dp"
+                                    android:src="@mipmap/img_special_nothing" />
+
+                                <TextView
+                                    android:id="@+id/error_tv_bottom"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/error_img_bottom"
+                                    android:layout_marginTop="@dimen/spacing_large"
+                                    android:gravity="center_horizontal"
+                                    android:text="暂无复习包"
+                                    android:textColor="@color/text_color_primary_light_more"
+                                    android:textSize="@dimen/font_size_medium" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </com.me.fanyin.zbme.widget.BaseSwipeRefreshLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.me.fanyin.zbme.views.mall.view.DropDownMenuLayout
+        android:id="@+id/studycase_suject_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</RelativeLayout>

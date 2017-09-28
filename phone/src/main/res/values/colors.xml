@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+
+    <color name="x_bg">#fff7f9fb</color>
+    <color name="white">#ffffff</color>
+    <color name="white_menu_list_bg">#f5ffffff</color>
+
+
+    <!-- App整体色调颜色 -->
+
+    <color name="color_primary">#ff8d34</color>
+    <color name="color_primary_dark">#99551F</color>
+    <color name="color_primary_light">#A0ff8d34</color>
+    <color name="color_accent">#ec444b</color>
+    <color name="color_accent_2">#6ed05d</color>
+
+    <color name="color_primary_enable">#ffb881</color>
+    <color name="color_primary_select">#e06708</color>
+    <color name="color_primary_click">#ffe9d7</color>
+
+    <color name="color_primary_bg">#FBFBFB</color>
+    <color name="color_primary_select_bg">#e2e2e2</color>
+    <color name="color_primary_btn_select">#f4f5f6</color>
+
+    <!-- 字体颜色 -->
+    <color name="text_color_primary">#79767f</color>
+    <color name="text_color_primary_light">#625f67</color>
+    <color name="text_color_primary_dark">#35323a</color>
+    <color name="text_second_color_primary">#727272</color>
+    <color name="text_color_primary_light_more">#b2afb7</color>
+
+    <color name="text_color_primary_hint">#999999</color>
+    <color name="text_color_primary_enable">#CCCCCC</color>
+
+    <color name="divider_line">#e8e6ea</color>
+
+    <color name="main_choose_gray_light">#f3f3f3</color>
+    <color name="main_text_time">#b2afb7</color>
+    <color name="main_text_limit_time">#f54e55</color>
+    <color name="main_type_indicator_bottome">#00c853</color>
+    <color name="delete_un_click">#F1BFC1</color>
+
+    <!--wp-->
+    <color name="gray_back">#ececec</color>
+    <color name="exam_list_error">#ff7666</color>
+    <color name="black">#000000</color>
+    <!--end-->
+
+    <!--fzw-->
+    <color name="exam_paper_text_primary_color">#333333</color>
+    <color name="exam_previous_paper_solid_bg">#fffbf8</color>
+    <color name="exam_previous_paper_stroke">#ffe6d3</color>
+    <color name="exam_main_countinue_bt_bg">#FDECDD</color>
+    <color name="exam_main_circle_color1">#FFBE72</color>
+    <color name="exam_main_circle_color2">#B1D9FA</color>
+    <color name="exam_main_circle_color3">#AC9BF3</color>
+    <color name="exam_main_circle_color4">#55A5FB</color>
+    <color name="exam_main_circle_color5">#5FD56D</color>
+    <color name="exam_main_circle_color6">#F080E7</color>
+    <color name="exam_main_circle_color7">#A67FFD</color>
+
+    <color name="color_accent_3">#e9f4eb</color>
+    <color name="exam_complex_drag_view_bg">#F7F9FB</color>
+    <!--   wyc-->
+    <color name="pop_background">#66000000</color>
+    <color name="search_layover_bg">#50000000</color>
+    <color name="search_hint_bg">#8affffff</color>
+    <color name="search_stroke_bg">#e8e6ea</color>
+    <color name="x_bg_transpant">#99f7f9fb</color>
+    <color name="intel_pitem_name">#ff8d34</color>
+    <color name="intel_pitem_bg">#fff2e8</color>
+    <color name="intel_study_type1">#ec444b</color>
+    <color name="intel_study_type2">#6ed05b</color>
+    <color name="intel_study_type3">#b2afb7</color>
+
+</resources>
