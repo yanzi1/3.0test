@@ -97,6 +97,19 @@ public class SharedPrefHelper {
     private static final String ANSWER_MENU_CACHE = "answer_menu_cache";//我的答疑菜单缓存
     private static final String LEARNING_RECORD_MENU_CACHE = "learning_record_menu_cache";//学习记录菜单缓存
 
+	private static final String EXAMID = "exam_id";
+	private static final String EXAMINATIONID = "examination_id";
+	private static final String SECTIONID = "section_id";
+	private static final String MAINTYPEID = "main_type_id";
+	private static final String EXAMINATION_TITTLE="examination_tittle";
+	private static final String EXAM_LIST_REFRESH="exam_list_refresh_time";
+	private static final String EXAMTAG = "exam_tag";
+	private static final String SUBJECT_ID = "subject_id";
+	private static final String ISFIRSTIN_DUOXUAN = "isFirstInDuoxuan";
+	private static final String CLASS_ID = "class_id";
+	private static final String FAULTTYPEID = "my_fault_type_id";
+
+
 	public static synchronized SharedPrefHelper getInstance() {
 		if (null == sharedPrefHelper) {
 			sharedPrefHelper = new SharedPrefHelper(AppContext.getInstance());
@@ -200,16 +213,6 @@ public class SharedPrefHelper {
 	}
 	public String getMainExamId(){
 		return sharedPreferences.getString(MAIN_EXAM_ID,"");
-	}
-	/**
-	 * 考种id
-	 * @param examId
-	 */
-	public void setExamId(String examId){
-		sharedPreferences.edit().putString(EXAM_ID, examId).commit();
-	}
-	public String getExamId(){
-		return sharedPreferences.getString(EXAM_ID,"");
 	}
 	
 	/**
@@ -669,4 +672,124 @@ public class SharedPrefHelper {
     public String getLearningRecordMenuCache(){
         return sharedPreferences.getString(LEARNING_RECORD_MENU_CACHE, "");
     }
+
+
+	/**
+	 * @author wyc
+	 * 获取试卷的开头
+	 */
+	public void setExaminationTittle(String str) {
+		sharedPreferences.edit().putString(EXAMINATION_TITTLE+getUserId(), str).commit();
+	}
+
+	public String getExaminationTitle() {
+		return sharedPreferences.getString(EXAMINATION_TITTLE+getUserId(), "");
+	}
+	/**
+	 * 试卷
+	 * @param examinationId
+	 */
+	public void setExaminationId(String examinationId){
+		sharedPreferences.edit().putString(EXAMINATIONID+getUserId(), examinationId).commit();
+	}
+	public String getExaminationId(){
+		return sharedPreferences.getString(EXAMINATIONID+getUserId(), "");
+	}
+	/**
+	 * 试卷
+	 * @param sectionId
+	 */
+	public void setSectionId(String sectionId){
+		sharedPreferences.edit().putString(SECTIONID+getUserId(), sectionId).commit();
+	}
+	public String getSectionId(){
+		return sharedPreferences.getString(SECTIONID+getUserId(), "");
+	}
+
+	/**
+	 * 首页选中的Type
+	 * @param typeId  试卷类型
+	 */
+	public void setMainTypeId(String typeId){
+		sharedPreferences.edit().putString(MAINTYPEID+getUserId(), typeId).commit();
+	}
+	public String getMainTypeId(){
+		return sharedPreferences.getString(MAINTYPEID+getUserId(), "");
+	}
+	/**
+	 * 试卷
+	 * @param tag
+	 */
+	public void setExamTag(int tag){
+		sharedPreferences.edit().putInt(EXAMTAG + getUserId(), tag).commit();
+	}
+	public int getExamTag(){
+		return sharedPreferences.getInt(EXAMTAG + getUserId(), 0);
+	}
+	/**
+	 * 选择考试科目
+	 * @param examId
+	 */
+	public void setExamId(String examId){
+		sharedPreferences.edit().putString(EXAMID + getUserId(), examId).commit();
+	}
+	public String getExamId(){
+		return sharedPreferences.getString(EXAMID + getUserId(), "");
+	}
+
+	/**
+	 * 选择考试类型名称
+	 * @param subjectName
+	 */
+	public void setSubjectName(String subjectName){
+		sharedPreferences.edit().putString(SUBJECTNAME+getUserId(), subjectName).commit();
+	}
+	public String getSubjectName(){
+		return sharedPreferences.getString(SUBJECTNAME+getUserId(), "");
+	}
+
+	/**
+	 * 选择考试类型
+	 * @param subjectId
+	 */
+	public void setSubjectId(String subjectId){
+		sharedPreferences.edit().putString(SUBJECT_ID+getUserId(), subjectId).commit();
+	}
+	public String getSubjectId(){
+		return sharedPreferences.getString(SUBJECTID+getUserId(), "");
+	}
+
+	/**
+	 * 是否是第一次进入多选题
+	 * @param isfirrstinClassroom
+	 */
+	public void setIsfirstInDuoxuan(boolean isfirrstinClassroom){
+		sharedPreferences.edit().putBoolean(ISFIRSTIN_DUOXUAN + getUserId(), isfirrstinClassroom).commit();
+	}
+	public boolean getIsfirstInDuoxuan(){
+		return sharedPreferences.getBoolean(ISFIRSTIN_DUOXUAN + getUserId(), true);
+	}
+
+	/**
+	 * 选择班次ID
+	 * @param subjectId
+	 */
+	public void setClassId(String subjectId){
+		sharedPreferences.edit().putString(CLASS_ID+getUserId(), subjectId).commit();
+	}
+	public String getClassId(){
+		return sharedPreferences.getString(CLASS_ID+getUserId(), "");
+	}
+
+	/**
+	 * 选择错题类型
+	 * @param subjectId
+	 */
+	public void setFaultTypeId(String subjectId){
+		sharedPreferences.edit().putString(FAULTTYPEID+getUserId(), subjectId).commit();
+	}
+	public String getFaultTypeId(){
+		return sharedPreferences.getString(FAULTTYPEID+getUserId(), "");
+	}
+
 }

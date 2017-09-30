@@ -234,7 +234,27 @@
             android:name="com.me.fanyin.zbme.views.course.studyplan.StudyCaseActivity"
             android:screenOrientation="portrait"/>
 
-
+        <!--  wyc exam        -->
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.activity.exampaperlist.ExamPaperListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.activity.ExamReportActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.activity.myfault.MyFaultActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.activity.ScoreCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="com.me.fanyin.zbme.views.exam.ExamActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
 
     </application>
 

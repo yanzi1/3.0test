@@ -48,7 +48,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
-            app:back_color="@color/color_accent_3"
+            app:back_color="@color/exam_test_question_bottom_bg"
             app:back_width="4dp"
             app:front_color1="@color/color_accent_2"
             app:front_width="4dp"

@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/spacing_xlarge"
+    android:paddingRight="@dimen/spacing_xlarge"
+    android:paddingTop="@dimen/spacing_xmedium"
+    android:paddingBottom="@dimen/spacing_xmedium"
+    android:background="@drawable/btn_rect_list_normal"
+    >
+
+    <CheckedTextView
+        android:id="@+id/ctv_name"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:background="@drawable/exam_btn_option_single"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/text_size_18"
+        android:text="A"
+        android:textColor="@color/exam_test_question_option_font"
+        android:focusable="false"
+        android:clickable="false"
+        android:enabled="false"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <org.sufficientlysecure.htmltextview.HtmlTextView
+            android:id="@+id/tv_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_18"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:text="此处是选项描述"
+            android:visibility="visible"
+            android:textColor="@color/exam_test_question_font"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:clickable="false"
+            android:enabled="false"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

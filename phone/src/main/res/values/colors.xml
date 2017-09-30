@@ -48,20 +48,17 @@
     <!--end-->
 
     <!--fzw-->
-    <color name="exam_paper_text_primary_color">#333333</color>
-    <color name="exam_previous_paper_solid_bg">#fffbf8</color>
-    <color name="exam_previous_paper_stroke">#ffe6d3</color>
-    <color name="exam_main_countinue_bt_bg">#FDECDD</color>
-    <color name="exam_main_circle_color1">#FFBE72</color>
-    <color name="exam_main_circle_color2">#B1D9FA</color>
-    <color name="exam_main_circle_color3">#AC9BF3</color>
-    <color name="exam_main_circle_color4">#55A5FB</color>
-    <color name="exam_main_circle_color5">#5FD56D</color>
-    <color name="exam_main_circle_color6">#F080E7</color>
-    <color name="exam_main_circle_color7">#A67FFD</color>
-
-    <color name="color_accent_3">#e9f4eb</color>
-    <color name="exam_complex_drag_view_bg">#F7F9FB</color>
+    <color name="exam_no_advice">#ff9600</color>
+    <color name="exam_test_question_bottom_bg">#ffffff</color>
+    <color name="exam_test_question_bottom_font">#666666</color>
+    <color name="exam_test_question_option_font">#999999</color>
+    <color name="exam_test_question_font">#333333</color>
+    <color name="exam_test_question_hearder_font_mu">#bbffffff</color>
+    <color name="exam_test_question_hearder_font_zi">#ffffff</color>
+    <color name="exam_test_question_score_scard_bg">#f2f4f7</color>
+    <color name="exam_test_question_score_scard_right_bg">#68cd3b</color>
+    <color name="exam_test_question_score_scard_line_bg">#e2e2e2</color>
+    <color name="grey">#8C8C8C</color>
     <!--   wyc-->
     <color name="pop_background">#66000000</color>
     <color name="search_layover_bg">#50000000</color>
@@ -73,5 +70,17 @@
     <color name="intel_study_type1">#ec444b</color>
     <color name="intel_study_type2">#6ed05b</color>
     <color name="intel_study_type3">#b2afb7</color>
+    <color name="light_gray_1">#f2f2f2</color>
+    <color name="exam_list_line">#999999</color>
+    <color name="exam_list_right_rate">#50de69</color>
+    <color name="exam_list_item_line">#dce1e9</color>
+    <color name="scanner_pay_tittle_bg">#f9fafb</color>
+    <color name="pay_total_price">#feaf32</color>
+    <color name="color_primary_hover">#F8F8F8</color>
+    <color name="pay_text_color">#666666</color>
+    <color name="errortest_color">#ff661a</color>
+    <color name="search_title">#ececec</color>
+    <color name="text_title_right">#6debe9</color>
+    <color name="yellow">#FFFF00</color>
 
 </resources>

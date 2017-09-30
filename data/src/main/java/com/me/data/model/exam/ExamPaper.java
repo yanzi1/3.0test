@@ -11,7 +11,7 @@ import java.util.List;
  */
 
 @Table(name="t_exam_pager")
-public class ExamPaper implements Serializable {
+public class ExamPaper implements Serializable{
     //知识点ID
     private Examination examination;
     private List<Question> questionList;

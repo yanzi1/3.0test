@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/exam_slide_guide"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:orientation="vertical"
+        android:background="@color/black"
+        android:visibility="visible"
+        ></LinearLayout>
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:background="@drawable/exam_guide_tittle"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dip_size_20"
+        android:layout_marginRight="@dimen/dip_size_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:textSize="@dimen/font_size_large"
+            android:layout_marginTop="@dimen/dip_size_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="多选题或者不定项选择题"
+            android:layout_gravity="center_horizontal"/>
+        <LinearLayout
+            android:layout_marginTop="@dimen/dip_size_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:textSize="@dimen/font_size_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="左右切换"
+                android:textColor="@color/cpb_red"/>
+            <TextView
+                android:textSize="@dimen/font_size_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="进行题目切换"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+      
+        <ImageView
+            android:layout_marginTop="@dimen/dip_size_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/classroom_guide1"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/exam_guide_center_img"/>
+
+        
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/ll_remanber"
+            android:paddingLeft="@dimen/dip_size_20"
+            android:paddingRight="@dimen/dip_size_20"
+            android:paddingTop="@dimen/dip_size_10"
+            android:paddingBottom="@dimen/dip_size_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_exam_no_advice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/exam_guide_noadvice_nor"/>
+            
+            <TextView
+                android:layout_marginLeft="@dimen/dip_size_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不再提示"
+                android:textColor="@color/exam_no_advice"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginBottom="@dimen/dip_size_10"
+            android:text="我知道了"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dip_size_15"
+            android:layout_marginRight="@dimen/dip_size_15"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/tv_classroom_guide2"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/exam_guide_sure"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,6 +1,5 @@
 package com.me.data.model.main;
 
-import com.me.data.model.exam.newmodle.StartOrContinueExam;
 
 import java.io.Serializable;
 import java.util.List;
@@ -12,7 +11,6 @@ import java.util.List;
 public class CaptureResultBean implements Serializable{
 
 //    private ExaminationVo examinationVo;
-    private StartOrContinueExam examinationVo;
     private List<CourseVoBean> courseVo;
 
 //    public StartOrContinueExam getStartOrContinueExam() {
@@ -23,13 +21,6 @@ public class CaptureResultBean implements Serializable{
 //        this.examinationVo = startOrContinueExam;
 //    }
 
-    public StartOrContinueExam getExaminationVo() {
-        return examinationVo;
-    }
-
-    public void setExaminationVo(StartOrContinueExam examinationVo) {
-        this.examinationVo = examinationVo;
-    }
 
     public List<CourseVoBean> getCourseVo() {
         return courseVo;
@@ -1212,13 +1203,5 @@ public class CaptureResultBean implements Serializable{
             }
         }
 
-    }
-
-    @Override
-    public String toString() {
-        return "CaptureResultBean{" +
-                "examinationVo=" + examinationVo +
-                ", courseVo=" + courseVo +
-                '}';
     }
 }

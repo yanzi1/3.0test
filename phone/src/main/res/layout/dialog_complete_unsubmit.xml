@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/exam_dialog_bg"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_marginTop="@dimen/dip_size_10"
+        android:padding="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exam_advice"
+        android:gravity="center"
+        android:textColor="@color/exam_test_question_font"
+        android:textSize="@dimen/font_size_xlarge"/>
+
+    <TextView
+        android:id="@+id/dialog_subtitle"
+        android:padding="@dimen/dip_size_10"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/exam_ongoing"
+        android:textColor="@color/exam_test_question_font"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_marginTop="@dimen/dip_size_10"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/divider_line" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_exam_giveup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:text="@string/exam_giveup"
+        android:textColor="@color/app_item_layout_text_selector"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:padding="@dimen/dip_size_15"
+            android:id="@+id/tv_exam_contiue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:clickable="true"
+            android:text="@string/exam_contiue"
+            android:textColor="@color/app_item_layout_text_selector"
+            android:textSize="16sp"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/divider_line" />
+        <TextView
+            android:padding="@dimen/dip_size_15"
+            android:id="@+id/tv_exam_nextdo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:clickable="true"
+            android:text="@string/exam_next_do"
+            android:textColor="@color/app_item_layout_text_selector"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

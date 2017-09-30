@@ -11,7 +11,7 @@ import java.io.Serializable;
  */
 
 @Table(name="t_examination")
-public class Examination implements Serializable {
+public class Examination implements Serializable{
     //知识点ID
     private String examinationId;
     private String examinationName;

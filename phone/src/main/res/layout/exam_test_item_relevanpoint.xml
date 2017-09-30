@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/spacing_xmedium"
+    android:paddingBottom="@dimen/spacing_xmedium"
+    android:background="@drawable/btn_rect_list_normal"
+    >
+
+    <TextView
+        android:id="@+id/tv_relevant_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_18"
+        android:textColor="@color/exam_test_question_font"
+        android:text="" />
+
+</LinearLayout>

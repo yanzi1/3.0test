@@ -45,9 +45,6 @@
     <!--end-->
 
     <!--wp-->
-    <dimen name="dip_size_10">10.0dip</dimen>
-    <dimen name="dip_size_14">14.0dip</dimen>
-    <dimen name="dip_size_15">15.0dip</dimen>
     <dimen name="dip_size_0.5">0.5dip</dimen>
     <dimen name="dip_size_1">1.0dip</dimen>
     <dimen name="dip_size_5">5.0dip</dimen>
@@ -63,10 +60,36 @@
     <dimen name="dip_size_50">50.0dip</dimen>
     <dimen name="dip_size_70">70.0dip</dimen>
 
-    <dimen name="text_size_15">15.0sp</dimen>
-    <dimen name="text_size_13">13.0sp</dimen>
-    <dimen name="text_size_12">12.0sp</dimen>
-    <dimen name="text_size_19">19.0sp</dimen>
-    <dimen name="dip_size_12">12.0dip</dimen>
     <!--end-->
+
+
+
+    <dimen name="text_size_12">12.0sp</dimen>
+    <dimen name="text_size_13">13.0sp</dimen>
+    <dimen name="text_size_14">14.0sp</dimen>
+    <dimen name="text_size_15">15.0sp</dimen>
+    <dimen name="text_size_16">16.0sp</dimen>
+    <dimen name="text_size_18">18.0sp</dimen>
+    <dimen name="text_size_19">19.0sp</dimen>
+    <dimen name="text_size_20">20.0sp</dimen>
+    <dimen name="text_size_25">25.0sp</dimen>
+
+    <dimen name="dip_size_10">10.0dip</dimen>
+    <dimen name="dip_size_12">12.0dip</dimen>
+    <dimen name="dip_size_14">14.0dip</dimen>
+    <dimen name="dip_size_15">15.0dip</dimen>
+    <dimen name="dip_size_16">16.0dip</dimen>
+    <dimen name="dip_size_18">18.0dip</dimen>
+
+
+    <dimen name="middle_size">15sp</dimen>
+    <dimen name="ic_time_size">14sp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+
+    <dimen name="scorecord_question_title">20sp</dimen>
+    <dimen name="scorecord_question">36sp</dimen>
 </resources>

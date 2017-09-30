@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_medium">
+
+
+    <TextView
+        android:id="@+id/examination_bottom_left"
+        style="@style/x_text"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:drawablePadding="@dimen/spacing_xsmall"
+        android:drawableTop="@drawable/exam_button_answercard_normal"
+        android:gravity="center"
+        android:text="@string/score_card"
+        android:textColor="@color/exam_test_question_bottom_font"/>
+
+
+    <TextView
+        android:id="@+id/examination_bottom_center"
+        style="@style/x_text"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:drawablePadding="@dimen/spacing_xsmall"
+        android:drawableTop="@drawable/exam_button_favor_normal"
+        android:gravity="center"
+        android:text="收藏"
+        android:textColor="@color/exam_test_question_bottom_font"/>
+
+    <TextView
+        android:id="@+id/examination_bottom_right"
+        style="@style/x_text"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:drawablePadding="@dimen/spacing_xsmall"
+        android:drawableTop="@drawable/exam_button_timer_normal"
+        android:gravity="center"
+        android:text="00:00:00"
+        android:textColor="@color/exam_test_question_bottom_font"/>
+
+</LinearLayout>

@@ -74,92 +74,6 @@
     <string name="read_and_accept">已阅读并接受</string>
     <string name="next_step">下一步</string>
 
-    <!-- exam 题库部分  fzw -->
-    <string name="exam_main_persenal_title">自主演练</string>
-    <string name="exam_main_persenal_practice">智能特训</string>
-    <string name="exam_main_persenal_chapter">章节组卷</string>
-    <string name="exam_main_persenal_custom">自定义组卷</string>
-    <string name="exam_main_persenal_practice_first">智</string>
-    <string name="exam_main_persenal_chapter_first">章</string>
-    <string name="exam_main_persenal_custom_first">自</string>
-    <string name="exam_main_persenal_practice_title">练习题库</string>
-
-    <string name="exam_paper_draft">草稿</string>
-    <string name="exam_paper_favor">收藏</string>
-    <string name="exam_paper_answer">答案</string>
-    <string name="exam_paper_card">题卡</string>
-
-    <string name="exam_paper_draw_last">上一步</string>
-    <string name="exam_paper_draw_next">下一步</string>
-    <string name="exam_paper_draw_clear">清除</string>
-
-    <string name="exam_paper_setting_font">Aa</string>
-    <string name="exam_paper_setting_day">日间模式</string>
-    <string name="exam_paper_setting_night">夜间模式</string>
-    <string name="exam_paper_setting_exam_type_reply">答题模式</string>
-    <string name="exam_paper_setting_exam_type_memory">背题模式</string>
-
-    <string name="exam_paper_card_hint_unanswer">未作回答：</string>
-    <string name="exam_paper_card_hint_answered">已作回答：</string>
-    <string name="exam_paper_card_bt">交卷并查看结果</string>
-    <string name="exam_paper_card_title">答题卡</string>
-
-    <string name="exam_paper_report_title">答题报告</string>
-    <string name="exam_paper_report_all_anys">全部解析</string>
-    <string name="exam_paper_report_wrong_anys">错题解析</string>
-    <string name="exam_paper_report_hint_right">回答正确</string>
-    <string name="exam_paper_report_hint_wrong">回答错误</string>
-    <string name="exam_paper_report_hint_noanswer">未做回答</string>
-    <string name="exam_paper_report_hint_total_goal">最后得分</string>
-    <string name="exam_paper_report_hint_beat_num">试卷用时</string>//击败考生
-    <string name="exam_paper_report_hint_correct_odds">正确率</string>
-
-    <string name="exam_paper_question_charge_ans_right">正确</string>
-    <string name="exam_paper_question_charge_ans_wrong">错误</string>
-
-    <string name="exam_paper_question_myans">我的答案：</string>
-    <string name="exam_paper_question_correctans">正确答案：</string>
-    <string name="exam_paper_question_noans">您未作答</string>
-    <string name="exam_paper_question_correct">答案正确</string>
-    <string name="exam_paper_question_statistics">统计</string>
-    <string name="exam_paper_question_statistics_totalans">共答</string>
-    <string name="exam_paper_question_statistics_wrongans">答错</string>
-    <string name="exam_paper_question_statistics_unit">次</string>
-    <string name="exam_paper_question_statistics_hint_persenal">个人统计：</string>
-    <string name="exam_paper_question_statistics_hint_total">全部统计：</string>
-    <string name="exam_paper_question_analysis">解析</string>
-    <string name="exam_paper_question_analysis_way">解题思路</string>
-    <string name="exam_paper_question_video_analysis">视频讲解</string>
-    <string name="exam_paper_question_knowledgePoint">相关知识点</string>
-    <string name="exam_paper_question_question">推荐答疑 ></string>
-    <string name="exam_paper_question_feedback">试题反馈 ></string>
-    <string name="exam_paper_question_lebal">笔记 ></string>
-    <string name="exam_paper_question_addlebal">+添加笔记</string>
-    <string name="exam_paper_question_card_title">答题卡</string>
-
-    <string name="exam_question_type_signal">单选题</string>
-    <string name="exam_question_type_multi">多选题</string>
-    <string name="exam_question_type_uncertainty">不定项选择题</string>
-    <string name="exam_question_type_charge">判断题</string>
-    <string name="exam_question_type_simple">简答题</string>
-    <string name="exam_question_type_analyse">计算分析题</string>
-    <string name="exam_question_type_general">综合题</string>
-    <string name="exam_question_type_simple_hint">本题不支持判分，您可查看答案解析</string>
-
-    <string name="exam_question_title_signal">[单选题]</string>
-    <string name="exam_question_title_multi">[多选题]</string>
-    <string name="exam_question_title_uncertainty">[不定项选择题]</string>
-    <string name="exam_question_title_charge">[判断题]</string>
-    <string name="exam_question_title_simple">[简答题]</string>
-    <string name="exam_question_title_analyse">[计算分析题]</string>
-    <string name="exam_question_title_general">[综合题]</string>
-
-    <string name="exam_question_title_signal_explain">[单选题]每题只有一个正确答案</string>
-    <string name="exam_question_title_multi_explain">[多选题]每题至少有两个正确答案</string>
-    <string name="exam_question_title_uncertainty_explain">[不定项选择题]每题有一个或多个选项</string>
-    <string name="exam_question_title_charge_explain">[判断题]判断以下说法是否正确</string>
-    <string name="exam_question_title_simple_explain">[简答题]</string>
-    <string name="exam_question_title_general_explain">[综合题]</string>
 
     <string name="collect">收藏</string>
     <string name="give_thumb_up">点赞</string>
@@ -243,5 +157,39 @@
     <string name="app_load_more_end">我是有底线的</string>
     <string name="app_load_more_failed">加载失败，请点我重试</string>
     <string name="app_loading_more">玩命加载中...</string>
+    <!--     TODO    -->
+    <string name="exam_uncomplete">您仍有试题未作答，确定交卷吗？</string>
+    <string name="exam_complete">您确定要交卷吗？</string>
+    <string name="exam_ongoing">您正在进行练习，确定要退出吗？</string>
+    <string name="exam_contiue">取消</string>
+    <string name="exam_submit">交卷</string>
+    <string name="exam_giveup">放弃此次做题</string>
+    <string name="exam_next_do">退出并保存</string>
+    <string name="exam_relavant_answer">本题答疑推荐</string>
+    <string name="empty_message">没有数据哦</string>
+    <string name="loading_message">加载中...</string>
+    <string name="error_message">数据加载失败了...</string>
+    <string name="exam_prictice">随堂练习</string>
+    <string name="exam_falt">我的错题</string>
+    <string name="exam_list_have_done">已做</string>
+    <string name="exam_list_right_rate">正确率</string>
+    <string name="exam_solution_thinking">解题思路</string>
+    <string name="net_error">网络连接失败，请检查您的网络~</string>
+    <string name="chat_no_more_info">没有更多消息</string>
+    <string name="question_point">本题不支持作答，可在交卷后核对答案并查看解析</string>
+    <string name="right_text">答对</string>
+    <string name="error_text">答错</string>
+    <string name="score_card">答题卡</string>
+    <string name="exam_check_analyze">查看解析</string>
+    <string name="scorecard_score">成绩</string>
+    <string name="scorecard_score_advice_title">You will never too late to learn!</string>
+    <string name="exam_report">答题报告</string>
+    <string name="delete">刪除</string>
+    <string name="question">题</string>
+    <string name="exam_advice">提示</string>
 
+    <string name="empty_button">再试一次</string>
+    <string name="loading_button">取消</string>
+    <string name="error_button">再试一次</string>
+    <string name="check_net">联网失败，请检查您的网络</string>
 </resources>

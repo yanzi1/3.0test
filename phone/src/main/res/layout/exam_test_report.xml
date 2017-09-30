@@ -1,0 +1,234 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/x_page"
+    android:background="@color/exam_test_question_score_scard_bg">
+
+    <include layout="@layout/top_title_bar" />
+
+    <ScrollView
+        android:id="@+id/content_sv"
+        style="@style/x_scrollview"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_report_score"
+                style="@style/normal_fw"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    style="@style/normal_fw"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_gravity="center"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/exam_score_card_score_yuan"
+                        >
+                        <LinearLayout
+                            android:id="@+id/score_left"
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            >
+
+                            <TextView
+                                android:id="@+id/bt_total_score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:text="199.0"
+                                android:textSize="56sp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:gravity="bottom"
+                                android:layout_gravity="bottom"
+                                android:text="分"
+                                android:layout_marginBottom="3dp"
+                                android:textSize="20sp"/>
+                           
+                        </LinearLayout>
+                       
+                        <TextView
+                            android:id="@+id/exam_report_time"
+                            android:layout_marginTop="@dimen/dip_size_10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:layout_below="@id/score_left"
+                            android:layout_centerHorizontal="true"
+                            android:text="用时 03:47"
+                            android:textSize="@dimen/font_size_nomarl"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        style="@style/normal_fw"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_pingjia"
+                            style="@style/normal_ww"
+                            android:layout_centerInParent="true"
+                            android:text="@string/scorecard_score_advice_title"
+                            android:textSize="20sp"
+                            android:textColor="@color/exam_test_question_font"/>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/normal_fw"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_large">
+
+                    <LinearLayout
+                        style="@style/normal_weight_width"
+                        android:orientation="horizontal">
+
+
+                            <TextView
+                                style="@style/normal_ww"
+                                android:paddingBottom="6dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="right|bottom"
+                                android:text="@string/right_text"
+                                android:textSize="20sp"
+                                android:textColor="@color/exam_test_question_bottom_font"
+                                />
+
+
+                            <TextView
+                                android:layout_marginLeft="@dimen/dip_size_15"
+                                android:layout_height="match_parent"
+                                android:id="@+id/tv_right_number"
+                                style="@style/normal_ww"
+                                android:layout_weight="1"
+                                android:gravity="left|bottom"
+                                android:text="0"
+                                android:textColor="@color/exam_test_question_score_scard_right_bg"
+                                android:textSize="36sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="60dp"
+                        android:paddingTop="@dimen/dip_size_20"
+                        android:paddingBottom="@dimen/dip_size_20"
+                        android:background="@color/exam_test_question_score_scard_line_bg" 
+                        />
+
+                    <LinearLayout
+                        style="@style/normal_weight_width"
+                        android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_marginRight="@dimen/dip_size_15"
+                                android:id="@+id/tv_error"
+                                style="@style/normal_ww"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="right|bottom"
+                                android:text="0"
+                                android:textColor="@color/errortest_color"
+                                android:textSize="@dimen/scorecord_question" />
+
+
+                            <TextView
+                                style="@style/normal_ww"
+                                android:paddingBottom="6dp"
+                                android:textColor="@color/exam_test_question_bottom_font"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="left|bottom"
+                                android:layout_centerInParent="true"
+                                android:text="@string/error_text"
+                                android:textSize="@dimen/scorecord_question_title"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <FrameLayout
+                android:id="@+id/exam_score_card_fragment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:paddingTop="@dimen/spacing_large"></FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/exam_scorecard_bottom_bg_normal"
+        >
+       <!-- android:background="@drawable/exam_btn_common_selector"-->
+        <LinearLayout
+            android:id="@+id/ll_error_bg"
+            style="@style/normal_weight_width"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_wrong_analysis"
+                android:drawableLeft="@drawable/exam_score_scard_error_icon"
+                android:drawablePadding="@dimen/dip_size_10"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/spacing_large"
+                android:text="错题解析"
+                android:textSize="@dimen/font_size_large"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/normal_weight_width"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_all_analysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:drawableLeft="@drawable/exam_score_scard_right_icon"
+                android:drawablePadding="@dimen/dip_size_10"
+                android:gravity="center"
+                android:padding="@dimen/spacing_large"
+                android:text="全部解析"
+                android:textSize="@dimen/font_size_large"
+                android:textColor="@color/white" />
+        </LinearLayout>
+       
+
+        
+    </LinearLayout>
+
+</LinearLayout>

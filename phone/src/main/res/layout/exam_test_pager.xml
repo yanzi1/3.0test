@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <LinearLayout
+        style="@style/x_page">
+        <include layout="@layout/top_title_bar_exam_test" />
+
+        <LinearLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <android.support.v4.view.ViewPager
+                android:layout_weight="1"
+                android:id="@+id/vp"
+                android:layout_width="match_parent"
+                android:background="@android:color/white"
+                android:layout_height="match_parent" >
+
+            </android.support.v4.view.ViewPager>
+
+            <include
+                android:id="@+id/exam_pager_bottom"
+                layout="@layout/exam_test_question_bottom" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/exam_pager_bottom_report_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/spacing_medium"
+                android:paddingTop="@dimen/spacing_medium"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/exam_btn_common_selector"
+                    android:padding="@dimen/spacing_large"
+                    android:gravity="center"
+                    android:text="提交并查看解析"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/dip_size_16" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <include layout="@layout/exam_slide_guide"/>
+  
+
+     
+</RelativeLayout>

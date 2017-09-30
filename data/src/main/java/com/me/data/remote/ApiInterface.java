@@ -4,16 +4,6 @@ import com.me.data.model.BaseRes;
 import com.me.data.model.WelcomeRes;
 import com.me.data.model.course.CourseStatiscalDetailBean;
 import com.me.data.model.course.KnowledgePointsStatiscialBean;
-import com.me.data.model.exam.ExamRank;
-import com.me.data.model.exam.newmodle.ContinueRecordExam;
-import com.me.data.model.exam.newmodle.ErrorStatistic;
-import com.me.data.model.exam.newmodle.ExamFeedbackType;
-import com.me.data.model.exam.newmodle.ExamMain;
-import com.me.data.model.exam.newmodle.ExamPaperReportAll;
-import com.me.data.model.exam.newmodle.ExamPreviousPaper;
-import com.me.data.model.exam.newmodle.KnowledgeVoVideo;
-import com.me.data.model.exam.newmodle.MyWrongExamPaper;
-import com.me.data.model.exam.newmodle.StartOrContinueExam;
 import com.me.data.model.intel.IntelMainBean;
 import com.me.data.model.intel.review.ChoiceTypesBean;
 import com.me.data.model.main.BooksErrataListBean;
@@ -72,12 +62,6 @@ import com.me.data.model.play.CourseDetail;
 import com.me.data.model.play.CourseListData;
 import com.me.data.model.play.NoteDetail;
 import com.me.data.model.play.StudyPlanBean;
-import com.me.data.model.query.QueryAddBookBean;
-import com.me.data.model.query.QueryAddKnowledgeDataBean;
-import com.me.data.model.query.QueryDetailItemBean;
-import com.me.data.model.query.QueryJudgeDataBean;
-import com.me.data.model.query.QueryMainBean;
-import com.me.data.model.query.QueryRecommendBean;
 import com.me.data.model.studyrecord.DayRecord;
 import com.me.data.model.studyrecord.EnableDate;
 import com.me.data.model.studyrecord.WeekRecordObj;
@@ -498,33 +482,6 @@ public interface ApiInterface {
 //    Flowable<BaseRes<String>> getExamPaper(@QueryMap Map<String, String> map);
 
     /*********************************** 做题模块 ↓↓ ***********************/
-    @GET(EXAM_GET_PAPER)
-    Flowable<BaseRes<StartOrContinueExam>> getExamPaper(@QueryMap Map<String, String> map);
-
-    @GET(EXAM_GET_MY_WRONG_PAPER)
-    Flowable<BaseRes<MyWrongExamPaper>> getMyWrongExamPaper(@QueryMap Map<String, String> map);
-
-    @GET(EXAM_GET_PAPER_CONTINUE_FROM_RECORD)
-    Flowable<BaseRes<ContinueRecordExam>> getExamPaperFromRecord(@QueryMap Map<String, String> map);
-
-    @GET(EXAM_GET_RECOMM_PAPER)
-    Flowable<BaseRes<StartOrContinueExam>> getRecommExamPaper(@QueryMap Map<String, String> map);
-
-    @GET(EXAM_KNOWLEDGE_VIDEO)
-    Flowable<BaseRes<KnowledgeVoVideo>> getExamKnowledgeVideo(@QueryMap Map<String, String> map);
-
-    @POST(EXAM_GET_ANYS)
-    @FormUrlEncoded
-    Flowable<BaseRes<StartOrContinueExam>> getExamPaperAnys(@FieldMap Map<String, String> map);
-
-    @GET(EXAM_GET_DETAIL)
-    Flowable<BaseRes<StartOrContinueExam>> getExamPaperDetail(@QueryMap Map<String, String> map);
-
-    @GET(EXAM_GET_REPORT)
-    Flowable<BaseRes<ExamPaperReportAll>> getExamPaperReort(@QueryMap Map<String, String> map);
-
-    @GET(EXAM_GET_REPORT_INTEL)
-    Flowable<BaseRes<ExamPaperReportAll>> getExamPaperReortIntel(@QueryMap Map<String, String> map);
 
     @GET(EXAM_ADD_FAVOR)
     Flowable<BaseRes<String>> examPaperAddFvor(@QueryMap Map<String, String> map);
@@ -537,15 +494,6 @@ public interface ApiInterface {
 
     @GET(EXAM_GET_QUES_IS_HAVE_NOTES)
     Flowable<BaseRes<NoteDetail>> getQuesIsHaveNotes(@QueryMap Map<String, String> map);
-
-    @GET(EXAM_MAIN)
-    Flowable<BaseRes<ExamMain>> getExamMain(@QueryMap Map<String, String> map);
-
-    @GET(EXAM_PREVIOUS_PAPER)
-    Flowable<BaseRes<ExamPreviousPaper>> getExamPreviousPaperList(@QueryMap Map<String, String> map);
-
-    @GET(EXAM_FEEDBACK_TYPEE)
-    Flowable<BaseRes<List<ExamFeedbackType>>> getExamFeedbackType(@QueryMap Map<String, String> map);
 
     @POST(EXAM_FEEDBACK_POST)
     @FormUrlEncoded
@@ -568,13 +516,6 @@ public interface ApiInterface {
     @FormUrlEncoded
     @POST(EXAM_SAVE_EXAM_PAPER_INTEL)
     Flowable<BaseRes<String>> saveExamPaperIntel(@FieldMap Map<String, String> map);
-
-    @POST(MINE_ERROR_QUESTION_STATISTIC)
-    @FormUrlEncoded
-    Flowable<BaseRes<ErrorStatistic>> mineErrorQuestionStatistic(@FieldMap Map<String, String> map);
-
-    @GET(EXAM_INTEL_START_EXAM)
-    Flowable<BaseRes<ContinueRecordExam>> intelExamStart(@QueryMap Map<String, String> map);
 
     /*********************************** 做题模块 ↑↑ ***********************/
     @GET(GOODS_DETAIL)
@@ -674,79 +615,6 @@ public interface ApiInterface {
     //支付成功，开课
     @GET(PAY_SUCCESS_OPEN)
     Flowable<String> paySuccessOpen(@QueryMap Map<String, String> options);
-
-
-    @GET(QUERYADD_MAIN_FRAGMENT)
-    Flowable<BaseRes<QueryMainBean>> getQueryMainFragment(@QueryMap Map<String, String> map);
-
-    @GET(QUERYADD_MAIN_FRAGMENT1)
-    Flowable<BaseRes<QueryMainBean>> getQueryMainFragment1(@QueryMap Map<String, String> map);
-
-    @FormUrlEncoded
-    @POST(QUERYADD_MAIN_FRAGMENT2)
-    Flowable<BaseRes<QueryMainBean>> getQueryMainFragment2(@FieldMap Map<String, String> map);
-
-    @FormUrlEncoded
-    @POST(QUERYADD_MAIN_QUERY_WORD)
-    Flowable<BaseRes<List<String>>> getQueryWord(@FieldMap Map<String, String> map);
-
-    @GET(QUERYADD_BOOK_LIST)
-    Flowable<BaseRes<List<QueryAddBookBean>>> getQueryBook(@QueryMap Map<String, String> map);
-
-    @GET(QUERYADD_BOOK_KNOWLEDGE_LIST)
-    Flowable<BaseRes<QueryAddKnowledgeDataBean>> getQueryKnowledge(@QueryMap Map<String, String> map);
-
-    @GET(QUERYADD_BOOK_KNOWLEDGE_QUERY_LIST)
-    Flowable<BaseRes<QueryRecommendBean>> getQueryKnowledgeQuery(@QueryMap Map<String, String> map);
-
-    @GET(QUERYADD_BOOK_JIANGYI_QUERY_LIST)
-    Flowable<BaseRes<QueryRecommendBean>> getQueryJiangyiQuery(@QueryMap Map<String, String> map);
-
-    @GET(INTEL_QUERY_RECOMMEND)
-    Flowable<BaseRes<QueryRecommendBean>> getIntelQuery(@QueryMap Map<String, String> map);
-    
-    @GET(INTEL_QUERY_QUESTION_RECOMMEND)
-    Flowable<BaseRes<QueryRecommendBean>> getIntelQuestionQuery(@QueryMap Map<String, String> map);
-
-    @POST(QUERYADD_BOOK_QUESTION_ADD)
-    Flowable<BaseRes<String>> submitQueryQuestion(@QueryMap Map<String, String> map);
-
-    @POST(QUERYADD_QUESTION_COLLECT)
-    Flowable<BaseRes<String>> collectQueryQuestion(@QueryMap Map<String, String> map);
-
-    @POST(QUERYADD_QUESTION_COLLECT_CANCEL)
-    Flowable<BaseRes<String>> collectCancelQueryQuestion(@QueryMap Map<String, String> map);
-
-    @POST(QUERYADD_QUESTION_FAVORIT)
-    Flowable<BaseRes<String>> favoriteCancelQueryQuestion(@QueryMap Map<String, String> map);
-
-    @FormUrlEncoded
-    @POST(QUERYADD_BOOK_BOOK_ADD)
-    Flowable<BaseRes<String>> submitQueryBookQuestion(@FieldMap Map<String, String> map);
-
-    @FormUrlEncoded
-    @POST(QUERYADD_BOOK_BOOK_ADD_UPDATE)
-    Flowable<BaseRes<String>> updateQueryBookQuestion(@FieldMap Map<String, String> map);
-
-    @GET(QUERYADD_BOOK_BOOK_ADD_DELETE)
-    Flowable<BaseRes<String>> deleteQueryBookQuestion(@QueryMap Map<String, String> map);
-
-    @FormUrlEncoded
-    @POST(QUERYADD_BOOK_BOOK_ADD_OTHER)
-    Flowable<BaseRes<String>> addOthreQueryBookQuestion(@FieldMap Map<String, String> map);
-
-    @GET(QUERYADD_QUESTION_DETAIL)
-    Flowable<BaseRes<QueryDetailItemBean>> getQueryBookQuestionDetail(@QueryMap Map<String, String> map);
-
-	@GET(INTEL_QUERY_DETAIL)
-    Flowable<BaseRes<QueryDetailItemBean>> getIntelQueryDetail(@QueryMap Map<String, String> map);
-
-    @GET(QUERYADD_JUDGE_DATA)
-    Flowable<BaseRes<List<QueryJudgeDataBean>>> getQueryJudgeData(@QueryMap Map<String, String> map);
-
-    @FormUrlEncoded
-    @POST(QUERYADD_JUDGE_SUBMIT)
-    Flowable<BaseRes<String>> submitQueryJudge(@FieldMap Map<String, String> map);
 
     @GET(MINE_ADDRESS_CONSIGNEELIST)
     Flowable<BaseRes<List<AddressBean>>> getConsigneeList(@QueryMap Map<String, String> map);
@@ -985,12 +853,6 @@ public interface ApiInterface {
 
     @GET(STUDY_RECORD_WEEK_RECORD)
     Flowable<BaseRes<WeekRecordObj>> studyRecordWeekRecord(@QueryMap Map<String, String> map);
-
-    @GET(EXAM_INTEL_RANK)
-    Flowable<BaseRes<ExamRank>> getExamRank(@QueryMap Map<String, String> map);
-
-    @GET(EXAM_INTEL_REVIEW_EXAM)
-    Flowable<BaseRes<MyWrongExamPaper>> intelReviewExam(@QueryMap Map<String, String> map);
 
     @GET(EXMA_INTEL_REVIEW_CHANGE_STATUS)
     Flowable<BaseRes<String>> intelReviewExamChangeStatus(@QueryMap Map<String, String> map);

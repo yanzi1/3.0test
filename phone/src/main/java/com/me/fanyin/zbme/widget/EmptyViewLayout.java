@@ -394,7 +394,7 @@ public class EmptyViewLayout {
         }
 
         if(mEmptyType==TYPE_OTHER_ERROR){
-            mBackgroundViews.setBackgroundColor(mContext.getResources().getColor(R.color.exam_complex_drag_view_bg));
+            mBackgroundViews.setBackgroundColor(Color.WHITE);
         }else{
             mBackgroundViews.setBackgroundColor(Color.WHITE);
         }

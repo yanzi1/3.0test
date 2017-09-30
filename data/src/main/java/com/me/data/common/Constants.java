@@ -288,4 +288,33 @@ public interface Constants {
     public static final String USER_MD5_YAN = "4b44a096eaa3c94f33845ae3c6e3d14c";
 
     String REVIEW_LIST = "review_list";
+
+    public static final int VIEW_STATUS_SAVE_DATA = 10;//保存数据中
+    public static final int VIEW_STATUS_SUBMIT = 11;//提交数据中
+    public static final int EXAM_TAG_COLLECTION = 20001; //收藏
+    public static final int EXAM_TAG_FALT = 20002; //错题
+    public static final int EXAM_TAG_ABILITY = 20000; //首页能力评估
+    public static final int EXAM_TAG_KNOWLEDGE = 20003; //知识点
+    public static final int EXAM_TAG_HIGHFREQUENCY = 20008;//高频考点
+    public static final int EXAM_TAG_EVERY_YEAR = 20005; //历年真题
+
+    public static final int EXAM_TAG_REPORT = 20004; //答题报告
+    public static final int EXAM_TAG_CONTINU = 20006; //继续做题
+    public static final int EXAM_KNOWLEDGE_CONTINU = 20009; //继续做题(knowledgeList里边的重新做题)
+    public static final int EXAM_KNOWLEDGE_RESTART = 20010; //重新做题
+    public static final int EXAM_ORIGINAL_QUESTION = 20011;//原题
+    public static final int EXAM_DO_CONTINUE = 20012;//继续做题，做到当前题
+    public static final String EXAM_COLLECT = "exam_collect";//做题-收藏
+    public static final String EXAM_TO_RECOMMQUESTION = "exam_to_recommquestion";//做题-查看推荐答疑
+    public static final String EXAM_TO_ASKQUESTION = "exam_to_askquestion";//做题-从推荐答疑提问
+    public static String ARG_POSITION = "ARG_POSITION";
+    public static final String EXAM_TYPE = "exam_type"; //试题类型
+    /**
+     * 是卷列表的参数
+     * 1:课后作业, 3:模拟考试, 4:历年真题, 29:随堂练习
+     */
+    public static final int EXAMLIST_TYPE_KEHOU = 1;
+    public static final int EXAMLIST_TYPE_MONI = 3;
+    public static final int EXAMLIST_TYPE_LINIAN = 4;
+    public static final int EXAMLIST_TYPE_SUITANG = 29;
 }

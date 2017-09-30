@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/x_page" >
+
+    <include layout="@layout/top_title_bar" />
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/exam_app_view_loading" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/exam_score_card_fragment"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="@dimen/spacing_large"></FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/exam_pager_bottom_report_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/spacing_medium"
+        android:paddingTop="@dimen/spacing_medium"
+        android:paddingLeft="@dimen/spacing_large"
+        android:paddingRight="@dimen/spacing_large"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/exam_btn_common_selector"
+            android:padding="@dimen/spacing_large"
+            android:gravity="center"
+            android:text="提交并查看解析"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dip_size_16" />
+    </RelativeLayout>
+     
+</LinearLayout>

@@ -18,14 +18,14 @@ public class Question implements Serializable {
 	private String examinationId; //试卷Id
 	private String questionId;
 	private  int choiceType; //题目类型
-	private String title; //题目描述或者标题
-	private String score; //分数
-	private String realAnswer; //真实答案
-	private String userAnswer; //本地答案
+	private  String title; //题目描述或者标题
+	private  String score; //分数
+	private  String realAnswer; //真实答案
+	private  String userAnswer; //本地答案
 	private boolean isCorrect;//是否正确
 	private String quizAnalyze;//解析
 	private String solutions;//解题思路：扫码看题1.5.0
-	private List<Option> optionList; //选项
+	private  List<Option> optionList; //选项
 	//添加题冒题ID
 	private String groupId;
 
@@ -34,40 +34,6 @@ public class Question implements Serializable {
 	
 	//试卷名称
 	private String examinationName;
-	//前面因为含有题冒题而后移的角标数
-	private int indexMove;
-	//是否显示了答案
-	private boolean isHaveShowAns;
-
-	/**
-	 * 自增
-	 * @return
-	 */
-	private int indexInList;//在总题目数据list中的角标
-
-	public int getIndexInList() {
-		return indexInList;
-	}
-
-	public void setIndexInList(int indexInList) {
-		this.indexInList = indexInList;
-	}
-
-	public boolean isHaveShowAns() {
-		return isHaveShowAns;
-	}
-
-	public void setHaveShowAns(boolean haveShowAns) {
-		isHaveShowAns = haveShowAns;
-	}
-
-	public int getIndexMove() {
-		return indexMove;
-	}
-
-	public void setIndexMove(int indexMove) {
-		this.indexMove = indexMove;
-	}
 
 	public String getExaminationName() {
 		return examinationName;

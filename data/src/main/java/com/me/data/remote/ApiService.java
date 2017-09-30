@@ -4,16 +4,6 @@ import com.me.data.model.BaseRes;
 import com.me.data.model.WelcomeRes;
 import com.me.data.model.course.CourseStatiscalDetailBean;
 import com.me.data.model.course.KnowledgePointsStatiscialBean;
-import com.me.data.model.exam.ExamRank;
-import com.me.data.model.exam.newmodle.ContinueRecordExam;
-import com.me.data.model.exam.newmodle.ErrorStatistic;
-import com.me.data.model.exam.newmodle.ExamFeedbackType;
-import com.me.data.model.exam.newmodle.ExamMain;
-import com.me.data.model.exam.newmodle.ExamPaperReportAll;
-import com.me.data.model.exam.newmodle.ExamPreviousPaper;
-import com.me.data.model.exam.newmodle.KnowledgeVoVideo;
-import com.me.data.model.exam.newmodle.MyWrongExamPaper;
-import com.me.data.model.exam.newmodle.StartOrContinueExam;
 import com.me.data.model.intel.IntelMainBean;
 import com.me.data.model.intel.review.ChoiceTypesBean;
 import com.me.data.model.main.BooksErrataListBean;
@@ -70,12 +60,6 @@ import com.me.data.model.play.CourseDetail;
 import com.me.data.model.play.CourseListData;
 import com.me.data.model.play.NoteDetail;
 import com.me.data.model.play.StudyPlanBean;
-import com.me.data.model.query.QueryAddBookBean;
-import com.me.data.model.query.QueryAddKnowledgeDataBean;
-import com.me.data.model.query.QueryDetailItemBean;
-import com.me.data.model.query.QueryJudgeDataBean;
-import com.me.data.model.query.QueryMainBean;
-import com.me.data.model.query.QueryRecommendBean;
 import com.me.data.model.studyrecord.DayRecord;
 import com.me.data.model.studyrecord.EnableDate;
 import com.me.data.model.studyrecord.WeekRecordObj;
@@ -205,47 +189,6 @@ public class ApiService {
     }
 
     /*********************************** 做题模块 ↓↓ ***********************/
-    /**
-     * 开始做题或重新做题
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<StartOrContinueExam>> getExamPaper(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getExamPaper(map));
-    }
-    /**
-     * 从做题记录继续做题
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<ContinueRecordExam>> getExamPaperContinueFromRecord(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getExamPaperFromRecord(map));
-    }
-    /**
-     * 智能系统做题、做真题
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<ContinueRecordExam>> intelExamStart(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().intelExamStart(map));
-    }
-    /**
-     * 我的错题列表
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<MyWrongExamPaper>> getMyWrongExamPaper(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getMyWrongExamPaper(map));
-    }
-
-    /**
-     * 智能系统做复习包内的习题
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<MyWrongExamPaper>> intelReviewStart(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().intelReviewExam(map));
-    }
 
     /**
      * 智能系统变更复习包中的习题状态
@@ -265,99 +208,12 @@ public class ApiService {
         return getData(ApiClient.getApiInterface().deleteWrongQues(map));
     }
     /**
-     * 获取知识点视频播放的各种id
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<KnowledgeVoVideo>> getKnowledgeVideo(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getExamKnowledgeVideo(map));
-    }
-    /**
      * 该题是否有笔记
      * @param map
      * @return
      */
     public static Flowable<BaseRes<NoteDetail>> getQuesIsHaveNotes(@QueryMap Map<String, String> map) {
         return getData(ApiClient.getApiInterface().getQuesIsHaveNotes(map));
-    }
-    /**
-     * 推荐做题
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<StartOrContinueExam>> getRecommExamPaper(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getRecommExamPaper(map));
-    }
-    /**
-     * 查看全部解析
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<StartOrContinueExam>> getExamPaperAnys(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getExamPaperAnys(map));
-    }
-    /**
-     * 试题详情
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<StartOrContinueExam>> getExamPaperDetail(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getExamPaperDetail(map));
-    }
-    /**
-     * 答题报告
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<ExamPaperReportAll>> getExamPaperReport(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getExamPaperReort(map));
-    }
-    /**
-     * 智能系统答题报告
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<ExamPaperReportAll>> getExamPaperReportIntel(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getExamPaperReortIntel(map));
-    }
-    /**
-     * 添加收藏
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> examPaperAddFavor(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().examPaperAddFvor(map));
-    }
-    /**
-     * 删除收藏
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> examPaperDeleteFavor(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().examPaperDeleteFvor(map));
-    }
-    /**
-     * 题库首页
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<ExamMain>> getExamMain(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getExamMain(map));
-    }
-    /**
-     * 历年真题列表
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<ExamPreviousPaper>> getExamPreviousPaper(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getExamPreviousPaperList(map));
-    }
-    /**
-     * 试题反馈试题类型
-     * @return
-     */
-    public static Flowable<BaseRes<List<ExamFeedbackType>>> getExamFeedBackType(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getExamFeedbackType(map));
     }
 
     /**
@@ -387,238 +243,7 @@ public class ApiService {
         return getData(ApiClient.getApiInterface().postExamPaperIntel(map));
     }
 
-    /**
-     * 保存试卷
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> saveExamPaper(@FieldMap Map<String, String> map){
-        return getData(ApiClient.getApiInterface().saveExamPaper(map));
-    }
-
-    /**
-     * 智能系统保存试卷
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> saveExamPaperIntel(@FieldMap Map<String, String> map){
-        return getData(ApiClient.getApiInterface().saveExamPaperIntel(map));
-    }
-
-    /**
-     * 提交试卷
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<ErrorStatistic>> mineErrorQuestionStatistic(@FieldMap Map<String, String> map){
-        return getData(ApiClient.getApiInterface().mineErrorQuestionStatistic(map));
-    }
-
-    /**
-     * 提交试卷
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<ExamRank>> getExamRank(@QueryMap Map<String, String> map){
-        return getData(ApiClient.getApiInterface().getExamRank(map));
-    }
-
     /*********************************** 做题模块 ↑↑ ***********************/
-
-    /**
-     * 获取提问中图书的列表
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<List<QueryAddBookBean>>> getQueryBook(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getQueryBook(map));
-    }
-    /**
-     * 获取答疑首页的fragment0数据
-     *
-     * @return
-     */
-    public static Flowable<BaseRes<QueryMainBean>> getQueryMainFragment(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getQueryMainFragment(map));
-    }
-    /**
-     * 获取答疑首页的fragment1数据
-     *
-     * @return
-     */
-    public static Flowable<BaseRes<QueryMainBean>> getQueryMainFragment1(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getQueryMainFragment1(map));
-    }
-    /**
-     * 获取答疑首页的fragment2数据
-     *
-     * @return
-     */
-    public static Flowable<BaseRes<QueryMainBean>> getQueryMainFragment2(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getQueryMainFragment2(map));
-    }
-    /**
-     * 获取自动匹配词
-     *
-     * @return
-     */
-    public static Flowable<BaseRes<List<String>>> getQueryWord(@QueryMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getQueryWord(map));
-    }
-
-    /**
-     * 获取提问中知识点的列表
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<QueryAddKnowledgeDataBean>> getQueryKnowledge(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getQueryKnowledge(map));
-    }
-
-    /**
-     * 获取提问中知识点对应的答疑列表
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<QueryRecommendBean>> getQueryKnowledgeQueryList(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getQueryKnowledgeQuery(map));
-    }
-    /**
-     * 获取讲义的推荐答疑
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<QueryRecommendBean>> getQueryJiangyiQueryList(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getQueryJiangyiQuery(map));
-    }
-    /**
-     * 获取智能系统的推荐答疑
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<QueryRecommendBean>> getQueryIntelQueryList(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getIntelQuery(map));
-    }
-    /**
-     * 获取智能系统试题的推荐答疑
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<QueryRecommendBean>> getIntelQuestionQuery(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getIntelQuestionQuery(map));
-    }
-
-    /**
-     * 试题提问
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> submitQueryQuestion(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().submitQueryQuestion(map));
-    }
-    /**
-     * 答疑收藏
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> collectQueryQuestion(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().collectQueryQuestion(map));
-    }
-    /**
-     * 答疑取消收藏
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> collectCancelQueryQuestion(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().collectCancelQueryQuestion(map));
-    }
-    /**
-     * 答疑点赞
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> favoriteCancelQueryQuestion(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().favoriteCancelQueryQuestion(map));
-    }
-
-    /**
-     * 图书提问
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> submitQueryBookQuestion(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().submitQueryBookQuestion(map));
-    }
-    /**
-     * 修改提问
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> updateQueryBookQuestion(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().updateQueryBookQuestion(map));
-    }
-    /**
-     * 删除提问
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> deleteQueryBookQuestion(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().deleteQueryBookQuestion(map));
-    }
-    /**
-     * 增加追问
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> addOthreQueryBookQuestion(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().addOthreQueryBookQuestion(map));
-    }
-    /**
-     * 答疑详情
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<QueryDetailItemBean>> getQueryBookQuestionDetail(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getQueryBookQuestionDetail(map));
-    }
-    /**
-     * 智能系统答疑详情
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<QueryDetailItemBean>> getIntelQueryDetail(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getIntelQueryDetail(map));
-    }
-    /**
-     * 答疑评价列表
-     *
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<List<QueryJudgeDataBean>>> getQueryJudgeData(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().getQueryJudgeData(map));
-    }
-    /**
-     * 答疑评价提问
-     * @param map
-     * @return
-     */
-    public static Flowable<BaseRes<String>> submitQueryJudge(@FieldMap Map<String, String> map) {
-        return getData(ApiClient.getApiInterface().submitQueryJudge(map));
-    }
 
     /**
      * 首页

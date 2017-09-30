@@ -25,7 +25,7 @@ public class ExamPaperLog implements Serializable {
     private String content; //试卷json
     public ExamPaperLog(){}
 
-    public ExamPaperLog(String userId, String examId, String subjectId, String typeId, String sectionId, String examinationId, String answers){
+    public ExamPaperLog(String userId,String examId,String subjectId,String typeId,String sectionId, String examinationId,String answers){
         this.userId=userId;
         this.examId=examId;
         this.subjectId=subjectId;

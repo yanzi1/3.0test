@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /*
+  ~  * Copyright (C) 2015 by  xunice@qq.com
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  * http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  */
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/top_title_bar_layout"
+    android:background="?attr/colorPrimary"
+    android:orientation="vertical" >
+
+
+    <ImageView
+        android:id="@+id/top_title_left"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/exam_btn_rect_list_secondary"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/top_title_right"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="16dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_sequence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_gravity="center"
+            android:textColor="@color/exam_test_question_hearder_font_zi"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_total_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="@color/exam_test_question_hearder_font_mu"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/top_title_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_toRightOf="@id/top_title_left"
+        android:layout_toLeftOf="@id/top_title_right"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

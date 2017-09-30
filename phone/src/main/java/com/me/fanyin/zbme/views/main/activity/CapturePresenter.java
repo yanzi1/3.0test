@@ -8,14 +8,11 @@ import com.me.data.common.Constants;
 import com.me.data.local.SharedPrefHelper;
 import com.me.data.model.BaseRes;
 import com.me.data.model.main.CaptureResultBean;
-import com.me.data.model.play.CourseWare;
 import com.me.data.mvp.BasePersenter;
 import com.me.data.remote.ApiService;
 import com.me.data.remote.rxjava.RxUtils;
 import com.me.data.remote.rxjava.SimpleRxSubscriber;
 import com.me.fanyin.zbme.R;
-import com.me.fanyin.zbme.views.course.play.audition.AuditionPlayActivity;
-import com.me.fanyin.zbme.views.main.event.SetCourseListEvent;
 import com.me.fanyin.zbme.views.user.LoginActivity;
 
 import org.apache.http.util.TextUtils;
@@ -58,28 +55,28 @@ class CapturePresenter extends BasePersenter<CaptureView> {
 
                     @Override
                     public void doOnNext(CaptureResultBean captureResultBean) {
-                        if (captureResultBean.getExaminationVo() != null || captureResultBean.getCourseVo() != null) {
-                            if (captureResultBean.getExaminationVo() != null) {
-                                return;
-                            }
-                            if (captureResultBean.getCourseVo() != null && captureResultBean.getCourseVo().size() != 0 && captureResultBean.getCourseVo().get(0) != null) {
-                                if (captureResultBean.getCourseVo().size() == 1) {
-                                    CourseWare courseWare = new CourseWare();
-                                    courseWare.setId(captureResultBean.getCourseVo().get(0).getId() + "");
-                                    courseWare.setName(captureResultBean.getCourseVo().get(0).getName());
-                                    courseWare.setTotalTime(captureResultBean.getCourseVo().get(0).getTotalTime());
-                                    courseWare.setStartTime(captureResultBean.getCourseVo().get(0).getStartTime());
-                                    courseWare.setEndTime(captureResultBean.getCourseVo().get(0).getEndTime());
-                                    Bundle bundle = new Bundle();
-                                    bundle.putSerializable("cw", courseWare);
-                                    gotoActivity(AuditionPlayActivity.class, false, bundle);
-                                } else {
-                                    Bundle bundle = new Bundle();
-                                    bundle.putSerializable(Constants.COURSE_ID, new SetCourseListEvent(captureResultBean.getCourseVo()));
-                                    gotoActivity(CaptureCourseListActivity.class, false, bundle);
-                                }
-                            }
-                        }
+//                        if (captureResultBean.getExaminationVo() != null || captureResultBean.getCourseVo() != null) {
+//                            if (captureResultBean.getExaminationVo() != null) {
+//                                return;
+//                            }
+//                            if (captureResultBean.getCourseVo() != null && captureResultBean.getCourseVo().size() != 0 && captureResultBean.getCourseVo().get(0) != null) {
+//                                if (captureResultBean.getCourseVo().size() == 1) {
+//                                    CourseWare courseWare = new CourseWare();
+//                                    courseWare.setId(captureResultBean.getCourseVo().get(0).getId() + "");
+//                                    courseWare.setName(captureResultBean.getCourseVo().get(0).getName());
+//                                    courseWare.setTotalTime(captureResultBean.getCourseVo().get(0).getTotalTime());
+//                                    courseWare.setStartTime(captureResultBean.getCourseVo().get(0).getStartTime());
+//                                    courseWare.setEndTime(captureResultBean.getCourseVo().get(0).getEndTime());
+//                                    Bundle bundle = new Bundle();
+//                                    bundle.putSerializable("cw", courseWare);
+//                                    gotoActivity(AuditionPlayActivity.class, false, bundle);
+//                                } else {
+//                                    Bundle bundle = new Bundle();
+//                                    bundle.putSerializable(Constants.COURSE_ID, new SetCourseListEvent(captureResultBean.getCourseVo()));
+//                                    gotoActivity(CaptureCourseListActivity.class, false, bundle);
+//                                }
+//                            }
+//                        }
                     }
 
                     @Override

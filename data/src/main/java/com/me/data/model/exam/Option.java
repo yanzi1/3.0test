@@ -11,27 +11,18 @@ public class Option implements Serializable {
 	// 1 选项名称：name
 	// 2 选项描述：description
 	
-	private String optionFlag;// 选项名称
+	private String name;// 选项名称
 	private String optionContent;// 选项描述
 
 	private String showWebView;//判断是否显示webview还是textview
-	private int choseFlag;//当前是否被选中 1.选中
-
-	public int getChoseFlag() {
-		return choseFlag;
-	}
-
-	public void setChoseFlag(int choseFlag) {
-		this.choseFlag = choseFlag;
-	}
 
 	public Option() {
 		super();
 	}
 
-	public Option(String optionFlag, String description) {
+	public Option(String name, String description) {
 		super();
-		this.optionFlag = optionFlag;
+		this.name = name;
 		this.optionContent = description;
 	}
 	/**
@@ -45,12 +36,12 @@ public class Option implements Serializable {
 		this.showWebView = showWebView;
 	}
 
-	public String getOptionFlag() {
-		return optionFlag;
+	public String getName() {
+		return name;
 	}
 
-	public void setOptionFlag(String name) {
-		this.optionFlag = name;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getOptionContent() {
@@ -63,7 +54,7 @@ public class Option implements Serializable {
 
 	@Override
 	public String toString() {
-		return "QuestionOptionBean [name=" + optionFlag + ", description="
+		return "QuestionOptionBean [name=" + name + ", description="
 				+ optionContent + "]";
 	}
 

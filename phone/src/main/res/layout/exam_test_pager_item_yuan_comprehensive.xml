@@ -1,0 +1,322 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/exam_test_question_score_scard_bg">
+    <!-- style="@style/x_scrollview"-->
+    <ScrollView
+        android:id="@+id/sv_examination"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:visibility="gone">
+        <!--android:fillViewport="true"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/spacing_large">
+
+                <RelativeLayout
+                    style="@style/normal_fw"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="12dp">
+
+                    <TextView
+                        android:id="@+id/tv_questionType"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="选择题"
+                        android:textColor="@color/exam_test_question_option_font"
+                        android:textSize="@dimen/text_size_16" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    style="@style/normal_fw"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+
+                    <org.sufficientlysecure.htmltextview.HtmlTextView
+                        android:id="@+id/tv_question_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1、刑事法"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textColor="@color/exam_test_question_font"
+                        android:textSize="@dimen/text_size_20" />
+
+                    <WebView
+                        android:id="@+id/wv_question_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1、刑事法"
+                        android:textColor="@color/exam_test_question_font"
+                        android:textSize="@dimen/text_size_20"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <com.dongao.mainclient.phone.view.exam.view.NoScrollListview
+                    android:id="@+id/lv_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="40000dp"
+                    android:layout_marginBottom="20dp"
+                    android:divider="@null"
+                    android:scrollbars="none" />
+
+                <LinearLayout
+                    android:id="@+id/ll_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray_back" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dip_size_20"
+                        android:layout_marginTop="@dimen/spacing_large"
+                        android:gravity="center"
+                        android:text="@string/question_point"
+                        android:textColor="@color/text_color_primary_enable"
+                        android:textSize="@dimen/font_size_nomarl" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/exam_pager_quiz_analyze_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_large">
+
+                    <TextView
+                        style="@style/x_text"
+                        android:text="答案"
+                        android:textColor="@color/exam_test_question_option_font"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_answer_htwv"
+                        style="@style/normal_fw"
+                        android:paddingTop="@dimen/dip_size_12">
+
+                        <org.sufficientlysecure.htmltextview.HtmlTextView
+                            android:id="@+id/tv_question_answer"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1、刑事法"
+                            android:textAppearance="@android:style/TextAppearance.Small"
+                            android:textColor="@color/exam_test_question_font"
+                            android:textSize="@dimen/text_size_18" />
+
+                        <WebView
+                            android:id="@+id/wv_question_answer_wv"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1、刑事法"
+                            android:textColor="@color/exam_test_question_font"
+                            android:textSize="@dimen/text_size_18"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_answer_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/spacing_large">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/x_text"
+                                android:text="正确答案 ："
+                                android:textColor="@color/exam_test_question_font"
+                                android:textSize="@dimen/text_size_18" />
+
+                            <TextView
+                                android:id="@+id/exam_question_real_answer"
+                                style="@style/x_text"
+                                android:text=""
+                                android:textColor="@color/color_primary"
+                                android:textSize="@dimen/text_size_18" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/exam_question_my_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/x_text"
+                                android:text="您的答案 ："
+                                android:textColor="@color/exam_test_question_font"
+                                android:textSize="@dimen/text_size_18" />
+
+                            <TextView
+                                android:id="@+id/exam_question_local_answer"
+                                style="@style/x_text"
+                                android:text=""
+                                android:textColor="@color/color_primary"
+                                android:textSize="@dimen/text_size_18" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_all_analysis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_large">
+
+                    <TextView
+                        style="@style/x_text"
+                        android:text="试题详解"
+                        android:textColor="@color/exam_test_question_option_font"
+                        android:textSize="@dimen/text_size_18" />
+
+
+                    <org.sufficientlysecure.htmltextview.HtmlTextView
+                        android:id="@+id/exam_question_quiz_analyze"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1、试题详解"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textColor="@color/exam_test_question_font"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <WebView
+                        android:id="@+id/exam_question_quiz_analyze_wv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1、刑事法"
+                        android:textColor="@color/exam_test_question_font"
+                        android:textSize="@dimen/text_size_18"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_solution_thinking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_large">
+
+                    <TextView
+                        style="@style/x_text"
+                        android:text="@string/exam_solution_thinking"
+                        android:textColor="@color/exam_test_question_option_font"
+                        android:textSize="@dimen/text_size_18" />
+
+
+                    <WebView
+                        android:id="@+id/solution_thinking_wv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1、刑事法"
+                        android:textColor="@color/exam_test_question_font"
+                        android:textSize="@dimen/text_size_18"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_relevant_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_large">
+
+                    <TextView
+                        style="@style/x_text"
+                        android:text="相关知识点："
+                        android:textColor="@color/exam_test_question_option_font"
+                        android:textSize="@dimen/text_size_18" />
+
+
+                    <com.dongao.mainclient.phone.view.exam.view.NoScrollListview
+                        android:id="@+id/lv_exam_question_relate_knowledge"
+                        style="?android:attr/listViewWhiteStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@null" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_relevant_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:layout_marginBottom="@dimen/spacing_medium"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_large">
+
+                    <TextView
+                        style="@style/x_text"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="@string/exam_relavant_answer"
+                        android:textColor="@color/exam_test_question_font"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/home_icon_arrow_right" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/exam_app_view_loading" />
+    </LinearLayout>
+
+</LinearLayout>
