@@ -53,6 +53,7 @@ public class ExamPaperListActivity extends BaseFragmentActivity implements ExamP
         initView();
         initData();
     }
+    
 
     @Override
     public void initView() {
